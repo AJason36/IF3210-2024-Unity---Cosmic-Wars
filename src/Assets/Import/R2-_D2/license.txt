@@ -1,0 +1,11 @@
+Model Information:
+* title:	R2- D2
+* source:	https://sketchfab.com/3d-models/r2-d2-71374f8575744fb691f57256274c00ee
+* author:	Johnson Martin (https://sketchfab.com/Johnson-Martin)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "R2- D2" (https://sketchfab.com/3d-models/r2-d2-71374f8575744fb691f57256274c00ee) by Johnson Martin (https://sketchfab.com/Johnson-Martin) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
