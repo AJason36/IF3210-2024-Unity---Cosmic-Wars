@@ -9,8 +9,10 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
-/UserSettings
-/ProjectSettings
+/[Pp]rojectSettings/
+/[Pp]rojectSettings/*
+/[Uu]serSettings/
+/[Uu]serSettings/*
 /Assembly-CSharp.csproj
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
