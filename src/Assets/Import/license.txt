@@ -1,0 +1,11 @@
+Model Information:
+* title:	Star Wars Tatooine Star Port Prop.
+* source:	https://sketchfab.com/3d-models/star-wars-tatooine-star-port-prop-20863d782fb34a02871cef941ecb0aca
+* author:	HammerWorks (https://sketchfab.com/HammerWorks)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Star Wars Tatooine Star Port Prop." (https://sketchfab.com/3d-models/star-wars-tatooine-star-port-prop-20863d782fb34a02871cef941ecb0aca) by HammerWorks (https://sketchfab.com/HammerWorks) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
