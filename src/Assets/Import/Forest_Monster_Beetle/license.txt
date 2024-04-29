@@ -1,0 +1,11 @@
+Model Information:
+* title:	Forest Monster Beetle
+* source:	https://sketchfab.com/3d-models/forest-monster-beetle-83d36d4a6d20450c80224ad825393d17
+* author:	ArachnoBoy (https://sketchfab.com/vang807)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Forest Monster Beetle" (https://sketchfab.com/3d-models/forest-monster-beetle-83d36d4a6d20450c80224ad825393d17) by ArachnoBoy (https://sketchfab.com/vang807) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
