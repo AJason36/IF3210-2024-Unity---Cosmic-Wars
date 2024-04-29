@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4CFFDA30-0E63-039E-0DCA-DAC117CE2649}|Assembly-CSharp.csproj|c:\\files\\kuliah\\semester-6\\pbd\\tugas\\if3210-2024-unity-ajg\\src\\assets\\scripts\\usernamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CFFDA30-0E63-039E-0DCA-DAC117CE2649}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\usernamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4CFFDA30-0E63-039E-0DCA-DAC117CE2649}|Assembly-CSharp.csproj|C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\assets\\scripts\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CFFDA30-0E63-039E-0DCA-DAC117CE2649}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CFFDA30-0E63-039E-0DCA-DAC117CE2649}|Assembly-CSharp.csproj|c:\\files\\kuliah\\semester-6\\pbd\\tugas\\if3210-2024-unity-ajg\\src\\assets\\scripts\\usernamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CFFDA30-0E63-039E-0DCA-DAC117CE2649}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\usernamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UsernameManager.cs",
               "DocumentMoniker": "C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\UsernameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UsernameManager.cs",
@@ -35,13 +35,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "SoundManager.cs",
               "DocumentMoniker": "C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\SoundManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SoundManager.cs",
               "ToolTip": "C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\SoundManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\SoundManager.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAwAAAAjAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBAAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-29T00:26:46.339Z",
               "EditorCaption": ""
