@@ -5,3 +5,6 @@ src/[Bb]uild/
 src/[Bb]uilds/
 src/[Ll]ogs/
 src/[Mm]emoryCaptures/
+src/UserSettings
+src/ProjectSettings
+src/Assembly-CSharp.csproj
