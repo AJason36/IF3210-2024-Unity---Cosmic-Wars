@@ -1,0 +1,11 @@
+Model Information:
+* title:	Magic flask
+* source:	https://sketchfab.com/3d-models/magic-flask-60e163541bae46d6bc30b5256de9129b
+* author:	OlegPopka (https://sketchfab.com/OlegPopka)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Magic flask" (https://sketchfab.com/3d-models/magic-flask-60e163541bae46d6bc30b5256de9129b) by OlegPopka (https://sketchfab.com/OlegPopka) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

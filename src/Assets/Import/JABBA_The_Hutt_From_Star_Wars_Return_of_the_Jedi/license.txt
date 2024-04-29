@@ -1,0 +1,11 @@
+Model Information:
+* title:	JABBA The Hutt From Star Wars Return of the Jedi
+* source:	https://sketchfab.com/3d-models/jabba-the-hutt-from-star-wars-return-of-the-jedi-d8f34d9ece52441384c9c2d760b3d618
+* author:	wayneartist (https://sketchfab.com/wayneartist)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "JABBA The Hutt From Star Wars Return of the Jedi" (https://sketchfab.com/3d-models/jabba-the-hutt-from-star-wars-return-of-the-jedi-d8f34d9ece52441384c9c2d760b3d618) by wayneartist (https://sketchfab.com/wayneartist) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
