@@ -1,0 +1,8 @@
+Model Information:
+* title:	Star Wars X-wing Rebel Flight Suit (rigged)
+* source:	https://sketchfab.com/3d-models/star-wars-x-wing-rebel-flight-suit-rigged-efa36772d0984634ac6ed8a0e95f8d14
+* author:	tegnemaskin (https://sketchfab.com/tegnemaskin)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
