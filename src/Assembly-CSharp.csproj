@@ -180,6 +180,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Import\alien_monster\license.txt" />
+    <None Include="Assets\Import\Jar-Jar-Binks\license.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -194,6 +195,7 @@
     <None Include="Assets\Terrain\rocky-path\license.txt" />
     <None Include="Assets\Import\Increase_Damage_Orb\license.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Import\Fighter_Interceptor_Sci-fi_ship._(game_ready)\license.txt" />
     <None Include="Assets\Import\Emperor_Palpatine___Darth_Sidious\license.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Weapon\Gun\license.txt" />
