@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\UsernameManager.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabLogger.cs" />
+    <Compile Include="Assets\Scripts\StatisticsManager.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabBrowserManager.cs" />
     <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabBrowserWindow.cs" />
@@ -78,12 +79,14 @@
     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabApi.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Import\TerrainSampleAssets\ThirdPartyNotices.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Import\license.txt" />
     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFFlipTexture.shader" />
     <None Include="Assets\Import\Forest_Monster_Beetle\license.txt" />
     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFColorSpace.cginc" />
-    <None Include="Assets\Import\JABBA_The_Hutt_From_Star_Wars_Return_of_the_Jedi\license.txt" />
+    <None Include="Assets\Import\JABBA_The_Hutt\license.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Import\Darth_Vader\license.txt" />
     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFPackOccMetalRough.shader" />
@@ -117,6 +120,7 @@
     <None Include="Assets\Import\Increase_Speed_Orb\license.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Import\BB8_Droid\license.txt" />
+    <None Include="Assets\Import\TerrainSampleAssets\ShaderGraphs\CustomFunctions\CustomLighting.hlsl" />
     <None Include="Assets\Import\Storm_Trooper_A-pose\license.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Sketchfab For Unity\Dependencies\Libraries\GLTFSerialization.dll" />
