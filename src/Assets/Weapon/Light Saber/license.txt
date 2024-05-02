@@ -1,0 +1,11 @@
+Model Information:
+* title:	star wars light saber
+* source:	https://sketchfab.com/3d-models/star-wars-light-saber-41ef0ed7eb87491cba8c697d675c5bb4
+* author:	BigSavio (https://sketchfab.com/saviomofi15)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "star wars light saber" (https://sketchfab.com/3d-models/star-wars-light-saber-41ef0ed7eb87491cba8c697d675c5bb4) by BigSavio (https://sketchfab.com/saviomofi15) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

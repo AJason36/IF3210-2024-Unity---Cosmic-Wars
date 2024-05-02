@@ -1,0 +1,11 @@
+Model Information:
+* title:	Blaster StarWars NN14
+* source:	https://sketchfab.com/3d-models/blaster-starwars-nn14-7ad57eea9616406394e78808c264aba0
+* author:	bodyyyaaa_ (https://sketchfab.com/bodyyyaaa_)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Blaster StarWars NN14" (https://sketchfab.com/3d-models/blaster-starwars-nn14-7ad57eea9616406394e78808c264aba0) by bodyyyaaa_ (https://sketchfab.com/bodyyyaaa_) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
