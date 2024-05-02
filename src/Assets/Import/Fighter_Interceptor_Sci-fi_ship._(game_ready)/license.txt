@@ -1,0 +1,11 @@
+Model Information:
+* title:	Fighter Interceptor Sci-fi ship. (game ready)
+* source:	https://sketchfab.com/3d-models/fighter-interceptor-sci-fi-ship-game-ready-1ed726e1df5549fd98b010f0d58967c8
+* author:	CannonMonkey (https://sketchfab.com/CannonMonkey)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Fighter Interceptor Sci-fi ship. (game ready)" (https://sketchfab.com/3d-models/fighter-interceptor-sci-fi-ship-game-ready-1ed726e1df5549fd98b010f0d58967c8) by CannonMonkey (https://sketchfab.com/CannonMonkey) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
