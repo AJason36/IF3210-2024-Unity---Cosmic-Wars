@@ -28,7 +28,7 @@ namespace Nightmare
             enemyHealth = GetComponent <EnemyHealth> ();
             nav = GetComponent<NavMeshAgent>();
 
-            StartPausible();
+            // StartPausible();
         }
 
         void OnEnable()
@@ -48,19 +48,20 @@ namespace Nightmare
 
         void Update ()
         {
-            if (!isPaused)
-            {
-                // If both the enemy and the player have health left...
-                if (enemyHealth.CurrentHealth() > 0 && playerHealth.currentHealth > 0)
-                {
-                    LookForPlayer();
-                    WanderOrIdle();
-                }
-                else
-                {
-                    nav.enabled = false;
-                }
-            }
+            // if (!isPaused)
+            // {
+            //     // If both the enemy and the player have health left...
+            //     if (enemyHealth.CurrentHealth() > 0 && playerHealth.currentHealth > 0)
+            //     {
+            //         LookForPlayer();
+            //         WanderOrIdle();
+            //     }
+            //     else
+            //     {
+            //         nav.enabled = false;
+            //     }
+            // }
+            nav.SetDestination(player.position);
         }
 
         void OnDestroy()
