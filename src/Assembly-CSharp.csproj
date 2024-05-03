@@ -97,6 +97,7 @@
     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabImporter.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\TriggerTest.cs" />
+    <Compile Include="Assets\Scripts\Managers\SettingsMenuManager.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\ColorGradingComponent.cs" />
     <Compile Include="Assets\Scripts\Managers\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\Managers\EnemyManager.cs" />
@@ -109,7 +110,6 @@
     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabLogger.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\ColorGradingCurve.cs" />
-    <Compile Include="Assets\Scripts\Managers\UsernameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\StatisticsMenuManager.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\BloomModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\FogComponent.cs" />
@@ -124,6 +124,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Components\ScreenSpaceReflectionComponent.cs" />
     <Compile Include="Assets\Effects\PostRenderEffects\FaerieAnger.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballGroupAttribute.cs" />
+    <Compile Include="Assets\Scripts\Managers\SettingsManager.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\UserLutModel.cs" />
     <Compile Include="Assets\MobileInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
@@ -135,7 +136,6 @@
     <Compile Include="Assets\MobileInput\Scripts\Joystick.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingComponent.cs" />
     <Compile Include="Assets\Scripts\StateMachineBehaviours\Faerie\FaerieStateBehaviour.cs" />
-    <Compile Include="Assets\Scripts\Managers\SoundManager.cs" />
     <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabBrowserManager.cs" />
     <Compile Include="Assets\Scripts\Player\DynamicPhysicMaterial.cs" />
     <Compile Include="Assets\MobileInput\Scripts\MobileControlRig.cs" />
