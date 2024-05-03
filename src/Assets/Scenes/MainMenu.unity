@@ -859,6 +859,7 @@ GameObject:
   - component: {fileID: 189763414}
   - component: {fileID: 189763415}
   - component: {fileID: 189763416}
+  - component: {fileID: 189763417}
   m_Layer: 0
   m_Name: MainMenuObject
   m_TagString: Untagged
@@ -907,6 +908,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 352e08554824c934fb3799de7c9fbb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &189763417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189763413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e376e0b59649ad4ca5eb9978ce914f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &193458718
@@ -2744,7 +2757,6 @@ GameObject:
   m_Component:
   - component: {fileID: 616112291}
   - component: {fileID: 616112293}
-  - component: {fileID: 616112292}
   m_Layer: 0
   m_Name: VolumeSlider
   m_TagString: Untagged
@@ -2774,19 +2786,6 @@ RectTransform:
   m_AnchoredPosition: {x: 200, y: 0}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &616112292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 616112290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98b4ebfeb891b9249b4d5bca8260a342, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 616112293}
 --- !u!114 &616112293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2838,9 +2837,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 616112292}
-        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
-        m_MethodName: changeVolume
+      - m_Target: {fileID: 1913002688}
+        m_TargetAssemblyTypeName: SettingsMenuManager, Assembly-CSharp
+        m_MethodName: UpdateMusicVolume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6510,6 +6509,7 @@ GameObject:
   - component: {fileID: 1913002687}
   - component: {fileID: 1913002686}
   - component: {fileID: 1913002685}
+  - component: {fileID: 1913002688}
   m_Layer: 0
   m_Name: SettingsMenuCanvas
   m_TagString: Untagged
@@ -6608,6 +6608,21 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1913002688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913002683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d99363f4b96bef4ba0dd7857ddec233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  usernameInputField: {fileID: 1955399062}
+  volumeSlider: {fileID: 616112293}
+  difficultyDropdown: {fileID: 1586450335}
 --- !u!1 &1927047175
 GameObject:
   m_ObjectHideFlags: 0
@@ -6728,7 +6743,6 @@ GameObject:
   - component: {fileID: 1955399064}
   - component: {fileID: 1955399063}
   - component: {fileID: 1955399062}
-  - component: {fileID: 1955399061}
   m_Layer: 0
   m_Name: UsernameInput
   m_TagString: Untagged
@@ -6756,19 +6770,6 @@ RectTransform:
   m_AnchoredPosition: {x: 200, y: 100}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1955399061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1955399059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f05403c7805425c4baeca5cbfda23398, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputField: {fileID: 1955399062}
 --- !u!114 &1955399062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6831,9 +6832,9 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1955399061}
-        m_TargetAssemblyTypeName: UsernameManager, Assembly-CSharp
-        m_MethodName: changeText
+      - m_Target: {fileID: 1913002688}
+        m_TargetAssemblyTypeName: SettingsMenuManager, Assembly-CSharp
+        m_MethodName: UpdateUsername
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
