@@ -45,13 +45,13 @@ public class StatisticsManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
+            Debug.Log("Duplicate instance of StatisticsManager found, destroying game object.");
             Destroy(gameObject);
         }
-
-        DontDestroyOnLoad(gameObject);
     }
 
     // Shot Accuracy Statistics Functions
