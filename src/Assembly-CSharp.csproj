@@ -164,6 +164,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Components\BloomComponent.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Models\Pets\Bat_Monster\license.txt" />
     <None Include="Assets\Import\TerrainSampleAssets\ThirdPartyNotices.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -179,6 +180,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Skyboxes\Space\license.txt" />
     <None Include="Assets\Import\alien_monster\license.txt" />
     <None Include="Assets\Import\Jar-Jar-Binks\license.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
@@ -201,10 +203,14 @@
     <None Include="Assets\Weapon\Gun\license.txt" />
     <None Include="Assets\Sketchfab For Unity\Dependencies\Libraries\Ionic.Zip.Unity.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\Skyboxes\Sky_Pano\license.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFBumpToNormal.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\Skyboxes\Green_Valley\license.txt" />
+    <None Include="Assets\Terrain\scifi_room\license.txt" />
     <None Include="Assets\Import\Increase_Speed_Orb\license.txt" />
+    <None Include="Assets\Models\Pets\Fish_Monster\license.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Import\TerrainSampleAssets\ShaderGraphs\CustomFunctions\CustomLighting.hlsl" />
     <None Include="Assets\Import\Storm_Trooper_A-pose\license.txt" />
