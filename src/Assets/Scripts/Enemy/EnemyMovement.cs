@@ -108,10 +108,10 @@ namespace Nightmare
         private void GoToPosition(Vector3 position)
         {
             timer = -1f;
-            if (!enemyHealth.IsDead())
-            {
-                SetDestination(position);
-            }
+            // if (!enemyHealth.IsDead())
+            // {
+            //     SetDestination(position);
+            // }
         }
 
         private void SetDestination(Vector3 position)
