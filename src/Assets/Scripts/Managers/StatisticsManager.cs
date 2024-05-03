@@ -95,15 +95,14 @@ public class StatisticsManager : MonoBehaviour
         }
     }
 
-    public void RecordShotHit()
+    public void RecordShot()
     {
         shotsFired++;
-        shotsHit++;
     }
 
-    public void RecordShotMissed()
+    public void RecordSuccessfulShot()
     {
-        shotsFired++;
+        shotsHit++;
     }
 
     // Distance Traveled Statistics Functions
@@ -175,6 +174,18 @@ public class StatisticsManager : MonoBehaviour
     {
         int totalPlayTime = PlayerPrefs.GetInt(_playTimePrefsName, 0);
         return totalPlayTime + playTime;
+    }
+
+    public string GetPlayTimeFormatted()
+    {
+        int totalPlayTime = PlayerPrefs.GetInt(_playTimePrefsName, 0);
+        totalPlayTime += playTime;
+
+        int hours = totalPlayTime / 3600;
+        int minutes = (totalPlayTime % 3600) / 60;
+        int seconds = totalPlayTime % 60;
+
+        return string.Format("{0:00}:{1:00}:{2:00}", hours, minutes, seconds);
     }
 
     // Quest Completed Statistics Functions
