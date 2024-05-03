@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Helpers\RandomAnimationPoint.cs" />
     <Compile Include="Assets\Scripts\Managers\AsyncLoad.cs" />
     <Compile Include="Assets\FaerieHappy.cs" />
+    <Compile Include="Assets\BossLogic.cs" />
     <Compile Include="Assets\Scripts\Managers\PoolManager.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingProfile.cs" />
     <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabModelWindow.cs" />
@@ -100,6 +101,8 @@
     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabImporter.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\TriggerTest.cs" />
+    <Compile Include="Assets\OrbLogic.cs" />
+    <Compile Include="Assets\Scripts\SpawnOrbLogic.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\ColorGradingComponent.cs" />
     <Compile Include="Assets\Scripts\Managers\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\Managers\EnemyManager.cs" />
