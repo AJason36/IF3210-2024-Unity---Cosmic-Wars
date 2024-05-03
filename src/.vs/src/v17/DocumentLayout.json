@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4CFFDA30-0E63-039E-0DCA-DAC117CE2649}|Assembly-CSharp.csproj|C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\assets\\scripts\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CFFDA30-0E63-039E-0DCA-DAC117CE2649}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\Managers\\StatisticsManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Managers\\StatisticsManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CFFDA30-0E63-039E-0DCA-DAC117CE2649}|Assembly-CSharp.csproj|c:\\files\\kuliah\\semester-6\\pbd\\tugas\\if3210-2024-unity-ajg\\src\\assets\\scripts\\usernamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CFFDA30-0E63-039E-0DCA-DAC117CE2649}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\usernamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\Managers\\StatisticsMenuManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Managers\\StatisticsMenuManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\Managers\\UsernameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Managers\\UsernameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,28 +26,41 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UsernameManager.cs",
-              "DocumentMoniker": "C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\UsernameManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UsernameManager.cs",
-              "ToolTip": "C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\UsernameManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UsernameManager.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwA4AAABAAAAA",
+              "DocumentMoniker": "C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\Managers\\UsernameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\UsernameManager.cs",
+              "ToolTip": "C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\Managers\\UsernameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\UsernameManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T02:45:35.961Z",
+              "WhenOpened": "2024-05-02T08:54:51.096Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SoundManager.cs",
-              "DocumentMoniker": "C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\SoundManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\SoundManager.cs",
-              "ToolTip": "C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\SoundManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\SoundManager.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBAAAAAIAAAA",
+              "Title": "StatisticsManager.cs",
+              "DocumentMoniker": "C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\Managers\\StatisticsManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\StatisticsManager.cs",
+              "ToolTip": "C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\Managers\\StatisticsManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\StatisticsManager.cs",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAAAAkAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T00:26:46.339Z",
+              "WhenOpened": "2024-05-02T08:54:48.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StatisticsMenuManager.cs",
+              "DocumentMoniker": "C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\Managers\\StatisticsMenuManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\StatisticsMenuManager.cs",
+              "ToolTip": "C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\Managers\\StatisticsMenuManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\StatisticsMenuManager.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAcwB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T08:54:38.156Z",
               "EditorCaption": ""
             }
           ]
