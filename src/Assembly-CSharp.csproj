@@ -75,7 +75,6 @@
     <Compile Include="Assets\Scripts\Helpers\RandomAnimationPoint.cs" />
     <Compile Include="Assets\Scripts\Managers\AsyncLoad.cs" />
     <Compile Include="Assets\FaerieHappy.cs" />
-    <Compile Include="Assets\BossLogic.cs" />
     <Compile Include="Assets\Scripts\Managers\PoolManager.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingProfile.cs" />
     <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabModelWindow.cs" />
@@ -151,6 +150,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Models\ScreenSpaceReflectionModel.cs" />
     <Compile Include="Assets\Scripts\Managers\LevelManager.cs" />
     <Compile Include="Assets\MobileInput\Scripts\VirtualInput.cs" />
+    <Compile Include="Assets\Scripts\Enemy\BossLogic.cs" />
     <Compile Include="Assets\MobileInput\Scripts\CrossPlatformInputManager.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\TaaComponent.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
