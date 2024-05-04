@@ -96,45 +96,11 @@ namespace Nightmare
             isDead = true;
 
             // Animations
-            if (anim != null)
-            {
-                anim.SetTrigger("Die");
-            }
-            else
-            {
-                Debug.LogError("Animator component missing on " + gameObject.name);
-            }
 
-            // Sound
-            if (playerAudio != null)
-            {
-                playerAudio.clip = deathClip;
-                playerAudio.Play();
-            }
-            else
-            {
-                Debug.LogError("AudioSource component missing on " + gameObject.name);
-            }
-
-            // Movement and Shooting Scripts
-            if (playerMovement != null)
-            {
-                playerMovement.enabled = false;
-            }
-            else
-            {
-                Debug.LogError("PlayerMovement component missing on " + gameObject.name);
-            }
-
-            if (playerShooting != null)
-            {
-                // playerShooting.DisableEffects();  // Assuming this is your intention.
-                playerShooting.enabled = false;
-            }
-            else
-            {
-                Debug.LogError("PlayerShooting component missing or not properly configured on " + gameObject.name);
-            }
+            anim.SetTrigger("Die");
+            playerAudio.clip = deathClip;
+            playerAudio.Play();
+            playerMovement.enabled = false;
         }
 
         // void Death()

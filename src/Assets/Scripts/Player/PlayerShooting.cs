@@ -34,25 +34,25 @@ namespace Nightmare
             shootableMask = LayerMask.GetMask ("Shootable", "Enemy");
 
             // Set up the references.
-            gunParticles = GetComponent<ParticleSystem> ();
-            gunLine = GetComponent <LineRenderer> ();
-            gunAudio = GetComponent<AudioSource> ();
-            gunLight = GetComponent<Light> ();
+            // gunParticles = GetComponent<ParticleSystem> ();
+            // gunLine = GetComponent <LineRenderer> ();
+            // gunAudio = GetComponent<AudioSource> ();
+            // gunLight = GetComponent<Light> ();
 			//faceLight = GetComponentInChildren<Light> ();
 
             AdjustGrenadeStock(0);
 
             listener = new UnityAction(CollectGrenade);
 
-            EventManager.StartListening("GrenadePickup", CollectGrenade);
+            // EventManager.StartListening("GrenadePickup", CollectGrenade);
 
-            StartPausible();
+            // StartPausible();
         }
 
         void OnDestroy()
         {
-            EventManager.StopListening("GrenadePickup", CollectGrenade);
-            StopPausible();
+            // EventManager.StopListening("GrenadePickup", CollectGrenade);
+            // StopPausible();
         }
 
         void Update ()
@@ -101,9 +101,9 @@ namespace Nightmare
         public void DisableEffects ()
         {
             // Disable the line renderer and the light.
-            gunLine.enabled = false;
-			faceLight.enabled = false;
-            gunLight.enabled = false;
+            // gunLine.enabled = false;
+			// faceLight.enabled = false;
+            // gunLight.enabled = false;
         }
 
 
@@ -182,7 +182,7 @@ namespace Nightmare
             AdjustGrenadeStock(-1);
             timer = timeBetweenBullets - grenadeFireDelay;
             GameObject clone = PoolManager.Pull("Grenade", transform.position, Quaternion.identity);
-            EventManager.TriggerEvent("ShootGrenade", grenadeSpeed * transform.forward);
+            // EventManager.TriggerEvent("ShootGrenade", grenadeSpeed * transform.forward);
             //GameObject clone = Instantiate(grenade, transform.position, Quaternion.identity);
             //Grenade grenadeClone = clone.GetComponent<Grenade>();
             //grenadeClone.Shoot(grenadeSpeed * transform.forward);

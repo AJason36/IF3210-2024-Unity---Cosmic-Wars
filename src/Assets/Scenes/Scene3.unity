@@ -526,10 +526,11 @@ GameObject:
   - component: {fileID: 312527890}
   - component: {fileID: 312527889}
   - component: {fileID: 312527888}
+  - component: {fileID: 312527894}
   - component: {fileID: 312527891}
+  - component: {fileID: 312527895}
   - component: {fileID: 312527892}
   - component: {fileID: 312527893}
-  - component: {fileID: 312527894}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -740,7 +741,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 312527886}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d257bc8cb9679754eb3ec8104943f53d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b2268f9c7df8764aa2e92dbf55b5ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 312527889}
@@ -753,6 +754,25 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   animator: {fileID: 822033458}
+--- !u!114 &312527895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312527886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c83720df9acb89488dbf2c0dbd3ad78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePerShot: 20
+  timeBetweenBullets: 0.15
+  range: 100
+  grenade: {fileID: 1105787354104060, guid: 41a4c48eef428174cb5039adb608d30c, type: 3}
+  grenadeSpeed: 200
+  grenadeFireDelay: 0.5
+  faceLight: {fileID: 0}
 --- !u!1 &396292222
 GameObject:
   m_ObjectHideFlags: 0
