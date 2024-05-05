@@ -103,6 +103,11 @@ namespace Nightmare
             playerMovement.enabled = false;
         }
 
+        public void drinkHealthOrb()
+        {
+            currentHealth += 10;
+            Debug.Log("Drinking health orb");
+        }
         // void Death()
         // {
         //     // Set the death flag so this function won't be called again.
