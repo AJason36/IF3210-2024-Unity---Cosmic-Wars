@@ -9,50 +9,84 @@ public class Weapon : MonoBehaviour
     public GameObject basoka;  
     public GameObject current;  
     public Animator animator;
-    public Transform attachmentPoint;  
+    public Transform attachmentPoint;
+
+    private int weaponIndex = 4; 
 
     void Start() {
         current = null;
-        animator.SetInteger("Weapon", 4);
+        SetWeapon(weaponIndex);
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Weapon 0"))
+        float scroll = Input.GetAxis("Weapon Wheel");
+        if (scroll != 0)
         {
-            animator.SetInteger("Weapon", 4);
-            if (current != null) {
-                Destroy(current);
-                current.transform.SetParent(null);
+            Debug.Log(scroll);
+            ChangeWeaponByScroll(scroll);
+        } else {
+            if (Input.GetButtonDown("Weapon 0"))
+            {
+                SetWeapon(4);
             }
-        } else if (Input.GetButtonDown("Weapon 1"))
-        {
-            animator.SetInteger("Weapon", 1);
-            if (current != null) {
-                Destroy(current);
-                current.transform.SetParent(null);
+            else if (Input.GetButtonDown("Weapon 1"))
+            {
+                SetWeapon(1);
             }
-            current = Instantiate(gun, attachmentPoint.position, attachmentPoint.rotation);
-            current.transform.SetParent(attachmentPoint, true);
-        } else if (Input.GetButtonDown("Weapon 2"))
-        {
-            animator.SetInteger("Weapon", 2);
-            if (current != null) {
-                Destroy(current);
-                current.transform.SetParent(null);
+            else if (Input.GetButtonDown("Weapon 2"))
+            {
+                SetWeapon(2);
             }
-            current = Instantiate(basoka, attachmentPoint.position, attachmentPoint.rotation);
-            current.transform.SetParent(attachmentPoint, true);
-        } else if (Input.GetButtonDown("Weapon 3"))
-        {
-            animator.SetInteger("Weapon", 3);
-            if (current != null) {
-                Destroy(current);
-                current.transform.SetParent(null);
+            else if (Input.GetButtonDown("Weapon 3"))
+            {
+                SetWeapon(3);
             }
-            current = Instantiate(lightSaber, attachmentPoint.position, attachmentPoint.rotation);
-            current.transform.SetParent(attachmentPoint, true);
         }
-        
+    }
+
+    void ChangeWeaponByScroll(float scrollDirection)
+    {
+        if (scrollDirection > 0)
+        {
+            weaponIndex++;
+            if (weaponIndex > 4) weaponIndex = 1;
+        }
+        else
+        {
+            weaponIndex--;
+            if (weaponIndex < 1) weaponIndex = 4; 
+        }
+
+        SetWeapon(weaponIndex);
+    }
+
+    void SetWeapon(int index)
+    {
+        if (current != null) {
+            Destroy(current);
+            current.transform.SetParent(null);
+        }
+
+        animator.SetInteger("Weapon", index);
+
+        switch (index)
+        {
+            case 1:
+                current = Instantiate(gun, attachmentPoint.position, attachmentPoint.rotation);
+                break;
+            case 2:
+                current = Instantiate(basoka, attachmentPoint.position, attachmentPoint.rotation);
+                break;
+            case 3:
+                current = Instantiate(lightSaber, attachmentPoint.position, attachmentPoint.rotation);
+                break;
+            case 4: 
+                current = null;
+                break;
+        }
+
+        if (current != null)
+            current.transform.SetParent(attachmentPoint, true);
     }
 }
