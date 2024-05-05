@@ -20,10 +20,10 @@ namespace Nightmare
             // Setting up the references.
             player = GameObject.FindGameObjectWithTag ("Player");
             playerHealth = player.GetComponent <PlayerHealth> ();
-            enemyHealth = GetComponent<EnemyHealth>();
+            // enemyHealth = GetComponent<EnemyHealth>();
             anim = GetComponent <Animator> ();
 
-            StartPausible();
+            // StartPausible();
         }
 
         void OnDestroy()
@@ -58,10 +58,11 @@ namespace Nightmare
             
             // Add the time since Update was last called to the timer.
             timer += Time.deltaTime;
-
+            
             // If the timer exceeds the time between attacks, the player is in range and this enemy is alive...
-            if(timer >= timeBetweenAttacks && playerInRange && enemyHealth.CurrentHealth() > 0)
+            if(timer >= timeBetweenAttacks && playerInRange /* && enemyHealth.CurrentHealth() > 0 */)
             {
+                Debug.Log("Calling attack function");
                 // ... attack.
                 Attack ();
             }
@@ -75,13 +76,15 @@ namespace Nightmare
         }
 
         void Attack ()
-        {
+        {   
+            
             // Reset the timer.
             timer = 0f;
-
+            Debug.Log("Inside Attack Function");
             // If the player has health to lose...
             if(playerHealth.currentHealth > 0)
             {
+                Debug.Log("Damage the player");
                 // ... damage the player.
                 playerHealth.TakeDamage (attackDamage);
             }
