@@ -29,9 +29,10 @@ namespace Nightmare
             anim = GetComponent<Animator>();
             playerAudio = GetComponent<AudioSource>();
             playerMovement = GetComponent<PlayerMovement>();
-            playerShooting = GetComponentInChildren<PlayerShooting>();
+            // playerShooting = GetComponentInChildren<PlayerShooting>();
+            currentHealth = startingHealth;
 
-            ResetPlayer();
+            // ResetPlayer();
         }
 
         public void ResetPlayer()
@@ -90,30 +91,42 @@ namespace Nightmare
                 Death();
             }
         }
-
         void Death()
         {
-            // Set the death flag so this function won't be called again.
             isDead = true;
 
-            // Turn off any remaining shooting effects.
-            playerShooting.DisableEffects();
+            // Animations
 
-            // Tell the animator that the player is dead.
-            anim.SetBool("IsDead", true);
-
-            // Set the audiosource to play the death clip and play it (this will stop the hurt sound from playing).
+            anim.SetTrigger("Die");
             playerAudio.clip = deathClip;
             playerAudio.Play();
-
-            // Turn off the movement and shooting scripts.
             playerMovement.enabled = false;
-            playerShooting.enabled = false;
         }
 
-        public void RestartLevel()
-        {
-            EventManager.TriggerEvent("GameOver");
-        }
+        // void Death()
+        // {
+        //     // Set the death flag so this function won't be called again.
+        //     isDead = true;
+
+        //     // Turn off any remaining shooting effects.
+        //     // playerShooting.DisableEffects();
+
+        //     // Tell the animator that the player is dead.
+        //     // anim.SetBool("IsDead", true);
+        //     anim.SetTrigger("Die");
+        //     // Set the audiosource to play the death clip and play it (this will stop the hurt sound from playing).
+            
+        //     playerAudio.clip = deathClip;
+        //     playerAudio.Play();
+
+        //     // Turn off the movement and shooting scripts.
+        //     playerMovement.enabled = false;
+        //     // playerShooting.enabled = false;
+        // }
+
+        // public void RestartLevel()
+        // {
+        //     EventManager.TriggerEvent("GameOver");
+        // }
     }
 }
