@@ -3,8 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class MainMenuManager : MonoBehaviour
 {
+    // Settings Manager Instance
+    private SettingsManager settingsManager;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        settingsManager = SettingsManager.Instance;
+        AudioListener.volume = settingsManager.GetMusicVolume();
+    }
+
     // Load Scene
     public void Play()
     {
