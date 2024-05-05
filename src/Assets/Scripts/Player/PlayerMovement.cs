@@ -6,7 +6,9 @@ namespace Nightmare
     public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
- 
+    GameObject healthOrb;
+    PlayerHealth playerHealth;
+
     public float speed = 12f;
     public float gravity = -9.81f * 4;
     public float jumpHeight = 3f;
@@ -20,7 +22,12 @@ namespace Nightmare
     bool isGrounded;
     bool isRunning;
     float actualSpeed;
- 
+    
+    void Awake()
+    {
+        healthOrb = GameObject.FindGameObjectWithTag("HealthOrb");
+        playerHealth = GetComponent<PlayerHealth>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -69,5 +76,14 @@ namespace Nightmare
  
         controller.Move(velocity * Time.deltaTime);
     }
+
+    void OnTriggerEnter (Collider other)
+    {
+        if(other.gameObject == healthOrb)
+        {
+            Debug.Log("Nabrak orb");
+            playerHealth.drinkHealthOrb();
+        }
+    } 
 }
 }
