@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:src/Assets/Import/Jar-Jar-Binks/textures.meta
 guid: 87609ae86a6802d4fb4e533b79c3b3eb
+========
+guid: 20d95d8f9383ca642881db4c08b79778
+>>>>>>>> f46c22d215c9e51948d28479073acd1ae7da0b7b:src/Assets/Import/Restore_Health_Orb/textures.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

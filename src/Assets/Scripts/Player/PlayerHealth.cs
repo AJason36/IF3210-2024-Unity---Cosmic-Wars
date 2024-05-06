@@ -102,6 +102,21 @@ namespace Nightmare
             playerMovement.enabled = false;
         }
 
+        public void DrinkHealthOrb()
+        {
+            float additionalHealth = (float)0.2 * startingHealth;
+            if(currentHealth + additionalHealth >= startingHealth)
+            {
+                Debug.Log("Health is <= 100");
+                currentHealth = startingHealth;
+            }
+            else{
+                Debug.Log("Drinking health orb");
+                currentHealth += 10;
+            }
+            
+            healthSlider.value = currentHealth;
+        }
         // void Death()
         // {
         //     // Set the death flag so this function won't be called again.

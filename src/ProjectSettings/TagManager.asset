@@ -4,7 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Pet
+  - Enemy
+  - HealthOrb
+  - SpeedOrb
+  - AttackOrb
   layers:
   - Default
   - TransparentFX
