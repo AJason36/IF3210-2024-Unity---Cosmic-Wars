@@ -120,9 +120,9 @@ public class FileDataHandler
         foreach (DirectoryInfo directory in directories)
         {
             string saveId = directory.Name;
-            string fullPath = Path.Combine(fullPath, saveId, _fileName);
+            string saveDataPath = Path.Combine(fullPath, saveId, _fileName);
 
-            if (!File.Exists(fullPath))
+            if (!File.Exists(saveDataPath))
             {
                 continue;
             }

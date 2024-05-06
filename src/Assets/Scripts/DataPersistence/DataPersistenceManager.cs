@@ -29,11 +29,6 @@ public class DataPersistenceManager : MonoBehaviour
         _fileDataHandler = new FileDataHandler(Application.persistentDataPath, _saveFileName);
     }
 
-    private void onEnable()
-    {
-        LoadGame();
-    }
-
     public void NewGame()
     {
         _gameData = new GameData();
@@ -73,12 +68,14 @@ public class DataPersistenceManager : MonoBehaviour
 
     private List<IDataPersistence> GetDataPersistenceObjects()
     {
-        if (_dataPersistenceObjects == null)
+        List<IDataPersistence> dataPersistenceObjects = new List<IDataPersistence>();
+
+        if (dataPersistenceObjects == null)
         {
-            _dataPersistenceObjects = FindObjectsOfType<MonoBehaviour>().OfType<IDataPersistence>().ToList();
+            dataPersistenceObjects = FindObjectsOfType<MonoBehaviour>().OfType<IDataPersistence>().ToList();
         }
 
-        return _dataPersistenceObjects;
+        return dataPersistenceObjects;
     }
 
     public bool HasGameData()
