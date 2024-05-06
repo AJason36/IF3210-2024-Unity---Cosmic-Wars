@@ -65,6 +65,7 @@ namespace Nightmare
         } else {
             animator.SetBool("Walking", false);
         }
+
         velocity.y += gravity * Time.deltaTime;
  
         controller.Move(velocity * Time.deltaTime);

@@ -5,6 +5,7 @@ using UnityEngine;
 public class MouseMovement : MonoBehaviour
 {
     public float mouseSensitivity = 100f;
+    public Transform follow;
  
     float xRotation = 0f;
     float YRotation = 0f;
@@ -15,7 +16,7 @@ public class MouseMovement : MonoBehaviour
       Cursor.lockState = CursorLockMode.Locked;
     }
  
-    void Update()
+    void LateUpdate()
     {
        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
@@ -29,8 +30,7 @@ public class MouseMovement : MonoBehaviour
        //control rotation around y axis (Look up and down)
        YRotation += mouseX;
  
-       //applying both rotations
-       transform.localRotation = Quaternion.Euler(xRotation, YRotation, 0f);
- 
+       follow.localRotation = Quaternion.Euler(xRotation, YRotation, 0f);
+       transform.localRotation = Quaternion.Euler(0f, YRotation * 3, 0f);
     }
 }
