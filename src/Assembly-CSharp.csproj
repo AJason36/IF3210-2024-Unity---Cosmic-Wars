@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\ChromaticAberrationComponent.cs" />
+    <Compile Include="Assets\Scripts\Pet\EnemyPetHealth.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\MotionBlurComponent.cs" />
     <Compile Include="Assets\Scripts\Pet\PetMovement.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\EyeAdaptationModel.cs" />
@@ -128,7 +129,6 @@
     <Compile Include="Assets\Scripts\Helpers\RandomParticlePoint.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\VignetteModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\ScreenSpaceReflectionComponent.cs" />
-    <Compile Include="Assets\Scripts\Pet\EnemyFlyingPetMovement.cs" />
     <Compile Include="Assets\Effects\PostRenderEffects\FaerieAnger.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballGroupAttribute.cs" />
     <Compile Include="Assets\Scripts\Managers\SettingsManager.cs" />

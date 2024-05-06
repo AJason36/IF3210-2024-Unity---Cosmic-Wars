@@ -96,7 +96,6 @@ namespace Nightmare
             isDead = true;
 
             // Animations
-
             anim.SetTrigger("Die");
             playerAudio.clip = deathClip;
             playerAudio.Play();
