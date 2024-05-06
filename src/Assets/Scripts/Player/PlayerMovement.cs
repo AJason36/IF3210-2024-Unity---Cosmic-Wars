@@ -24,6 +24,10 @@ namespace Nightmare
         bool isRunning;
         float actualSpeed;
 
+        bool isSpeedBoosted = false;
+        float speedBoostDuration = 15f;
+        float speedBoostTimer = 0f;
+
         void Awake()
         {
             playerHealth = GetComponent<PlayerHealth>();
@@ -60,11 +64,21 @@ namespace Nightmare
 
             velocity.y += gravity * Time.deltaTime;
             controller.Move(velocity * Time.deltaTime);
+
+            // Check for speed boost timer
+            if (isSpeedBoosted)
+            {
+                speedBoostTimer -= Time.deltaTime;
+                if (speedBoostTimer <= 0)
+                {
+                    speed = initialSpeed; // Reset speed to initial value
+                    isSpeedBoosted = false;
+                }
+            }
         }
 
         void OnTriggerEnter(Collider other)
         {
-            Debug.Log("Entered trigger with: " + other.gameObject.name);
             if (other.CompareTag("HealthOrb"))
             {
                 playerHealth.DrinkHealthOrb();
@@ -72,17 +86,27 @@ namespace Nightmare
             }
             else if (other.CompareTag("SpeedOrb"))
             {
-                Debug.Log("Masuk ke attack");
-                StartCoroutine(TemporarySpeedBoost()); // Start coroutine for temporary speed boost
                 Destroy(other.gameObject); // Destroy the orb after use
+                if (!isSpeedBoosted) // If speed boost is not already active, start it
+                {
+                    StartCoroutine(TemporarySpeedBoost());
+                }
+                else
+                {
+                    Debug.Log("Reeset timer");
+                    speedBoostTimer = speedBoostDuration;
+                }
             }
         }
 
         IEnumerator TemporarySpeedBoost()
         {
+            isSpeedBoosted = true;
             speed += 0.2f * initialSpeed;
-            yield return new WaitForSeconds(5f);
-            speed = initialSpeed;
+            speedBoostTimer = speedBoostDuration;
+            yield return new WaitForSeconds(speedBoostDuration);
+            speed = initialSpeed; // Reset speed to initial value after duration
+            isSpeedBoosted = false;
         }
     }
 }
