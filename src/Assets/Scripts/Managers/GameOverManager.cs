@@ -6,37 +6,60 @@ namespace Nightmare
 {
     public class GameOverManager : MonoBehaviour
     {
-        private PlayerHealth playerHealth;
+        // private PlayerHealth playerHealth;
+        // Animator anim;
+
+        // LevelManager lm;
+        // private UnityEvent listener;
+
+        // void Awake ()
+        // {
+        //     playerHealth = FindObjectOfType<PlayerHealth>();
+        //     anim = GetComponent <Animator> ();
+        //     lm = FindObjectOfType<LevelManager>();
+        //     EventManager.StartListening("GameOver", ShowGameOver);
+        // }
+
+        // void OnDestroy()
+        // {
+        //     EventManager.StopListening("GameOver", ShowGameOver);
+        // }
+
+        // void ShowGameOver()
+        // {
+        //     anim.SetBool("GameOver", true);
+        // }
+
+        // private void ResetLevel()
+        // {
+        //     ScoreManager.score = 0;
+        //     LevelManager lm = FindObjectOfType<LevelManager>();
+        //     lm.LoadInitialLevel();
+        //     anim.SetBool("GameOver", false);
+        //     playerHealth.ResetPlayer();
+        // }
+        public PlayerHealth playerHealth;
+        public float restartDelay = 5f;
+
         Animator anim;
+        float restartTimer;
 
-        LevelManager lm;
-        private UnityEvent listener;
-
-        void Awake ()
+        void Awake()
         {
-            playerHealth = FindObjectOfType<PlayerHealth>();
-            anim = GetComponent <Animator> ();
-            lm = FindObjectOfType<LevelManager>();
-            EventManager.StartListening("GameOver", ShowGameOver);
+            anim = GetComponent<Animator>();
         }
 
-        void OnDestroy()
+        void Update()
         {
-            EventManager.StopListening("GameOver", ShowGameOver);
-        }
-
-        void ShowGameOver()
-        {
-            anim.SetBool("GameOver", true);
-        }
-
-        private void ResetLevel()
-        {
-            ScoreManager.score = 0;
-            LevelManager lm = FindObjectOfType<LevelManager>();
-            lm.LoadInitialLevel();
-            anim.SetBool("GameOver", false);
-            playerHealth.ResetPlayer();
+            if(playerHealth.currentHealth <= 0)
+            {
+                anim.SetTrigger("GameOver");
+                restartTimer += Time.deltaTime;
+                if(restartTimer >= restartDelay)
+                {
+                    Application.LoadLevel(Application.loadedLevel);
+                }
+            }
         }
     }
 }
