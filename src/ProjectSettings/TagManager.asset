@@ -4,6 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Enemy
+  - HealthOrb
+  - SpeedOrb
+  - AttackOrb
   - Pet
   layers:
   - Default
