@@ -216,6 +216,7 @@
     <None Include="Assets\Skyboxes\Sky_Pano\license.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFBumpToNormal.shader" />
+    <None Include="Assets\Skyboxes\Desert\license.txt" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\Import\Health_Potion_Bottle\license.txt" />
     <None Include="Assets\Skyboxes\Green_Valley\license.txt" />
