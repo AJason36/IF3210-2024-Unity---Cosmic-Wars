@@ -13,7 +13,7 @@ public class Countdown : MonoBehaviour
    
   public int sceneToLoad;
 
-  float endOfTime = 0;
+  float endOfTime = 0f;
 
     // Update is called once per frame
     void Update()
