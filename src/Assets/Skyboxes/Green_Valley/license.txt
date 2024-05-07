@@ -1,0 +1,11 @@
+Model Information:
+* title:	Green Valley skybox
+* source:	https://sketchfab.com/3d-models/green-valley-skybox-9ec23f9cbda04095973b3c0c925f858f
+* author:	BreathlesSherpa (https://sketchfab.com/BreathlesSherpa)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Green Valley skybox" (https://sketchfab.com/3d-models/green-valley-skybox-9ec23f9cbda04095973b3c0c925f858f) by BreathlesSherpa (https://sketchfab.com/BreathlesSherpa) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -8,6 +8,7 @@ TagManager:
   - HealthOrb
   - SpeedOrb
   - AttackOrb
+  - Pet
   layers:
   - Default
   - TransparentFX
