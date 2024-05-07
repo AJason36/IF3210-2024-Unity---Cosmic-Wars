@@ -22,6 +22,7 @@ public class MainMenuManager : MonoBehaviour
     public void Play()
     {
         sceneLevelManager.loadInitialScene();
+        gameObject.SetActive(false); // Set Main Menu inactive
         Debug.Log("Move to Save Data");
         Destroy(this);
     }

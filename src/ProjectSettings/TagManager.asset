@@ -11,6 +11,8 @@ TagManager:
   - Pet
   - SceneLoader
   - Props
+  - LoadingScreen
+  - LoadingSlider
   layers:
   - Default
   - TransparentFX

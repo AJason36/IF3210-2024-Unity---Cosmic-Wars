@@ -8,15 +8,16 @@ using UnityEngine.UI;
 public class SceneLevelManager : MonoBehaviour
 {
   static SceneLevelManager instance;
-  static int lastLevelIndex = 1;
   static int currentLevelIndex = 1;
 
   // For Loading Screen
   [SerializeField] private GameObject loadingScreen;
-  [SerializeField] private GameObject currentScreen;
   [SerializeField] private Slider slider;
+  // [SerializeField] private GameObject currentScreen;
+
 
   void Awake(){
+    loadingScreen.SetActive(false);
     if (instance != null){
       Destroy (gameObject);
     } else {
@@ -52,8 +53,16 @@ public class SceneLevelManager : MonoBehaviour
 
     // Start is called before the first frame update
     public void loadScene(int sceneId){
+      Debug.Log(loadingScreen);
+      if (!loadingScreen || !slider){
+        loadingScreen = UnityEngine.GameObject.FindGameObjectWithTag("LoadingScreen");
+        if ( UnityEngine.GameObject.FindGameObjectWithTag("LoadingSlider")){
+          slider = (Slider) FindObjectOfType(typeof (Slider));
+        }
+      }
+
       loadingScreen.SetActive(true);
-      currentScreen.SetActive(false);
+      // currentScreen.SetActive(false);
       StartCoroutine(loadSceneAsync(sceneId));
     }
 
@@ -66,5 +75,8 @@ public class SceneLevelManager : MonoBehaviour
         slider.value = progress;
         yield return null;
       }
+
+      loadingScreen.SetActive(false);
+      // currentScreen.SetActive(true);
     }
 }
