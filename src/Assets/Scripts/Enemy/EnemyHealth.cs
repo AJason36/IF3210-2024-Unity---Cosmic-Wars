@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Nightmare
 {
@@ -9,10 +11,12 @@ namespace Nightmare
         public int scoreValue = 10;
         public AudioClip deathClip;
 
+        public Slider healthSlider;
+        public bool isBoss = false;
+
         int currentHealth;
         Animator anim;
         AudioSource enemyAudio;
-        ParticleSystem hitParticles;
         CapsuleCollider capsuleCollider;
         EnemyMovement enemyMovement;
 
@@ -20,7 +24,6 @@ namespace Nightmare
         {
             anim = GetComponent <Animator> ();
             enemyAudio = GetComponent <AudioSource> ();
-            hitParticles = GetComponentInChildren <ParticleSystem> ();
             capsuleCollider = GetComponent <CapsuleCollider> ();
             enemyMovement = this.GetComponent<EnemyMovement>();
         }
@@ -54,7 +57,7 @@ namespace Nightmare
             return (currentHealth <= 0f);
         }
 
-        public void TakeDamage (int amount, Vector3 hitPoint)
+        public void TakeDamage (int amount)
         {
             if (!IsDead())
             {
@@ -69,10 +72,11 @@ namespace Nightmare
                 {
                     enemyMovement.GoToPlayer();
                 }
+
+                if(isBoss){
+                    healthSlider.value = currentHealth;
+                }
             }
-                
-            hitParticles.transform.position = hitPoint;
-            hitParticles.Play();
         }
 
         void Death ()
