@@ -14,9 +14,6 @@ src/[Pp]rojectSettings/
 src/[Uu]serSettings/
 src/Assembly-CSharp.csproj
 
-# Asset meta data should only be ignored when the corresponding asset is also ignored
-src/[Aa]ssets/**/*.meta
-
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
 
