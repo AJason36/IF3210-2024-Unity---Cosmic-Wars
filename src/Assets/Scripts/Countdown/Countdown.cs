@@ -1,13 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using GLTF.Schema;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Countdown : MonoBehaviour
 {
   [SerializeField] TextMeshProUGUI countdownText;
   [SerializeField] float remainingTime;
+   
+  public int sceneToLoad;
 
   float endOfTime = 0;
 
@@ -21,6 +25,7 @@ public class Countdown : MonoBehaviour
         countdownText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
       } else {
         countdownText.text = "Time's Up!";
+        SceneManager.LoadScene(sceneToLoad);
       }
 
     }
