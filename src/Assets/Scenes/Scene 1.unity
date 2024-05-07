@@ -96198,19 +96198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd6dd1b15c224cdfae19193de6f0dae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 1769066230}
-  speed: 12
-  gravity: -39.24
-  jumpHeight: 3
-  groundCheck: {fileID: 910151485}
-  groundDistance: 0.4
-  groundMask:
-    m_Bits: 256
-  animator: {fileID: 717141836}
-  velocity: {x: 0, y: 0, z: 0}
-  isGrounded: 0
-  isRunning: 0
-  actualSpeed: 0
 --- !u!114 &1769066229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96283,6 +96270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1769066230}
   speed: 12
+  initialSpeed: 0
   gravity: -39.24
   jumpHeight: 3
   groundCheck: {fileID: 910151485}
