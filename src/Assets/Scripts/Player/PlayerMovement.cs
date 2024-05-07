@@ -108,5 +108,9 @@ namespace Nightmare
             speed = initialSpeed; // Reset speed to initial value after duration
             isSpeedBoosted = false;
         }
+
+        velocity.y += gravity * Time.deltaTime;
+ 
+        controller.Move(velocity * Time.deltaTime);
     }
 }
