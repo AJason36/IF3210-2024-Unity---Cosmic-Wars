@@ -19,7 +19,9 @@ namespace Nightmare
         {
             // Setting up the references.
             player = GameObject.FindGameObjectWithTag ("Player");
+            Debug.Log(player);
             playerHealth = player.GetComponent <PlayerHealth> ();
+            Debug.Log(playerHealth);
             // enemyHealth = GetComponent<EnemyHealth>();
             anim = GetComponent <Animator> ();
 
