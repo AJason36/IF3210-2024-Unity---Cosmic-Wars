@@ -72679,7 +72679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdownText: {fileID: 1319770250}
-  remainingTime: 30
+  remainingTime: 10
   sceneToLoad: 4
 --- !u!114 &1319770250
 MonoBehaviour:

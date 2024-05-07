@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class SceneLevelManager : MonoBehaviour
 {
   static SceneLevelManager instance;
+  static int lastLevelIndex = 1;
   static int currentLevelIndex = 1;
 
 
@@ -20,12 +21,14 @@ public class SceneLevelManager : MonoBehaviour
     }
   }
 
+  public int getCurrentLevelIndex(){
+    return currentLevelIndex;
+  }
+
     // Start is called before the first frame update
-  public void loadNextScene(){
-    int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-    currentLevelIndex = currentSceneIndex +1;
+  public void nextScene(){
+    currentLevelIndex = currentLevelIndex +1;
     Debug.Log(string.Format("Current Level Index {0}", currentLevelIndex));
-    SceneManager.LoadScene(currentLevelIndex);
   }
   // Update is called once per frame
   public void loadCurrentScene()

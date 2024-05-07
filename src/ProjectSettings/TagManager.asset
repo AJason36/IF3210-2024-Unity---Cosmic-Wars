@@ -9,6 +9,8 @@ TagManager:
   - SpeedOrb
   - AttackOrb
   - Pet
+  - SceneLoader
+  - Props
   layers:
   - Default
   - TransparentFX
