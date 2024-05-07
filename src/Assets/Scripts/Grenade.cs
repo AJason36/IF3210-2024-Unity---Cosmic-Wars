@@ -113,7 +113,7 @@ namespace Nightmare
                     EnemyHealth victim = colls[i].GetComponent<EnemyHealth>();
                     if (victim != null)
                     {
-                        victim.TakeDamage(explosiveDamage, colls[i].ClosestPoint(this.transform.position));
+                        victim.TakeDamage(explosiveDamage);
                     }
                 }
             }

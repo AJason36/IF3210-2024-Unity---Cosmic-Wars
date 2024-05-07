@@ -12,6 +12,7 @@ namespace Nightmare
         GameObject player;
         PlayerHealth playerHealth;
         EnemyHealth enemyHealth;
+        private EnemyMovement enemyMovement; 
         bool playerInRange;
         float timer;
 
@@ -19,9 +20,8 @@ namespace Nightmare
         {
             // Setting up the references.
             player = GameObject.FindGameObjectWithTag ("Player");
-            Debug.Log(player);
             playerHealth = player.GetComponent <PlayerHealth> ();
-            Debug.Log(playerHealth);
+            enemyMovement = GetComponent<EnemyMovement>();
             // enemyHealth = GetComponent<EnemyHealth>();
             anim = GetComponent <Animator> ();
 
@@ -64,8 +64,7 @@ namespace Nightmare
             // If the timer exceeds the time between attacks, the player is in range and this enemy is alive...
             if(timer >= timeBetweenAttacks && playerInRange /* && enemyHealth.CurrentHealth() > 0 */)
             {
-                Debug.Log("Calling attack function");
-                // ... attack.
+                enemyMovement.StopMovement();
                 Attack ();
             }
 
@@ -82,7 +81,6 @@ namespace Nightmare
             
             // Reset the timer.
             timer = 0f;
-            Debug.Log("Inside Attack Function");
             // If the player has health to lose...
             if(playerHealth.currentHealth > 0)
             {
@@ -90,6 +88,13 @@ namespace Nightmare
                 // ... damage the player.
                 playerHealth.TakeDamage (attackDamage);
             }
+            StartCoroutine(ResumeMovementAfterDelay(timeBetweenAttacks));  // Resume movement after attack delay
+
+        }
+        IEnumerator ResumeMovementAfterDelay(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            enemyMovement.StartMovement();  // Re-enable movement
         }
     }
 }
