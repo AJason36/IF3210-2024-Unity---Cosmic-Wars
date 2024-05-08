@@ -6,6 +6,9 @@ namespace Nightmare
 {
     public class PlayerMovement : MonoBehaviour
     {
+        // Managers
+        private StatisticsManager statisticsManager;
+
         public CharacterController controller;
         PlayerHealth playerHealth;
 
@@ -34,6 +37,11 @@ namespace Nightmare
             initialSpeed = speed; // Store the initial speed
         }
 
+        void Start()
+        {
+            statisticsManager = StatisticsManager.Instance;
+        }
+
         void Update()
         {
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -55,6 +63,10 @@ namespace Nightmare
             animator.SetBool("Walking", move.sqrMagnitude > 0.01f);
 
             controller.Move(move * actualSpeed * Time.deltaTime);
+
+            // Distance traveled
+            float distance = move.magnitude * actualSpeed * Time.deltaTime;
+            statisticsManager.RecordDistanceTraveled(distance / 1000);
 
             if (Input.GetButtonDown("Jump") && isGrounded)
             {
