@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossLogic : MonoBehaviour
+public class SpawnLogic : MonoBehaviour
 {
     public GameObject zombunnyPrefab;
     public Transform[] spawnPoints;
