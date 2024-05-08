@@ -23,8 +23,8 @@ public class PopupManager : MonoBehaviour
     private ShopCountdown shopCountdown;
     private ShopManager shopManager;
 
-
     float distanceThreshold = 4f;
+
     void Start()
     {
         sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
@@ -34,7 +34,7 @@ public class PopupManager : MonoBehaviour
         doorPos = door.position;
         exitPos = exit.position;
         savePos = save.position;
-        sceneLevelManager.nextScene();
+        // sceneLevelManager.nextScene();
     }
 
     // Update is called once per frame
@@ -65,6 +65,7 @@ public class PopupManager : MonoBehaviour
           popup.text = popupPlaceholder + "Go to the Next Scene";
           if (Input.GetKeyDown("e")){
             Debug.Log("Moving into the next scene");
+            sceneLevelManager.nextScene();
             sceneLevelManager.loadCurrentScene();
           }
         }
@@ -72,8 +73,9 @@ public class PopupManager : MonoBehaviour
           shopManager.SetShopInactive();
           popup.text = popupPlaceholder + "Exit Game";
           if (Input.GetKeyDown("e")){
-            // TO DO
             Debug.Log("Exit Clicked");
+            Cursor.lockState = CursorLockMode.None;
+            sceneLevelManager.loadScene(0);
           }
         }
         else if (saveDist < distanceThreshold){

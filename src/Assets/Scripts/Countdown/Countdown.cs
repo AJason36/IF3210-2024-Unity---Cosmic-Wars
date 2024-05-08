@@ -10,10 +10,15 @@ public class Countdown : MonoBehaviour
 {
   [SerializeField] TextMeshProUGUI countdownText;
   [SerializeField] float remainingTime;
+  private SceneLevelManager sceneLevelManager;
    
   public int sceneToLoad;
 
   float endOfTime = 0f;
+
+    void Awake(){
+        sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -25,7 +30,7 @@ public class Countdown : MonoBehaviour
         countdownText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
       } else {
         countdownText.text = "Time's Up!";
-        SceneManager.LoadScene(sceneToLoad);
+        sceneLevelManager.loadScene(sceneToLoad);
       }
 
     }

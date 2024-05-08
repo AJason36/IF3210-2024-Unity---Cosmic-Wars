@@ -33,7 +33,7 @@ public class SceneLevelManager : MonoBehaviour
 
     // Start is called before the first frame update
   public void nextScene(){
-    currentLevelIndex = currentLevelIndex +1;
+    currentLevelIndex += 1;
     Debug.Log(string.Format("Current Level Index {0}", currentLevelIndex));
   }
   // Update is called once per frame
