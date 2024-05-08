@@ -12,7 +12,7 @@ public class Quest1 : MonoBehaviour
     private SceneLevelManager sceneLevelManager;
     private QuestInfoManager questInfoManager;
     float remainingTime = 5f;
-    int nextSceneToLoad = 4; // Isolated Scene
+    int nextSceneToLoad = 5; // Isolated Scene
     float endOfTime = 0f;
     float hold = 5f;
 

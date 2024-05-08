@@ -35,7 +35,7 @@ public class LoadGameManager : MonoBehaviour
         }
 
         sceneLevelManager.setCurrentLevelIndex(dataPersistenceManager.GetGameData().level);
-        sceneLevelManager.loadScene(4);
+        sceneLevelManager.loadScene(5);
     }
 
     public void LoadSaveDataOne()
