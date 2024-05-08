@@ -17,6 +17,7 @@ TagManager:
   - Shop
   - Save
   - Quest
+  - Jendral
   layers:
   - Default
   - TransparentFX
