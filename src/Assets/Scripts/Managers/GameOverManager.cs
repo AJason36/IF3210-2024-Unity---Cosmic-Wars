@@ -40,6 +40,7 @@ namespace Nightmare
         //     playerHealth.ResetPlayer();
         // }
         public PlayerHealth playerHealth;
+        public PlayerMovement playerMovement;
         public float restartDelay = 5f;
 
         Animator anim;
@@ -56,17 +57,13 @@ namespace Nightmare
             {
                 anim.SetTrigger("GameOver");
                 restartTimer += Time.deltaTime;
-                // if(restartTimer >= restartDelay)
-                // {
-                //     Application.LoadLevel(Application.loadedLevel);
-                // }
+                if(restartTimer >= restartDelay)
+                {
+                    Cursor.lockState = CursorLockMode.None;
+                    Application.LoadLevel("GameOverScene");
+                }
             }
         }
 
-        public void BackToMainMenu()
-        {
-            Debug.Log("Back to main menu");
-            SceneManager.LoadScene("MainMenu");
-        }
     }
 }
