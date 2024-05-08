@@ -13,6 +13,7 @@ namespace Nightmare
 
         public Slider healthSlider;
         public bool isBoss = false;
+        public bool isPet = false;
 
         public int currentHealth;
         Animator anim;
@@ -43,13 +44,16 @@ namespace Nightmare
 
         void Update ()
         {
-            if (IsDead())
+            if (IsDead() && !isPet)
             {
                 transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
-                if (transform.position.y < -0.4f)
+                if (transform.position.y < -0.35f)
                 {
                     Destroy(gameObject);
                 }
+            }
+            if(isPet && IsDead()){
+                Destroy(gameObject);
             }
         }
 
@@ -62,14 +66,21 @@ namespace Nightmare
         {
             if (!IsDead())
             {
-                enemyAudio.Play();
+                if (!isPet){
+                    enemyAudio.Play();
+                }
                 currentHealth -= amount;
 
-                if (IsDead())
+                if (currentHealth <= 0)
+                {
+                    currentHealth = 0;
+                }
+
+                if (IsDead() && !isPet)
                 {
                     Death();
                 }
-                else
+                else if(!isPet)
                 {
                     enemyMovement.GoToPlayer();
                 }
@@ -83,10 +94,11 @@ namespace Nightmare
         void Death ()
         {
             // EventManager.TriggerEvent("Sound", this.transform.position);
-            anim.SetTrigger ("Dead");
-
-            enemyAudio.clip = deathClip;
-            enemyAudio.Play ();
+            if(!isPet){
+                anim.SetTrigger ("Dead");
+                enemyAudio.clip = deathClip;
+                enemyAudio.Play ();
+            }
         }
 
         public void StartSinking ()

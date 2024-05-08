@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 2432465459367045844}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.327, z: 0.345}
+  m_LocalPosition: {x: -0.002, y: 0.478, z: 0.15}
   m_LocalScale: {x: 1.3333334, y: 1.3333334, z: 1.3333334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -343,6 +343,8 @@ MonoBehaviour:
   deathClip: {fileID: 8300000, guid: 62366b8d2c37a49dca550841c741317f, type: 3}
   healthSlider: {fileID: 0}
   isBoss: 0
+  isPet: 0
+  currentHealth: 0
 --- !u!114 &1048370530089251385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,6 +363,7 @@ MonoBehaviour:
   spreadAngle: 15
   timeBetweenAttacks: 1.5
   attackDamage: 20
+  buffPercentage: 1
   plasmaExplosionEffect: {fileID: 2417008737201747336, guid: 03452a2f2fe6ef04083f30974a088a34, type: 3}
 --- !u!114 &5029005839763068832
 MonoBehaviour:

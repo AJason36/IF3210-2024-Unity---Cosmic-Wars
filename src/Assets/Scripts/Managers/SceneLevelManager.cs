@@ -19,9 +19,12 @@ public class SceneLevelManager : MonoBehaviour
   void Awake(){
     loadingScreen.SetActive(false);
     if (instance != null){
+      Debug.Log("Masuk ke instance not null");
       Destroy (gameObject);
     } else {
       instance = this;
+      
+      Debug.Log("Masuk ke instance null");
       Debug.Log("Instance Created");
       DontDestroyOnLoad(gameObject);
     }
@@ -48,6 +51,7 @@ public class SceneLevelManager : MonoBehaviour
   {      
     currentLevelIndex = 1;
     Debug.Log(string.Format("Current Level Index {0}", currentLevelIndex));
+    Cursor.lockState = CursorLockMode.Locked;
     loadScene(currentLevelIndex);
   }
 

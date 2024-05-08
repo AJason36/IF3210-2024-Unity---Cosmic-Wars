@@ -40,7 +40,6 @@ namespace Nightmare
         //     playerHealth.ResetPlayer();
         // }
         public PlayerHealth playerHealth;
-        public PlayerMovement playerMovement;
         public float restartDelay = 5f;
 
         Animator anim;

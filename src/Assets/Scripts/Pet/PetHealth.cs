@@ -18,7 +18,9 @@ public class EnemyPetHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(isDead){
+          Destroy(gameObject);
+        }
     }
 
     public void TakeDamage (int amount) {

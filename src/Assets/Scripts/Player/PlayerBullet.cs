@@ -6,6 +6,7 @@ namespace Nightmare
 {
     public class PlayerBullet : MonoBehaviour
     {
+        private StatisticsManager statisticsManager;
         public int damage = 40;
         public float speed = 10f;
         public float maxDistance = 20f;
@@ -16,6 +17,7 @@ namespace Nightmare
 
         void Start()
         {
+            statisticsManager = StatisticsManager.Instance;
             startPosition = transform.position;
             rb = GetComponent<Rigidbody>();
             // Ensure that the Rigidbody component exists
@@ -46,8 +48,9 @@ namespace Nightmare
             {
                 // Ensure the PlayerHealth component exists
                 EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
-                if (enemyHealth != null)
+                if (enemyHealth.currentHealth>0)
                 {
+                    statisticsManager.RecordSuccessfulShot();
                     if(isShotGun){
                         enemyHealth.TakeDamage(15);
                     }else{
