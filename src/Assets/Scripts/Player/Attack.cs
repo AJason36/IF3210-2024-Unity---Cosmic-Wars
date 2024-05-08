@@ -11,7 +11,7 @@ namespace Nightmare
         public float projectileSpeed = 2000f;
         public Animator animator;
         public float range = 100f;
-        public float spreadAngle = 15f; 
+        public float spreadAngle = 1f; 
 
         void Update()
         {
@@ -43,6 +43,20 @@ namespace Nightmare
                     GameObject rightProjectile = Instantiate(projectilePrefab, shootingPoint.position, Quaternion.LookRotation(rightRay.direction));
                     Vector3 rightTarget = rightRay.origin + rightRay.direction * range;
                     StartCoroutine(MoveProjectile(rightProjectile, rightTarget));
+
+                    // Shoot right
+                    Quaternion upRotation = Quaternion.Euler(spreadAngle, 0, 0); // Rotate the direction right by the spread angle
+                    Ray upRay = new Ray(shootingPoint.position, upRotation * ray.direction);
+                    GameObject upProjectile = Instantiate(projectilePrefab, shootingPoint.position, Quaternion.LookRotation(upRay.direction));
+                    Vector3 upTarget = upRay.origin + upRay.direction * range;
+                    StartCoroutine(MoveProjectile(upProjectile, upTarget));
+
+                    // Shoot right
+                    Quaternion downRotation = Quaternion.Euler(-spreadAngle, 0, 0); // Rotate the direction right by the spread angle
+                    Ray downRay = new Ray(shootingPoint.position, downRotation * ray.direction);
+                    GameObject downProjectile = Instantiate(projectilePrefab, shootingPoint.position, Quaternion.LookRotation(downRay.direction));
+                    Vector3 downTarget = downRay.origin + downRay.direction * range;
+                    StartCoroutine(MoveProjectile(downProjectile, downTarget));
                 }
             }
         }
