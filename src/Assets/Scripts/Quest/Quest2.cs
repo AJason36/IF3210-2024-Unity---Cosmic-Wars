@@ -56,7 +56,5 @@ public class Quest2 : MonoBehaviour
         }
       }
 
-
-
     }
 }

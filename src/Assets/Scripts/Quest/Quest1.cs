@@ -10,6 +10,7 @@ public class Quest1 : MonoBehaviour
     // Winning Condition
     [SerializeField] TextMeshProUGUI winningCountdown;
     private SceneLevelManager sceneLevelManager;
+    private QuestInfoManager questInfoManager;
     float remainingTime = 5f;
     int nextSceneToLoad = 4; // Isolated Scene
     float endOfTime = 0f;
@@ -17,6 +18,7 @@ public class Quest1 : MonoBehaviour
 
     void Awake(){
         sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
+        questInfoManager = UnityEngine.GameObject.FindGameObjectWithTag("Quest").GetComponent<QuestInfoManager>();
     }
 
     // Start is called before the first frame update
@@ -29,29 +31,27 @@ public class Quest1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      // TO DO
-      // Quest Mechanism
-
-      if (!isWon){
-        // Ini nanti dihapus
-        if (hold > endOfTime){
-          hold -= Time.deltaTime;
-        } else {
-          isWon = true;
+      // Start after Quest Info is Done
+      if (questInfoManager.getIsDone()){
+        if (!isWon){
+          // TO DO
+          if (hold > endOfTime){
+            hold -= Time.deltaTime;
+          } else {
+            isWon = true;
+          }
         }
-      }
-
-      if (isWon){
-        // If won, start the countdown
-        Debug.Log(remainingTime);
-        if (remainingTime > endOfTime){
-          remainingTime -= Time.deltaTime;
-          int minutes = Mathf.FloorToInt(remainingTime / 60);
-          int seconds = Mathf.FloorToInt(remainingTime % 60);
-          winningCountdown.text = string.Format("Countdown to Next Scene\n{0:00}:{1:00}", minutes, seconds);
-        } else {
-          winningCountdown.text = "Time's Up!";
-          sceneLevelManager.loadScene(nextSceneToLoad);
+        else{
+          // If won, start the countdown
+          if (remainingTime > endOfTime){
+            remainingTime -= Time.deltaTime;
+            int minutes = Mathf.FloorToInt(remainingTime / 60);
+            int seconds = Mathf.FloorToInt(remainingTime % 60);
+            winningCountdown.text = string.Format("Countdown to Next Scene\n{0:00}:{1:00}", minutes, seconds);
+          } else {
+            winningCountdown.text = "Time's Up!";
+            sceneLevelManager.loadScene(nextSceneToLoad);
+          }
         }
       }
 
