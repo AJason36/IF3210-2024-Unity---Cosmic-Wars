@@ -55,7 +55,6 @@ namespace Nightmare
             {
                 enemyMovement.StopMovement();
                 Attack ();
-                enemyMovement.StartMovement();
             }
 
             if (playerHealth.currentHealth <= 0)

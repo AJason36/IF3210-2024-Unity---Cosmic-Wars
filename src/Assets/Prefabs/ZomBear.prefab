@@ -112,15 +112,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: c236aa7ad6dcabe47abc7d2cf903ae71, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: c236aa7ad6dcabe47abc7d2cf903ae71, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: c236aa7ad6dcabe47abc7d2cf903ae71, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: c236aa7ad6dcabe47abc7d2cf903ae71, type: 3}
       propertyPath: m_LocalPosition.x
@@ -197,6 +197,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100074, guid: c236aa7ad6dcabe47abc7d2cf903ae71, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5029005839763068832}
+    - targetCorrespondingSourceObject: {fileID: 100074, guid: c236aa7ad6dcabe47abc7d2cf903ae71, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3531062692512510370}
   m_SourcePrefab: {fileID: 100100000, guid: c236aa7ad6dcabe47abc7d2cf903ae71, type: 3}
 --- !u!4 &3640727457401270790 stripped
 Transform:
@@ -354,7 +357,7 @@ MonoBehaviour:
   pelletsCount: 5
   spreadAngle: 15
   timeBetweenAttacks: 1.5
-  attackDamage: 10
+  attackDamage: 20
   plasmaExplosionEffect: {fileID: 2417008737201747336, guid: 03452a2f2fe6ef04083f30974a088a34, type: 3}
 --- !u!114 &5029005839763068832
 MonoBehaviour:
@@ -369,5 +372,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombunnyPrefab: {fileID: 7430344815960393558, guid: 053bcee65ddad2a478ca1b68f45d8e4f, type: 3}
-  spawnPoints: []
+  spawnPoints:
+  - {fileID: 3640727457401270790}
+  spawnInterval: 25
+--- !u!114 &3531062692512510370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3640727457401564710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd70cf1edfcab0e4d811990ac64d9eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbPrefabs:
+  - {fileID: 5214856012706974297, guid: 25f15fd1603aa5b448e16fe1ef0cdf56, type: 3}
+  - {fileID: 4337475147359526460, guid: b8281ee4507440a418c04d629f6de6e2, type: 3}
+  - {fileID: 5730802060650760599, guid: 4fabc906f381c914cb199f2c559f92a2, type: 3}
+  spawnPoints:
+  - {fileID: 3640727457401270790}
   spawnInterval: 25

@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 1928209043217519027}
   - component: {fileID: 4990989009250328375}
   - component: {fileID: 9011646750432553966}
+  - component: {fileID: 5004210237883648950}
   m_Layer: 3
   m_Name: Zombunny
   m_TagString: Enemy
@@ -406,3 +407,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5004210237883648950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7430344815960393558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd70cf1edfcab0e4d811990ac64d9eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbPrefabs:
+  - {fileID: 5214856012706974297, guid: 25f15fd1603aa5b448e16fe1ef0cdf56, type: 3}
+  - {fileID: 4337475147359526460, guid: b8281ee4507440a418c04d629f6de6e2, type: 3}
+  - {fileID: 5730802060650760599, guid: 4fabc906f381c914cb199f2c559f92a2, type: 3}
+  spawnPoints:
+  - {fileID: 7430344815960365942}
+  spawnInterval: 25
