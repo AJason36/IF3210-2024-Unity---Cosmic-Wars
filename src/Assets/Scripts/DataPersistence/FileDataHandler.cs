@@ -11,8 +11,8 @@ public class FileDataHandler
 
     public FileDataHandler(string filePath, string fileName)
     {
-        this._filePath = filePath;
-        this._fileName = fileName;
+        _filePath = filePath;
+        _fileName = fileName;
     }
 
     public GameData Load(string saveId)
@@ -23,7 +23,7 @@ public class FileDataHandler
         }
 
         // Ensure compatibility with different separators
-        string fullPath = Path.Combine(_filePath, _fileName);
+        string fullPath = Path.Combine(_filePath, saveId, _fileName);
 
         GameData data = null;
         if (File.Exists(fullPath))
@@ -61,7 +61,7 @@ public class FileDataHandler
         }
 
         // Ensure compatibility with different separators
-        string fullPath = Path.Combine(_filePath, _fileName);
+        string fullPath = Path.Combine(_filePath, saveId, _fileName);
 
         try
         {
@@ -94,7 +94,7 @@ public class FileDataHandler
         }
 
         // Ensure compatibility with different separators
-        string fullPath = Path.Combine(_filePath, _fileName);
+        string fullPath = Path.Combine(_filePath, saveId, _fileName);
 
         if (File.Exists(fullPath))
         {
@@ -113,14 +113,11 @@ public class FileDataHandler
     {
         Dictionary<string, GameData> saves = new Dictionary<string, GameData>();
 
-        // Ensure compatibility with different separators
-        string fullPath = Path.Combine(_filePath, _fileName);
-
         IEnumerable<DirectoryInfo> directories = new DirectoryInfo(_filePath).EnumerateDirectories();
         foreach (DirectoryInfo directory in directories)
         {
             string saveId = directory.Name;
-            string saveDataPath = Path.Combine(fullPath, saveId, _fileName);
+            string saveDataPath = Path.Combine(_filePath, saveId, _fileName);
 
             if (!File.Exists(saveDataPath))
             {

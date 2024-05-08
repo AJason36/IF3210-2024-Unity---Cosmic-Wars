@@ -5,6 +5,8 @@ namespace Nightmare
 {
     public class Attack : MonoBehaviour
     {
+        private StatisticsManager statisticsManager;
+
         public Camera playerCamera;
         public GameObject projectilePrefab;
         public Transform shootingPoint; // A transform from where projectiles are shot
@@ -15,6 +17,8 @@ namespace Nightmare
 
         void Update()
         {
+            statisticsManager.RecordShot();
+
             if (Input.GetMouseButtonDown(0))
             {
                 int weapon = animator.GetInteger("Weapon");

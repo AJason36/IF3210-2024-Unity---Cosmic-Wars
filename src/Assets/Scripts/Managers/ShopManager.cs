@@ -17,6 +17,17 @@ public class ShopManager : MonoBehaviour
     // 1 for BB8
     private int itemID;
 
+    public void SetShopActive(){
+      shopCanvas.gameObject.SetActive(true);
+      Cursor.lockState = CursorLockMode.None;
+      // SetCanvasInteractable(true);
+    }
+
+    public void SetShopInactive(){
+      shopCanvas.gameObject.SetActive(false);
+      Cursor.lockState = CursorLockMode.Locked;
+    }
+
     public void OpenShopPopup()
     {
         shopPopup.gameObject.SetActive(true);
