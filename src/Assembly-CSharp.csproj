@@ -74,6 +74,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabImporterWindow.cs" />
     <Compile Include="Assets\Scripts\Helpers\RandomAnimationPoint.cs" />
+    <Compile Include="Assets\Scripts\Managers\LoadGameMenuManager.cs" />
     <Compile Include="Assets\Scripts\Managers\AsyncLoad.cs" />
     <Compile Include="Assets\FaerieHappy.cs" />
     <Compile Include="Assets\Scripts\Managers\PoolManager.cs" />
