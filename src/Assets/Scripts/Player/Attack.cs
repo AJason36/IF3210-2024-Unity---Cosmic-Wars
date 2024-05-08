@@ -28,7 +28,7 @@ namespace Nightmare
                 animator.SetTrigger("Fight");
                 if (weapon == 1) {
                     statisticsManager.RecordShot();
-                    Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, 0));
+                    Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, 2 * Screen.height / 3));
                     GameObject projectile = Instantiate(projectilePrefab, shootingPoint.position, Quaternion.LookRotation(ray.direction));
                     PlayerBullet bulletComponent = projectile.GetComponent<PlayerBullet>();
                     if (bulletComponent != null)
