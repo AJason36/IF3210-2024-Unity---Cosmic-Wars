@@ -6,15 +6,9 @@ using UnityEngine.UI;
 
 public class LoadGameManager : MonoBehaviour
 {
-    // Data Persistence Manager
+    // Managers
     private DataPersistenceManager dataPersistenceManager;
-
-    // Canvas
-    public Canvas menuCanvas;
-
-    // Popup Objects
-    public Canvas loadPopup;
-    public Image darkOverlay;
+    private SceneLevelManager sceneLevelManager;
 
     // Save Buttons
     public Button loadOneButton;
@@ -24,32 +18,7 @@ public class LoadGameManager : MonoBehaviour
     // Save ID
     private int saveId;
 
-    public void OpenLoadPopup()
-    {
-        loadPopup.gameObject.SetActive(true);
-        darkOverlay.gameObject.SetActive(true);
-        SetCanvasInteractable(false);
-    }
-
-    public void CloseSavePopup()
-    {
-        loadPopup.gameObject.SetActive(false);
-        darkOverlay.gameObject.SetActive(false);
-        SetCanvasInteractable(true);
-    }
-
-    private void SetCanvasInteractable(bool interactable)
-    {
-        CanvasGroup canvasGroup = menuCanvas.GetComponent<CanvasGroup>();
-
-        if (canvasGroup != null)
-        {
-            canvasGroup.interactable = interactable;
-            canvasGroup.blocksRaycasts = interactable;
-        }
-    }
-
-    public void SaveGame()
+    private void LoadGame()
     {
         if (saveId == -1)
         {
@@ -57,15 +26,34 @@ public class LoadGameManager : MonoBehaviour
             return;
         }
 
-        dataPersistenceManager.SaveGame(saveId.ToString());
-        CloseSavePopup();
+        dataPersistenceManager.LoadGame(saveId.ToString());
+
+        if (dataPersistenceManager.GetGameData() == null)
+        {
+            Debug.LogError("Save Data not found.");
+            return;
+        }
+
+        sceneLevelManager.setCurrentLevelIndex(dataPersistenceManager.GetGameData().level);
+        sceneLevelManager.loadScene(4);
     }
 
-    // TODO: Implement Load Save Data
-
-    public void CancelSave()
+    public void LoadSaveDataOne()
     {
-        CloseSavePopup();
+        saveId = 1;
+        LoadGame();
+    }
+
+    public void LoadSaveDataTwo()
+    {
+        saveId = 2;
+        LoadGame();
+    }
+
+    public void LoadSaveDataThree()
+    {
+        saveId = 3;
+        LoadGame();
     }
 
     private void LoadSaveDataMenu()
@@ -118,6 +106,8 @@ public class LoadGameManager : MonoBehaviour
                     child.gameObject.SetActive(false);
                 }
             }
+
+            button.interactable = false;
         }
         else
         {
@@ -156,13 +146,9 @@ public class LoadGameManager : MonoBehaviour
     void Start()
     {
         dataPersistenceManager = DataPersistenceManager.Instance;
-
-        LoadSaveDataMenu();
-
-        // Just in case
-        loadPopup.gameObject.SetActive(false);
-        darkOverlay.gameObject.SetActive(false);
+        sceneLevelManager = SceneLevelManager.instance;
 
         saveId = -1;
+        LoadSaveDataMenu();
     }
 }

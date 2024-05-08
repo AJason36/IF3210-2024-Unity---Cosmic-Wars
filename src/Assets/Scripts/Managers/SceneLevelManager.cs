@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class SceneLevelManager : MonoBehaviour
 {
-  static SceneLevelManager instance;
+  public static SceneLevelManager instance;
   static int currentLevelIndex = 1;
 
   // For Loading Screen
@@ -32,6 +32,10 @@ public class SceneLevelManager : MonoBehaviour
 
   public int getCurrentLevelIndex(){
     return currentLevelIndex;
+  }
+
+  public void setCurrentLevelIndex(int levelIndex) {
+    currentLevelIndex = levelIndex;
   }
 
     // Start is called before the first frame update
