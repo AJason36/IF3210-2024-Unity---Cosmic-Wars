@@ -6,14 +6,13 @@ using TMPro;
 public class GameOverCount : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI countdownText;
-    SceneLevelManager sceneLevelManager;
-    public float countDown;
+    public SceneLevelManager sceneLevelManager;
+    private float countDown = 10f;
     private float timer;
     private bool hasSceneLoaded;
     // Start is called before the first frame update
     void Start()
     {
-        sceneLevelManager = GetComponent<SceneLevelManager>();
         timer = countDown;
         hasSceneLoaded = false;
     }

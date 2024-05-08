@@ -8,7 +8,7 @@ public class PopupManager : MonoBehaviour
 {
     public Transform shop;
     public Transform door;
-    public Transform load;
+    public Transform exit;
     public Transform save;
 
     public TextMeshProUGUI popup;
@@ -17,18 +17,22 @@ public class PopupManager : MonoBehaviour
 
     UnityEngine.Vector3 shopPos;
     UnityEngine.Vector3 doorPos;
-    UnityEngine.Vector3 loadPos;
+    UnityEngine.Vector3 exitPos;
     UnityEngine.Vector3 savePos;
     private SceneLevelManager sceneLevelManager;
+    private ShopCountdown shopCountdown;
+    private ShopManager shopManager;
 
 
     float distanceThreshold = 4f;
     void Start()
     {
         sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
+        shopCountdown = UnityEngine.GameObject.FindGameObjectWithTag("CanvasProps").GetComponent<ShopCountdown>();
+        shopManager = UnityEngine.GameObject.FindGameObjectWithTag("Shop").GetComponent<ShopManager>();
         shopPos = shop.position;
         doorPos = door.position;
-        loadPos = load.position;
+        exitPos = exit.position;
         savePos = save.position;
         sceneLevelManager.nextScene();
     }
@@ -40,30 +44,45 @@ public class PopupManager : MonoBehaviour
 
         float shopDist = UnityEngine.Vector3.Distance(playerPos, shopPos);
         float doorDist = UnityEngine.Vector3.Distance(playerPos, doorPos);
-        float loadDist = UnityEngine.Vector3.Distance(playerPos, loadPos);
+        float exitDist = UnityEngine.Vector3.Distance(playerPos, exitPos);
         float saveDist = UnityEngine.Vector3.Distance(playerPos, savePos);
 
         if (shopDist < distanceThreshold){
-          // TO DO
-          Debug.Log("Shop Clicked");
-          popup.text = popupPlaceholder + "Open Shop";
+          if (shopCountdown.GetRemainingTime() >= 0){
+            popup.text = popupPlaceholder + "Open Shop";
+            if (Input.GetKeyDown("e")){
+              Debug.Log("Opening Shop");
+              shopManager.SetShopActive();
+            }
+          } else {
+            popup.text = "Shop is inaccessible!";
+            shopManager.SetShopInactive();
+          }
+
         }
         else if (doorDist < distanceThreshold){
+          shopManager.SetShopInactive();
           popup.text = popupPlaceholder + "Go to the Next Scene";
           if (Input.GetKeyDown("e")){
             Debug.Log("Moving into the next scene");
             sceneLevelManager.loadCurrentScene();
           }
         }
-        else if (loadDist < distanceThreshold){
-          // TO DO
-          Debug.Log("Load Clicked");
-          popup.text = popupPlaceholder + "Load Game";
+        else if (exitDist < distanceThreshold){
+          shopManager.SetShopInactive();
+          popup.text = popupPlaceholder + "Exit Game";
+          if (Input.GetKeyDown("e")){
+            // TO DO
+            Debug.Log("Exit Clicked");
+          }
         }
         else if (saveDist < distanceThreshold){
-          // TO DO
-          Debug.Log("Save Clicked");
+          shopManager.SetShopInactive();
           popup.text = popupPlaceholder + "Save Game";
+          if (Input.GetKeyDown("e")){
+            // TO DO
+            Debug.Log("Save Clicked");
+          }
         } 
         else {
           popup.text = "";

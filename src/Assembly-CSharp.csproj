@@ -106,6 +106,7 @@
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabImporter.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
+    <Compile Include="Assets\Scripts\Countdown\ShopCountdown.cs" />
     <Compile Include="Assets\Scripts\Enemy\Shotgun.cs" />
     <Compile Include="Assets\TriggerTest.cs" />
     <Compile Include="Assets\Scripts\Managers\SettingsMenuManager.cs" />
