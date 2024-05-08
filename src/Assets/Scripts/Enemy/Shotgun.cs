@@ -2,9 +2,9 @@ using UnityEngine;
 
 namespace Nightmare {
     public class Shotgun : MonoBehaviour {
-        public int damage = 1; // Default damage
-        public float speed = 10f; // Speed of the projectile
-        public float maxDistance = 20f; // Maximum distance a pellet can travel
+        public int damage = 1;
+        public float speed = 10f; 
+        public float maxDistance = 20f; 
 
         private Vector3 startPosition;
         private Rigidbody rb;

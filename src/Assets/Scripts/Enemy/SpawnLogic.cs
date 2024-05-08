@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Nightmare;
 using UnityEngine;
 
 public class SpawnLogic : MonoBehaviour
@@ -8,16 +9,21 @@ public class SpawnLogic : MonoBehaviour
     public Transform[] spawnPoints;
     public float spawnInterval = 25f;
     private float timer;
+    private EnemyHealth enemyHealth;
 
+    void Awake()
+        {
+            enemyHealth = GetComponent<EnemyHealth>();
+        }
     void Start()
     {
-        timer = spawnInterval; // Start the timer
+        timer = spawnInterval; 
     }
 
     void Update()
     {
         timer -= Time.deltaTime;
-        if (timer <= 0)
+        if (timer <= 0 && !enemyHealth.IsDead())
         {
             SpawnZombunny();
             timer = spawnInterval;

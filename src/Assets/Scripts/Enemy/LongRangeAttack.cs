@@ -51,7 +51,7 @@ namespace Nightmare
         void Update()
         {
             timer += Time.deltaTime;
-            if (timer >= timeBetweenAttacks && playerInRange)
+            if (timer >= timeBetweenAttacks && playerInRange && !enemyHealth.IsDead())
             {
                 enemyMovement.StopMovement();
                 Attack ();

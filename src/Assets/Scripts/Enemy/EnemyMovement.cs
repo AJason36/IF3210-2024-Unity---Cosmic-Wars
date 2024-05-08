@@ -61,7 +61,7 @@ namespace Nightmare
             //         nav.enabled = false;
             //     }
             // }
-            if(nav.enabled){
+            if(nav.enabled && !enemyHealth.IsDead()){
                 nav.SetDestination(player.position);
             }
         }

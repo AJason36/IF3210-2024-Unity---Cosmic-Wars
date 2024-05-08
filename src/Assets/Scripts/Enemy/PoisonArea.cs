@@ -12,6 +12,7 @@ namespace Nightmare{
 
         private GameObject player;
         private PlayerHealth playerHealth;
+        private EnemyHealth enemyHealth;
         private PlayerMovement playerMovement;
         private Animator anim;
         private bool playerInRange = false;
@@ -23,7 +24,8 @@ namespace Nightmare{
             player = GameObject.FindGameObjectWithTag("Player");
             playerHealth = player.GetComponent<PlayerHealth>();
             playerMovement = player.GetComponent<PlayerMovement>();
-            anim = GetComponentInParent<Animator>(); // Assuming the Animator is on the parent object of this script
+            anim = GetComponentInParent<Animator>();
+            enemyHealth = GetComponentInParent<EnemyHealth>();
         }
 
         void OnTriggerEnter(Collider other)
@@ -46,7 +48,7 @@ namespace Nightmare{
 
         void Update()
         {
-            if (playerInRange)
+            if (playerInRange && !enemyHealth.IsDead())
             {
                 timer += Time.deltaTime;
 
