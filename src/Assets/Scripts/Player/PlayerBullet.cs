@@ -44,6 +44,7 @@ namespace Nightmare
 
         void OnTriggerEnter(Collider other)
         {
+            Debug.Log("Ini damage bullet : " +  damage);
             if (other.gameObject.CompareTag("Enemy"))
             {
                 // Ensure the PlayerHealth component exists

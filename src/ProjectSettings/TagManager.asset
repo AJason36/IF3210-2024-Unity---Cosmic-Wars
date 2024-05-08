@@ -16,6 +16,7 @@ TagManager:
   - CanvasProps
   - Shop
   - Save
+  - Quest
   layers:
   - Default
   - TransparentFX
