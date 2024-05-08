@@ -24,7 +24,7 @@ public class Loading : MonoBehaviour
       while (!op.isDone){
         float progress = Mathf.Clamp01(op.progress/0.9f);
         loadingBarFill.fillAmount = progress;
-        yield return null;
+        yield return new WaitForSeconds(0.5f);
       }
     }
 }
