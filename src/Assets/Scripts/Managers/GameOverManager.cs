@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 namespace Nightmare
 {
@@ -55,11 +56,17 @@ namespace Nightmare
             {
                 anim.SetTrigger("GameOver");
                 restartTimer += Time.deltaTime;
-                if(restartTimer >= restartDelay)
-                {
-                    Application.LoadLevel(Application.loadedLevel);
-                }
+                // if(restartTimer >= restartDelay)
+                // {
+                //     Application.LoadLevel(Application.loadedLevel);
+                // }
             }
+        }
+
+        public void BackToMainMenu()
+        {
+            Debug.Log("Back to main menu");
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }

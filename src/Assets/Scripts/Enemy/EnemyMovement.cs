@@ -61,7 +61,18 @@ namespace Nightmare
             //         nav.enabled = false;
             //     }
             // }
+            if(nav.enabled){
+                nav.SetDestination(player.position);
+            }
+        }
+
+        public void StartMovement(){
+            nav.enabled = true;
             nav.SetDestination(player.position);
+        }
+
+        public void StopMovement(){
+            nav.enabled = false;
         }
 
         void OnDestroy()
