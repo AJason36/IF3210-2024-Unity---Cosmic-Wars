@@ -15,6 +15,7 @@ TagManager:
   - LoadingSlider
   - CanvasProps
   - Shop
+  - Save
   layers:
   - Default
   - TransparentFX

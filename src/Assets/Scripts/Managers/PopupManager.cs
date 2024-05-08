@@ -23,6 +23,8 @@ public class PopupManager : MonoBehaviour
     private ShopCountdown shopCountdown;
     private ShopManager shopManager;
 
+    private SaveGameManager saveGameManager;
+
     float distanceThreshold = 4f;
 
     void Start()
@@ -30,11 +32,11 @@ public class PopupManager : MonoBehaviour
         sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
         shopCountdown = UnityEngine.GameObject.FindGameObjectWithTag("CanvasProps").GetComponent<ShopCountdown>();
         shopManager = UnityEngine.GameObject.FindGameObjectWithTag("Shop").GetComponent<ShopManager>();
+        saveGameManager = UnityEngine.GameObject.FindGameObjectWithTag("Save").GetComponent<SaveGameManager>();
         shopPos = shop.position;
         doorPos = door.position;
         exitPos = exit.position;
         savePos = save.position;
-        // sceneLevelManager.nextScene();
     }
 
     // Update is called once per frame
@@ -61,7 +63,6 @@ public class PopupManager : MonoBehaviour
 
         }
         else if (doorDist < distanceThreshold){
-          shopManager.SetShopInactive();
           popup.text = popupPlaceholder + "Go to the Next Scene";
           if (Input.GetKeyDown("e")){
             Debug.Log("Moving into the next scene");
@@ -70,20 +71,17 @@ public class PopupManager : MonoBehaviour
           }
         }
         else if (exitDist < distanceThreshold){
-          shopManager.SetShopInactive();
           popup.text = popupPlaceholder + "Exit Game";
           if (Input.GetKeyDown("e")){
             Debug.Log("Exit Clicked");
-            Cursor.lockState = CursorLockMode.None;
             sceneLevelManager.loadScene(0);
           }
         }
         else if (saveDist < distanceThreshold){
-          shopManager.SetShopInactive();
           popup.text = popupPlaceholder + "Save Game";
           if (Input.GetKeyDown("e")){
-            // TO DO
             Debug.Log("Save Clicked");
+            saveGameManager.SetSaveOpen();
           }
         } 
         else {

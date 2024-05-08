@@ -24,6 +24,16 @@ public class SaveGameManager : MonoBehaviour
     // Save ID
     private int saveId;
 
+    public void SetSaveOpen(){
+      menuCanvas.gameObject.SetActive(true);
+      Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void SetSaveClose(){
+      menuCanvas.gameObject.SetActive(false);
+      Cursor.lockState = CursorLockMode.Locked;
+    }
+
     public void OpenSavePopup()
     {
         savePopup.gameObject.SetActive(true);
