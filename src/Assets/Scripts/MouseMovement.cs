@@ -31,6 +31,6 @@ public class MouseMovement : MonoBehaviour
        YRotation += mouseX;
  
        follow.localRotation = Quaternion.Euler(xRotation, YRotation, 0f);
-       transform.localRotation = Quaternion.Euler(0f, YRotation * 3, 0f);
+       transform.localRotation = Quaternion.Euler(0f, YRotation * 5, 0f);
     }
 }
