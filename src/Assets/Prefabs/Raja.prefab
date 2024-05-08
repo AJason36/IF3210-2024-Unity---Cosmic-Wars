@@ -235,7 +235,7 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: ff05a5c9b1441894cb163470976d30d6, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 2cd6bf77cac24414c8e134b0c0e7aed3, type: 2}
+      objectReference: {fileID: 22100000, guid: 19b1058b58d5e314bb115a937b9bcf48, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -509,6 +509,8 @@ MonoBehaviour:
   deathClip: {fileID: 8300000, guid: 8c615fd0429f34edf85539d70279360d, type: 3}
   healthSlider: {fileID: 0}
   isBoss: 0
+  isPet: 0
+  currentHealth: 0
 --- !u!114 &5490918330368551014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,6 +529,7 @@ MonoBehaviour:
   spreadAngle: 15
   timeBetweenAttacks: 1.5
   attackDamage: 50
+  buffPercentage: 1
   plasmaExplosionEffect: {fileID: 2417008737201747336, guid: 03452a2f2fe6ef04083f30974a088a34, type: 3}
 --- !u!114 &4299508124343741041
 MonoBehaviour:
