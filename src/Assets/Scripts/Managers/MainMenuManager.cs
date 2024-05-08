@@ -6,25 +6,33 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
-    // Settings Manager Instance
+    // Manager Instances
     private SceneLevelManager sceneLevelManager;
     private SettingsManager settingsManager;
+    private StatisticsManager statisticsManager;
+    private DataPersistenceManager dataPersistenceManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
+        sceneLevelManager = GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
         settingsManager = SettingsManager.Instance;
+        dataPersistenceManager = DataPersistenceManager.Instance;
+        statisticsManager = StatisticsManager.Instance;
+
         AudioListener.volume = settingsManager.GetMusicVolume();
     }
 
     // Load Scene
     public void Play()
     {
+        dataPersistenceManager.NewGame();
+        dataPersistenceManager.GetGameData().difficultyId = settingsManager.GetDifficulty();
+        dataPersistenceManager.GetGameData().username = settingsManager.GetUsername();
+
+        statisticsManager.RecordGamePlayed();
+
         sceneLevelManager.loadInitialScene();
-        gameObject.SetActive(false); // Set Main Menu inactive
-        Debug.Log("Move to Save Data");
-        Destroy(this);
     }
 
     // Quit Game
