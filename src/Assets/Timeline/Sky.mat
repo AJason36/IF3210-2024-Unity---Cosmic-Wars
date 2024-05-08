@@ -3,19 +3,16 @@
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
-<<<<<<< HEAD
   m_ObjectHideFlags: 0
-=======
-  m_ObjectHideFlags: 32
->>>>>>> c61d3391e572e9cea61594209b46879ab1492152
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MeshesstarWarsTatooineStarportbase11Mtl_0
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: Sky
+  m_Shader: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _SUNDISK_HIGH_QUALITY
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -65,16 +62,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AtmosphereThickness: 0.77
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _Exposure: 0.58
     - _GlossMapScale: 1
-<<<<<<< HEAD
-    - _Glossiness: 0.4
-=======
-    - _Glossiness: 0.39999998
->>>>>>> c61d3391e572e9cea61594209b46879ab1492152
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
@@ -83,13 +78,14 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _SunDisk: 2
+    - _SunSize: 0
+    - _SunSizeConvergence: 9.85
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-<<<<<<< HEAD
-    - _Color: {r: 0.55345905, g: 0.39507923, b: 0.39507923, a: 1}
-=======
     - _Color: {r: 1, g: 1, b: 1, a: 1}
->>>>>>> c61d3391e572e9cea61594209b46879ab1492152
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _GroundColor: {r: 0.5254902, g: 0.36078432, b: 0.24313727, a: 1}
+    - _SkyTint: {r: 1, g: 1, b: 0, a: 1}
   m_BuildTextureStacks: []

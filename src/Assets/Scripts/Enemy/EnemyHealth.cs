@@ -14,7 +14,7 @@ namespace Nightmare
         public Slider healthSlider;
         public bool isBoss = false;
 
-        int currentHealth;
+        public int currentHealth;
         Animator anim;
         AudioSource enemyAudio;
         CapsuleCollider capsuleCollider;
@@ -26,6 +26,7 @@ namespace Nightmare
             enemyAudio = GetComponent <AudioSource> ();
             capsuleCollider = GetComponent <CapsuleCollider> ();
             enemyMovement = this.GetComponent<EnemyMovement>();
+            currentHealth = startingHealth;
         }
 
         void OnEnable()
@@ -45,9 +46,9 @@ namespace Nightmare
             if (IsDead())
             {
                 transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
-                if (transform.position.y < -10f)
+                if (transform.position.y < -0.4f)
                 {
-                    Destroy(this.gameObject);
+                    Destroy(gameObject);
                 }
             }
         }
@@ -81,7 +82,7 @@ namespace Nightmare
 
         void Death ()
         {
-            EventManager.TriggerEvent("Sound", this.transform.position);
+            // EventManager.TriggerEvent("Sound", this.transform.position);
             anim.SetTrigger ("Dead");
 
             enemyAudio.clip = deathClip;
