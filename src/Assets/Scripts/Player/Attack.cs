@@ -6,7 +6,9 @@ namespace Nightmare
     public class Attack : MonoBehaviour
     {
         private StatisticsManager statisticsManager;
-
+        private int totalAttackOrbs;
+        private int damage;
+        private int initialDamage;
         public Camera playerCamera;
         public GameObject projectilePrefab;
         public Transform shootingPoint; // A transform from where projectiles are shot
@@ -14,10 +16,13 @@ namespace Nightmare
         public Animator animator;
         public float range = 100f;
         public float spreadAngle = 0.5f; 
-
+        
         void Start()
         {
             statisticsManager = StatisticsManager.Instance;
+            totalAttackOrbs = 0;
+            initialDamage = 40;
+            damage = initialDamage; 
         }
 
         void Update()
@@ -31,8 +36,10 @@ namespace Nightmare
                     Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, 0));
                     GameObject projectile = Instantiate(projectilePrefab, shootingPoint.position, Quaternion.LookRotation(ray.direction));
                     PlayerBullet bulletComponent = projectile.GetComponent<PlayerBullet>();
+                    
                     if (bulletComponent != null)
                     {
+                        bulletComponent.damage = damage; 
                         bulletComponent.isShotGun = false;
                     }
                     else
@@ -45,8 +52,10 @@ namespace Nightmare
                     Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
                     GameObject straightProjectile = Instantiate(projectilePrefab, shootingPoint.position, Quaternion.LookRotation(ray.direction));
                     PlayerBullet bulletComponent1 = straightProjectile.GetComponent<PlayerBullet>();
+                    
                     if (bulletComponent1 != null)
                     {
+                        bulletComponent1.damage = damage;
                         bulletComponent1.isShotGun = true;
                     }
                     Vector3 straightTarget = ray.origin + ray.direction * range;
@@ -57,8 +66,10 @@ namespace Nightmare
                     Ray leftRay = new Ray(shootingPoint.position, leftRotation * ray.direction);
                     GameObject leftProjectile = Instantiate(projectilePrefab, shootingPoint.position, Quaternion.LookRotation(leftRay.direction));
                     PlayerBullet bulletComponent2 = leftProjectile.GetComponent<PlayerBullet>();
+                    
                     if (bulletComponent2 != null)
                     {
+                        bulletComponent2.damage = damage;
                         bulletComponent2.isShotGun = true;
                     }
                     Vector3 leftTarget = leftRay.origin + leftRay.direction * range;
@@ -69,8 +80,10 @@ namespace Nightmare
                     Ray rightRay = new Ray(shootingPoint.position, rightRotation * ray.direction);
                     GameObject rightProjectile = Instantiate(projectilePrefab, shootingPoint.position, Quaternion.LookRotation(rightRay.direction));
                     PlayerBullet bulletComponent3 = rightProjectile.GetComponent<PlayerBullet>();
+                    bulletComponent3.damage = damage;
                     if (bulletComponent3 != null)
                     {
+                        bulletComponent3.damage = damage;
                         bulletComponent3.isShotGun = true;
                     }
                     Vector3 rightTarget = rightRay.origin + rightRay.direction * range;
@@ -83,6 +96,7 @@ namespace Nightmare
                     PlayerBullet bulletComponent4 = upProjectile.GetComponent<PlayerBullet>();
                     if (bulletComponent4 != null)
                     {
+                        bulletComponent4.damage = damage;
                         bulletComponent4.isShotGun = true;
                     }
                     Vector3 upTarget = upRay.origin + upRay.direction * range;
@@ -95,6 +109,7 @@ namespace Nightmare
                     PlayerBullet bulletComponent5 = downProjectile.GetComponent<PlayerBullet>();
                     if (bulletComponent5 != null)
                     {
+                        bulletComponent5.damage = damage;
                         bulletComponent5.isShotGun = true;
                     }
                     Vector3 downTarget = downRay.origin + downRay.direction * range;
@@ -111,6 +126,17 @@ namespace Nightmare
 
             if (projectile != null) {
                 Destroy(projectile);
+            }
+        }
+
+        public void DrinkAttackOrbs()
+        {
+            if(totalAttackOrbs < 15)
+            {
+                Debug.Log("Ini damage sebelom increase : " + damage);
+                totalAttackOrbs += 1;
+                damage += (int)(0.1*initialDamage);
+                Debug.Log("Ini damage setelah increase" + damage);
             }
         }
     }

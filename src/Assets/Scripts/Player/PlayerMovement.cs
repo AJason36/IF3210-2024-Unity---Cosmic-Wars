@@ -8,6 +8,7 @@ namespace Nightmare
     {
         public CharacterController controller;
         PlayerHealth playerHealth;
+        Attack playerAttack;
 
         public float speed = 12f;
         public float initialSpeed;
@@ -31,6 +32,7 @@ namespace Nightmare
         void Awake()
         {
             playerHealth = GetComponent<PlayerHealth>();
+            playerAttack = GetComponent<Attack>();
             initialSpeed = speed; // Store the initial speed
         }
 
@@ -96,6 +98,10 @@ namespace Nightmare
                     Debug.Log("Reeset timer");
                     speedBoostTimer = speedBoostDuration;
                 }
+            }else if(other.CompareTag("AttackOrb"))
+            {
+                Destroy(other.gameObject);
+                playerAttack.DrinkAttackOrbs();
             }
         }
 
