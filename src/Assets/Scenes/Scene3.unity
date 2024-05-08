@@ -525,9 +525,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4902969302447012967, guid: d53549120f40a2c4689f55778f079460, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5075379315033714730, guid: d53549120f40a2c4689f55778f079460, type: 3}
       propertyPath: m_Name
       value: Hellephant 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075379315033714730, guid: d53549120f40a2c4689f55778f079460, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5075379315033811978, guid: d53549120f40a2c4689f55778f079460, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1669,6 +1677,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1112127195951481959, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1112127195951481959, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
       propertyPath: playerCamera
       value: 

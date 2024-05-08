@@ -21,6 +21,7 @@ public class PopupManager : MonoBehaviour
     UnityEngine.Vector3 savePos;
     private SceneLevelManager sceneLevelManager;
     private ShopCountdown shopCountdown;
+    private ShopManager shopManager;
 
 
     float distanceThreshold = 4f;
@@ -28,6 +29,7 @@ public class PopupManager : MonoBehaviour
     {
         sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
         shopCountdown = UnityEngine.GameObject.FindGameObjectWithTag("CanvasProps").GetComponent<ShopCountdown>();
+        shopManager = UnityEngine.GameObject.FindGameObjectWithTag("Shop").GetComponent<ShopManager>();
         shopPos = shop.position;
         doorPos = door.position;
         exitPos = exit.position;
@@ -49,15 +51,17 @@ public class PopupManager : MonoBehaviour
           if (shopCountdown.GetRemainingTime() >= 0){
             popup.text = popupPlaceholder + "Open Shop";
             if (Input.GetKeyDown("e")){
-              // TO DO
               Debug.Log("Opening Shop");
+              shopManager.SetShopActive();
             }
           } else {
             popup.text = "Shop is inaccessible!";
+            shopManager.SetShopInactive();
           }
 
         }
         else if (doorDist < distanceThreshold){
+          shopManager.SetShopInactive();
           popup.text = popupPlaceholder + "Go to the Next Scene";
           if (Input.GetKeyDown("e")){
             Debug.Log("Moving into the next scene");
@@ -65,6 +69,7 @@ public class PopupManager : MonoBehaviour
           }
         }
         else if (exitDist < distanceThreshold){
+          shopManager.SetShopInactive();
           popup.text = popupPlaceholder + "Exit Game";
           if (Input.GetKeyDown("e")){
             // TO DO
@@ -72,6 +77,7 @@ public class PopupManager : MonoBehaviour
           }
         }
         else if (saveDist < distanceThreshold){
+          shopManager.SetShopInactive();
           popup.text = popupPlaceholder + "Save Game";
           if (Input.GetKeyDown("e")){
             // TO DO

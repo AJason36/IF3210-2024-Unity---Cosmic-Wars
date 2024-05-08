@@ -5,16 +5,25 @@ namespace Nightmare
 {
     public class Attack : MonoBehaviour
     {
+        private StatisticsManager statisticsManager;
+
         public Camera playerCamera;
         public GameObject projectilePrefab;
         public Transform shootingPoint; // A transform from where projectiles are shot
         public float projectileSpeed = 2000f;
         public Animator animator;
         public float range = 100f;
-        public float spreadAngle = 1f; 
+        public float spreadAngle = 1f;
+
+        void Start()
+        {
+            statisticsManager = StatisticsManager.Instance;
+        }
 
         void Update()
         {
+            statisticsManager.RecordShot();
+
             if (Input.GetMouseButtonDown(0))
             {
                 int weapon = animator.GetInteger("Weapon");
