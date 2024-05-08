@@ -46,7 +46,7 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void SaveGame(string saveId)
     {
-        if (this._gameData == null)
+        if (_gameData == null)
         {
             return;
         }

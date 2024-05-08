@@ -5,22 +5,26 @@ namespace Nightmare
 {
     public class Attack : MonoBehaviour
     {
+        private StatisticsManager statisticsManager;
+
         public Camera playerCamera;
         public GameObject projectilePrefab;
         public Transform shootingPoint; // A transform from where projectiles are shot
         public float projectileSpeed = 2000f;
         public Animator animator;
         public float range = 100f;
-        public float spreadAngle = 1f; 
+        public float spreadAngle = 0.5f; 
 
         void Update()
         {
+            statisticsManager.RecordShot();
+
             if (Input.GetMouseButtonDown(0))
             {
                 int weapon = animator.GetInteger("Weapon");
                 animator.SetTrigger("Fight");
                 if (weapon == 1) {
-                    Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
+                    Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, 0));
                     GameObject projectile = Instantiate(projectilePrefab, shootingPoint.position, Quaternion.LookRotation(ray.direction));
                     PlayerBullet bulletComponent = projectile.GetComponent<PlayerBullet>();
                     if (bulletComponent != null)
