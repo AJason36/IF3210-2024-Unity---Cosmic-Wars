@@ -78,6 +78,10 @@ namespace Nightmare
             // Reduce the current health by the damage amount.
             currentHealth -= amount;
 
+            if(currentHealth < 0){
+                currentHealth = 0; 
+            }
+
             // Set the health bar's value to the current health.
             healthSlider.value = currentHealth;
 
@@ -90,6 +94,17 @@ namespace Nightmare
                 // ... it should die.
                 Death();
             }
+        }
+
+        public void Heal(int amount)
+        {
+            currentHealth += amount;
+            if (currentHealth > startingHealth)
+            {
+                currentHealth = startingHealth;
+            }
+
+            healthSlider.value = currentHealth;
         }
         void Death()
         {

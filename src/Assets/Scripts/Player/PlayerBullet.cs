@@ -46,7 +46,7 @@ namespace Nightmare
             {
                 // Ensure the PlayerHealth component exists
                 EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
-                if (enemyHealth != null)
+                if (enemyHealth.currentHealth>0)
                 {
                     if(isShotGun){
                         enemyHealth.TakeDamage(15);

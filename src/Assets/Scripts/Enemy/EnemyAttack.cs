@@ -7,6 +7,8 @@ namespace Nightmare
     {
         public float timeBetweenAttacks = 0.5f;
         public int attackDamage = 10;
+        public int initialDamage;
+        public float buffPercentage = 1;
 
         Animator anim;
         GameObject player;
@@ -24,7 +26,7 @@ namespace Nightmare
             enemyMovement = GetComponent<EnemyMovement>();
             enemyHealth = GetComponent<EnemyHealth>();
             anim = GetComponent <Animator> ();
-
+            initialDamage = attackDamage;
             // StartPausible();
         }
 
@@ -78,18 +80,15 @@ namespace Nightmare
 
         void Attack ()
         {   
-            
             // Reset the timer.
             timer = 0f;
             // If the player has health to lose...
             if(playerHealth.currentHealth > 0)
             {
-                Debug.Log("Damage the player");
                 // ... damage the player.
-                playerHealth.TakeDamage (attackDamage);
+                playerHealth.TakeDamage ((int)(attackDamage*buffPercentage));
             }
             StartCoroutine(ResumeMovementAfterDelay(timeBetweenAttacks));  // Resume movement after attack delay
-
         }
         IEnumerator ResumeMovementAfterDelay(float delay)
         {

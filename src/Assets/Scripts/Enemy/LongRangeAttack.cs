@@ -12,6 +12,7 @@ namespace Nightmare
         public float spreadAngle = 15f; 
         public float timeBetweenAttacks = 1.5f;
         public int attackDamage = 10;
+        public float buffPercentage = 1;
 
         private Animator anim;
         private GameObject player;
@@ -84,7 +85,7 @@ namespace Nightmare
                 if (projectile != null) {
                     Shotgun shotgunScript = projectile.GetComponent<Shotgun>();
                     if (shotgunScript != null) {
-                        shotgunScript.damage = attackDamage / pelletsCount;
+                        shotgunScript.damage = (int)(attackDamage * buffPercentage / pelletsCount);
                     } else {
                         Debug.LogError("Shotgun component not found on the instantiated projectile!", projectile);
                     }
