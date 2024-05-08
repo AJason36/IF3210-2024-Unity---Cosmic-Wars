@@ -15,15 +15,19 @@ namespace Nightmare
         public float range = 100f;
         public float spreadAngle = 0.5f; 
 
+        void Start()
+        {
+            statisticsManager = StatisticsManager.Instance;
+        }
+
         void Update()
         {
-            statisticsManager.RecordShot();
-
             if (Input.GetMouseButtonDown(0))
             {
                 int weapon = animator.GetInteger("Weapon");
                 animator.SetTrigger("Fight");
                 if (weapon == 1) {
+                    statisticsManager.RecordShot();
                     Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, 0));
                     GameObject projectile = Instantiate(projectilePrefab, shootingPoint.position, Quaternion.LookRotation(ray.direction));
                     PlayerBullet bulletComponent = projectile.GetComponent<PlayerBullet>();
