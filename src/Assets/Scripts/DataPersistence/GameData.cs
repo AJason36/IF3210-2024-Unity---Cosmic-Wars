@@ -14,6 +14,7 @@ public class GameData
     public string username;
     public int petId;
     public int money;
+    public int level;
 
     public GameData()
     {
@@ -21,5 +22,6 @@ public class GameData
         username = "Lex Starwalker";
         petId = -1;
         money = 0;
+        level = 1;
     }
 }
