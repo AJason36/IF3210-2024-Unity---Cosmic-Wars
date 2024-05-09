@@ -66,6 +66,10 @@ namespace Nightmare
             damaged = false;
         }
 
+        public bool getIsDead(){
+          return isDead;
+        }
+
 
         public void TakeDamage(int amount)
         {

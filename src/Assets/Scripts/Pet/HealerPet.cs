@@ -6,11 +6,15 @@ namespace Nightmare
 {
     public class HealerPet : MonoBehaviour
     {
-        public GameObject player;
+        private GameObject player;
         public int healAmount = 2;
         private float healTimer = 2f;
         private float timeSinceLastHeal = 0f;
 
+        void Awake() 
+        {
+          player = GameObject.FindGameObjectWithTag("Player");
+        }
         void Update()
         {
             timeSinceLastHeal += Time.deltaTime;
