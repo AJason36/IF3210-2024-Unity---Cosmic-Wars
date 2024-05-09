@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 public class Quest1 : MonoBehaviour
 {
@@ -14,7 +16,7 @@ public class Quest1 : MonoBehaviour
     float remainingTime = 5f;
     int nextSceneToLoad = 5; // Isolated Scene
     float endOfTime = 0f;
-    float hold = 60f;
+    float hold = 5f;
 
     void Awake(){
         sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
@@ -56,4 +58,5 @@ public class Quest1 : MonoBehaviour
       }
 
     }
+
 }
