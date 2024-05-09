@@ -1,48 +1,70 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class Quest4 : MonoBehaviour
-{
-    bool isWon;
+namespace Nightmare{
+  public class Quest4 : MonoBehaviour
+  {
+      bool isWon;
 
-    // Winning Condition
-    private SceneLevelManager sceneLevelManager;
-    private QuestInfoManager questInfoManager;
-    float remainingTime = 5f;
-    int nextSceneToLoad = 5; // Isolated Scene
-    float endOfTime = 0f;
-    float hold = 5f;
+      // Winning Condition
+      private SceneLevelManager sceneLevelManager;
+      private QuestInfoManager questInfoManager;
+      private GameObject[] allEnemy;
+      private GameObject[] allJendral;
+      float remainingTime = 5f;
+      int nextSceneToLoad = 5; // Isolated Scene
+      float endOfTime = 0f;
+      float hold = 5f;
 
-    void Awake(){
-        sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
-        questInfoManager = UnityEngine.GameObject.FindGameObjectWithTag("Quest").GetComponent<QuestInfoManager>();
-    }
+      void Awake(){
+          sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
+          questInfoManager = UnityEngine.GameObject.FindGameObjectWithTag("Quest").GetComponent<QuestInfoManager>();
+          allEnemy = GameObject.FindGameObjectsWithTag("Enemy");
+          allJendral = GameObject.FindGameObjectsWithTag("Jendral");
+      }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-      isWon = false;
-    }
+      // Start is called before the first frame update
+      void Start()
+      {
+        isWon = false;
+      }
 
-    // Update is called once per frame
-    void Update()
-    {
-      // Start after Quest Info is Done
-      if (questInfoManager.getIsDone()){
-        if (!isWon){
-          // TO DO
-          if (hold > endOfTime){
-            hold -= Time.deltaTime;
-          } else {
-            isWon = true;
+      // Update is called once per frame
+      void Update()
+      {
+        allEnemy = GameObject.FindGameObjectsWithTag("Enemy");
+        allJendral = GameObject.FindGameObjectsWithTag("Jendral");
+        // Start after Quest Info is Done
+        if (questInfoManager.getIsDone()){
+          if (!isWon){
+            
           }
-        }
-        else{
-          // If won, set win condition
-
+          else{
+            if(allEnemy.Length > 0){
+              foreach(GameObject enemy in allEnemy){
+                if(enemy != null){
+                  Destroy(enemy);
+                }
+              }
+            }
+            if(allJendral.Length > 0){
+              foreach(GameObject enemy in allJendral){
+                if(enemy != null){
+                  Destroy(enemy);
+                }
+              }
+            }
+          }
         }
       }
 
-    }
+      public bool getIsWon(){
+        return isWon;
+      }
+      public void SetIsWon(bool isWon){
+        this.isWon = isWon;
+      }
+  }
 }
