@@ -164,11 +164,7 @@ public class SaveGameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dataPersistenceManager = DataPersistenceManager.Instance;
-
-        // TODO: Remove this after integrated
-        dataPersistenceManager.NewGame();
-        
+        dataPersistenceManager = DataPersistenceManager.Instance;        
         LoadSaveDataMenu();
 
         // Just in case

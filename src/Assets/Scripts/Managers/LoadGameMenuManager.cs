@@ -34,6 +34,7 @@ public class LoadGameManager : MonoBehaviour
             return;
         }
 
+        StatisticsManager.Instance.StartTrackingTime();
         sceneLevelManager.setCurrentLevelIndex(dataPersistenceManager.GetGameData().level);
         sceneLevelManager.loadScene(5);
     }

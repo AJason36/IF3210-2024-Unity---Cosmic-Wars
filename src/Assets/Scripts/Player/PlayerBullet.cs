@@ -44,21 +44,22 @@ namespace Nightmare
 
         void OnTriggerEnter(Collider other)
         {
+            if(other is CapsuleCollider ){
             if (other.gameObject.CompareTag("Jendral") || other.gameObject.CompareTag("Enemy"))
             {
-                // Ensure the PlayerHealth component exists
                 EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
                 if (enemyHealth.currentHealth>0)
                 {
                     statisticsManager.RecordSuccessfulShot();
                     if(isShotGun){
-                        enemyHealth.TakeDamage(15);
+                        int pelletDmg = damage * 2 / 5;
+                        enemyHealth.TakeDamage(pelletDmg);
                     }else{
                         enemyHealth.TakeDamage(damage);
                     }
                     Destroy(gameObject); 
                 }
-            }
+            }}
         }
     }
 
