@@ -136,13 +136,22 @@ public class StatisticsManager : MonoBehaviour
     // Playtime Statistics Functions
     public void StartTrackingTime()
     {
+        if (recordTimeRoutine != null)
+        {
+            Debug.LogWarning("Record Time Routine already running, stopping it before starting a new one.");
+            StopCoroutine(recordTimeRoutine);
+        }
+
         recordTimeRoutine = RecordTimeRoutine();
         StartCoroutine(recordTimeRoutine);
     }
 
     public void StopTrackingTime()
     {
-        StopCoroutine(recordTimeRoutine);
+        if (recordTimeRoutine != null)
+        {
+            StopCoroutine(recordTimeRoutine);
+        }
     }
 
     private IEnumerator RecordTimeRoutine()

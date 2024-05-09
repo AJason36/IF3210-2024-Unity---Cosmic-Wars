@@ -30,6 +30,7 @@ public class MainMenuManager : MonoBehaviour
         dataPersistenceManager.GetGameData().difficultyId = settingsManager.GetDifficulty();
         dataPersistenceManager.GetGameData().username = settingsManager.GetUsername();
 
+        statisticsManager.StartTrackingTime();
         statisticsManager.RecordGamePlayed();
 
         sceneLevelManager.loadInitialScene();
