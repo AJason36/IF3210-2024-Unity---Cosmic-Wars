@@ -66,6 +66,7 @@ public class PopupManager : MonoBehaviour
           popup.text = popupPlaceholder + "Go to the Next Scene";
           if (Input.GetKeyDown("e")){
             Debug.Log("Moving into the next scene");
+            DataPersistenceManager.Instance.GetGameData().level += 1;
             sceneLevelManager.nextScene();
             sceneLevelManager.loadCurrentScene();
           }
