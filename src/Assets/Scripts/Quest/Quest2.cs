@@ -37,7 +37,7 @@ namespace Nightmare{
         isWon = false;
       }
 
-    void DestroyAllEnemies(GameObject[] allEnemies){
+    void DestroyAllEnemies(){
       // Destroy all remaining enemy 
       if(allEnemies.Length > 0){
         foreach(GameObject enemy in allEnemies){
@@ -68,7 +68,7 @@ namespace Nightmare{
           }
           else{
             // Destroy all remaining enemy 
-            DestroyAllEnemies(allEnemies);
+            DestroyAllEnemies();
 
             // If won, start the countdown
             if (remainingTime > endOfTime){
@@ -85,7 +85,7 @@ namespace Nightmare{
       } else {
         winningCountdown.text = "";
         gameCountdown.text = "";
-        DestroyAllEnemies(allEnemies);
+        DestroyAllEnemies();
       }
     } 
   }

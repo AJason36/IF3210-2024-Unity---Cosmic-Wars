@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PetHealth : MonoBehaviour
@@ -7,6 +8,8 @@ public class PetHealth : MonoBehaviour
 
     public int startingHealth = 50;
     int currentHealth;
+
+    public bool godMode = false;
     bool isDead;
 
     // Start is called before the first frame update
@@ -24,6 +27,10 @@ public class PetHealth : MonoBehaviour
     }
 
     public void TakeDamage (int amount) {
+      if (godMode){
+        return;
+      }
+
       currentHealth -= amount;
 
       if (currentHealth <= 0 && !isDead){

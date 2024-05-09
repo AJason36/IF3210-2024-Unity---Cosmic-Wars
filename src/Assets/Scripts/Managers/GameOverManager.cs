@@ -64,7 +64,7 @@ namespace Nightmare
                 {
                     loadStatistics = true;
                     Cursor.lockState = CursorLockMode.None;
-                    sceneLevelManager.loadScene(6);
+                    sceneLevelManager.loadScene(6); // Statistics
                 }
             }
         }

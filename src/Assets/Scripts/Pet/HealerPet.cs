@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Nightmare
 {
@@ -11,9 +12,14 @@ namespace Nightmare
         private float healTimer = 2f;
         private float timeSinceLastHeal = 0f;
 
+        // For Movement Behavior
+        private Transform playerTransform;
+        public NavMeshAgent nav;
+
         void Awake() 
         {
           player = GameObject.FindGameObjectWithTag("Player");
+          playerTransform = player.transform;
         }
         void Update()
         {
@@ -27,11 +33,15 @@ namespace Nightmare
 
         void HealPlayer()
         {
-            PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
-            if (playerHealth != null && playerHealth.currentHealth > 0)
-            {
-                playerHealth.Heal(healAmount);
-            }
+          // Set Navigation for Movement
+          nav.SetDestination(playerTransform.position);
+
+          // Heal
+          PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+          if (playerHealth != null && playerHealth.currentHealth > 0)
+          {
+              playerHealth.Heal(healAmount);
+          }
         }
     }
 }
