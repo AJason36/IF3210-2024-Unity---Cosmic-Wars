@@ -10,12 +10,13 @@ public class Quest2 : MonoBehaviour
 
     // Winning Condition
     [SerializeField] TextMeshProUGUI winningCountdown;
+    [SerializeField] TextMeshProUGUI gameCountdown;
     private SceneLevelManager sceneLevelManager;
     private QuestInfoManager questInfoManager;
     float remainingTime = 5f;
     int nextSceneToLoad = 5; // Isolated Scene
     float endOfTime = 0f;
-    float hold = 5f;
+    float remainingGameTime = 10f;
 
     void Awake(){
         sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
@@ -36,9 +37,13 @@ public class Quest2 : MonoBehaviour
       if (questInfoManager.getIsDone()){
         if (!isWon){
           // TO DO
-          if (hold > endOfTime){
-            hold -= Time.deltaTime;
+          if (remainingGameTime > endOfTime){
+            remainingGameTime -= Time.deltaTime;
+            int minutes = Mathf.FloorToInt(remainingGameTime / 60);
+            int seconds = Mathf.FloorToInt(remainingGameTime % 60);
+            gameCountdown.text = string.Format("Remaining Time\n{0:00}:{1:00}", minutes, seconds);
           } else {
+            gameCountdown.text = "";
             isWon = true;
           }
         }
