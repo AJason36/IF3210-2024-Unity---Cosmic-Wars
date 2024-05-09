@@ -95,6 +95,7 @@
     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\ChromaticAberrationComponent.cs" />
+    <Compile Include="Assets\Scripts\CheatCodes\ICheatCode.cs" />
     <Compile Include="Assets\Scripts\Managers\ShopManager.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\MotionBlurComponent.cs" />
     <Compile Include="Assets\Scripts\Pet\PetMovement.cs" />
@@ -201,6 +202,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Models\BuiltinDebugViewsModel.cs" />
     <Compile Include="Assets\Scripts\Loading\Loading.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\BloomComponent.cs" />
+    <Compile Include="Assets\Scripts\CheatCodes\CheatCodeManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Models\Pets\Bat_Monster\license.txt" />
