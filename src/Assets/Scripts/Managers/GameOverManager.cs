@@ -58,6 +58,7 @@ namespace Nightmare
         {
             if(playerHealth.currentHealth <= 0)
             {
+                Debug.Log("Masuk ke kurang dari 0");
                 anim.SetTrigger("GameOver");
                 restartTimer += Time.deltaTime;
                 if(restartTimer >= restartDelay && !loadStatistics)

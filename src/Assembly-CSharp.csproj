@@ -173,6 +173,7 @@
     <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabBrowserManager.cs" />
     <Compile Include="Assets\Scripts\Player\DynamicPhysicMaterial.cs" />
     <Compile Include="Assets\MobileInput\Scripts\MobileControlRig.cs" />
+    <Compile Include="Assets\Scripts\Enemy\BossCondition.cs" />
     <Compile Include="Assets\Scripts\PausibleObject.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\FogModel.cs" />
     <Compile Include="Assets\Scripts\Quest\Quest3.cs" />
