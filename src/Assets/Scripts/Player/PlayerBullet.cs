@@ -58,10 +58,6 @@ namespace Nightmare
                     }
                     Destroy(gameObject); 
                 }
-                else
-                {
-                    Debug.LogError("EnemyHealth component missing on player object!", other);
-                }
             }
         }
     }
