@@ -14,7 +14,7 @@ public class Quest1 : MonoBehaviour
     float remainingTime = 5f;
     int nextSceneToLoad = 5; // Isolated Scene
     float endOfTime = 0f;
-    float hold = 5f;
+    float hold = 60f;
 
     void Awake(){
         sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();

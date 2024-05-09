@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Playables;
 
 public class SceneLevelManager : MonoBehaviour
 {
@@ -70,20 +71,42 @@ public class SceneLevelManager : MonoBehaviour
 
       loadingScreen.SetActive(true);
       // currentScreen.SetActive(false);
-      StartCoroutine(loadSceneAsync(sceneId));
+      StartCoroutine(LoadScenesInOrder(sceneId));
     }
 
-    // Update is called once per frame
-    IEnumerator loadSceneAsync(int sceneId){
-      AsyncOperation op = SceneManager.LoadSceneAsync(sceneId);
 
-      while (!op.isDone){
-        float progress = Mathf.Clamp01(op.progress/0.9f);
-        slider.value = progress;
-        yield return null;
-      }
+    IEnumerator LoadScenesInOrder(int sceneId)
+    {
+        if (sceneId == 1) {
+          yield return StartCoroutine(LoadSceneAsync(7, false)); 
 
-      loadingScreen.SetActive(false);
-      // currentScreen.SetActive(true);
+          PlayableDirector director = null;
+
+          if (director == null)
+              director = FindObjectOfType<PlayableDirector>();
+
+          if (director != null)
+          {
+              yield return new WaitUntil(() => director.state != PlayState.Playing);
+          }
+        }
+        
+        yield return StartCoroutine(LoadSceneAsync(sceneId, false)); 
+    }
+
+    IEnumerator LoadSceneAsync(int sceneId, bool additive)
+    {
+        AsyncOperation op = SceneManager.LoadSceneAsync(sceneId, additive ? LoadSceneMode.Additive : LoadSceneMode.Single);
+
+        loadingScreen.SetActive(true);
+
+        while (!op.isDone)
+        {
+            float progress = Mathf.Clamp01(op.progress / 0.9f);
+            slider.value = progress;
+            yield return null;
+        }
+
+        loadingScreen.SetActive(false);
     }
 }
