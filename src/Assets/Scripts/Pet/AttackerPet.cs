@@ -8,7 +8,7 @@ namespace Nightmare
 {
     public class AttackerPet : MonoBehaviour
     {
-        public int attackDamage = 10;
+        public int attackDamage = 100;
         public float timeBetweenAttacks = 1f;
         public float moveSpeed = 5f;
         public NavMeshAgent nav;
