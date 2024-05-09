@@ -109,8 +109,10 @@ namespace Nightmare
           break;
         case CheatCodes.ONE_HIT:
           GameObject player = GameObject.FindGameObjectWithTag("Player");
-          Attack playerAttack = player.GetComponent<Attack>();
-          playerAttack.isOneHitKill = true;
+          if(player != null){
+            Attack playerAttack = player.GetComponent<Attack>();
+            if(playerAttack != null) playerAttack.isOneHitKill = true;
+          }
           break;
         case CheatCodes.INF_MONEY:
           Debug.Log("Infinite money cheat code activated");
@@ -132,8 +134,12 @@ namespace Nightmare
           break;
         case CheatCodes.INSTANT_ORB:
           GameObject playerOrb = GameObject.FindGameObjectWithTag("Player");
-          Attack playerOrbAttack = playerOrb.GetComponent<Attack>();
-          playerOrbAttack.DrinkAttackOrbs();
+          if(playerOrb != null){
+            Attack playerOrbAttack = playerOrb.GetComponent<Attack>();
+            if(playerOrbAttack != null){
+              playerOrbAttack.DrinkAttackOrbs();
+            }
+          }
           break;
         case CheatCodes.SKIP_LEVEL:
           Debug.Log("Skip level cheat code activated");
