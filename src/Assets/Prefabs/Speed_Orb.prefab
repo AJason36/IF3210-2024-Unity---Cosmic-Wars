@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 735908875004495903, guid: 3e7317804fb49904baec0283680b6280, type: 3}
       propertyPath: m_Name
-      value: Speed_Orb 1
+      value: Speed_Orb
       objectReference: {fileID: 0}
     - target: {fileID: 735908875004495903, guid: 3e7317804fb49904baec0283680b6280, type: 3}
       propertyPath: m_TagString
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5730802060650760599}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14de643eeab17fc428925fde69c6a033, type: 3}
   m_Name: 
