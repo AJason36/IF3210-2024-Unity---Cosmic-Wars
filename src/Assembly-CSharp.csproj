@@ -1,21 +1,26 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project ToolsVersion="Current">
   <!-- Generated file, do not modify, your changes will be overwritten (use AssetPostprocessor.OnGeneratedCSProject) -->
   <PropertyGroup>
-    <LangVersion>9.0</LangVersion>
+    <BaseIntermediateOutputPath>Temp/obj/$(Configuration)/$(MSBuildProjectName)</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
   </PropertyGroup>
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <ItemGroup>
+    <ProjectCapability Include="Unity" />
+  </ItemGroup>
   <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <LangVersion>9.0</LangVersion>
+    <Configurations>Debug;Release</Configurations>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.20506</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4CFFDA30-0E63-039E-0DCA-DAC117CE2649}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -39,17 +44,16 @@
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
-    <NoConfig>true</NoConfig>
+    <NoStandardLibraries>true</NoStandardLibraries>
     <NoStdLib>true</NoStdLib>
-    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
-    <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
-    <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
+    <NoConfig>true</NoConfig>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <MSBuildWarningsAsMessages>MSB3277</MSBuildWarningsAsMessages>
   </PropertyGroup>
   <PropertyGroup>
-    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
     <UnityProjectGeneratorVersion>2.0.22</UnityProjectGeneratorVersion>
-    <UnityProjectGeneratorStyle>Legacy</UnityProjectGeneratorStyle>
+    <UnityProjectGeneratorStyle>SDK</UnityProjectGeneratorStyle>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneOSX:2</UnityBuildTarget>
     <UnityVersion>2022.3.20f1</UnityVersion>
@@ -59,145 +63,146 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.20f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Enemy\SpawnLogic.cs" />
-    <Compile Include="Assets\Scripts\Managers\PauseManager.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerBullet.cs" />
-    <Compile Include="Assets\Scripts\Pet\AttackerPet.cs" />
-    <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabExporter.cs" />
-    <Compile Include="Assets\Import\ParticlePack\Misc Effects\Scripts\SpawnEffect.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\DitheringModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\MotionBlurModel.cs" />
-    <Compile Include="Assets\Scripts\Player\Attack.cs" />
-    <Compile Include="Assets\Scripts\Pet\AvoidPlayer.cs" />
-    <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabPlugin.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
-    <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabImporterWindow.cs" />
-    <Compile Include="Assets\Scripts\Helpers\RandomAnimationPoint.cs" />
-    <Compile Include="Assets\Scripts\Managers\LoadGameMenuManager.cs" />
-    <Compile Include="Assets\Scripts\Managers\AsyncLoad.cs" />
-    <Compile Include="Assets\FaerieHappy.cs" />
-    <Compile Include="Assets\Scripts\Managers\PoolManager.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\PostProcessingProfile.cs" />
-    <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabModelWindow.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\ChromaticAberrationModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\GrainComponent.cs" />
-    <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabUI.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\AmbientOcclusionModel.cs" />
-    <Compile Include="Assets\Scripts\Pet\IncreasePet.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
-    <Compile Include="Assets\Scripts\Pet\HealerPet.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\PostProcessingModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\ChromaticAberrationComponent.cs" />
-    <Compile Include="Assets\Scripts\CheatCodes\ICheatCode.cs" />
-    <Compile Include="Assets\Scripts\Managers\ShopManager.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\MotionBlurComponent.cs" />
-    <Compile Include="Assets\Scripts\Pet\PetMovement.cs" />
-    <Compile Include="Assets\Scripts\Pet\PetHealth.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\EyeAdaptationModel.cs" />
-    <Compile Include="Assets\Scripts\StateMachineBehaviours\Faerie\FaerieAngry.cs" />
-    <Compile Include="Assets\MobileInput\Scripts\PlatformSpecific\MobileInput.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\ColorGradingModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\VignetteComponent.cs" />
-    <Compile Include="Assets\Scripts\FaerieCircle.cs" />
-    <Compile Include="Assets\Scripts\Grenade.cs" />
-    <Compile Include="Assets\TopMover.cs" />
-    <Compile Include="Assets\Scripts\Managers\GrenadeManager.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
-    <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabImporter.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
-    <Compile Include="Assets\Scripts\Countdown\ShopCountdown.cs" />
-    <Compile Include="Assets\Scripts\Enemy\Shotgun.cs" />
-    <Compile Include="Assets\TriggerTest.cs" />
-    <Compile Include="Assets\Scripts\Quest\Quest2.cs" />
-    <Compile Include="Assets\Scripts\Managers\SettingsMenuManager.cs" />
-    <Compile Include="Assets\OrbLogic.cs" />
-    <Compile Include="Assets\Scripts\Quest\QuestInfoManager.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\ColorGradingComponent.cs" />
-    <Compile Include="Assets\Scripts\SpawnOrbLogic.cs" />
-    <Compile Include="Assets\Scripts\DataPersistence\FileDataHandler.cs" />
-    <Compile Include="Assets\Scripts\Managers\SceneLevelManager.cs" />
-    <Compile Include="Assets\Scripts\Managers\ScoreManager.cs" />
-    <Compile Include="Assets\Scripts\Managers\EnemyManager.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\PostProcessingContext.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\GrainModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\AmbientOcclusionComponent.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\DepthOfFieldModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\DepthOfFieldComponent.cs" />
-    <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
-    <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabLogger.cs" />
-    <Compile Include="Assets\Scripts\DataPersistence\IDataPersistence.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Utils\ColorGradingCurve.cs" />
-    <Compile Include="Assets\Scripts\Managers\StatisticsMenuManager.cs" />
-    <Compile Include="Assets\Scripts\DataPersistence\GameData.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\BloomModel.cs" />
-    <Compile Include="Assets\Scripts\Quest\Quest1.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\FogComponent.cs" />
-    <Compile Include="Assets\Scripts\Managers\StatisticsManager.cs" />
-    <Compile Include="Assets\Scripts\CutSceneController.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\UserLutComponent.cs" />
-    <Compile Include="Assets\Scripts\Managers\CinematicController.cs" />
-    <Compile Include="Assets\Scripts\Managers\GameOverManager.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\DitheringComponent.cs" />
-    <Compile Include="Assets\Scripts\DataPersistence\DataPersistenceManager.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\VignetteModel.cs" />
-    <Compile Include="Assets\Scripts\Helpers\RandomParticlePoint.cs" />
-    <Compile Include="Assets\Scripts\Countdown\Countdown.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\ScreenSpaceReflectionComponent.cs" />
-    <Compile Include="Assets\Effects\PostRenderEffects\FaerieAnger.cs" />
-    <Compile Include="Assets\GameOverCount.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballGroupAttribute.cs" />
-    <Compile Include="Assets\Scripts\Managers\SettingsManager.cs" />
-    <Compile Include="Assets\Scripts\Managers\PopupManager.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\UserLutModel.cs" />
-    <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Pet\EnemyPetMovement.cs" />
-    <Compile Include="Assets\MobileInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
-    <Compile Include="Assets\Scripts\Weapon.cs" />
-    <Compile Include="Assets\Scripts\Managers\MainMenuManager.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\PostProcessingBehaviour.cs" />
-    <Compile Include="Assets\Scripts\Managers\EventManager.cs" />
-    <Compile Include="Assets\MobileInput\Scripts\Joystick.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\PostProcessingComponent.cs" />
-    <Compile Include="Assets\Scripts\Enemy\PoisonArea.cs" />
-    <Compile Include="Assets\Scripts\StateMachineBehaviours\Faerie\FaerieStateBehaviour.cs" />
-    <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabBrowserManager.cs" />
-    <Compile Include="Assets\Scripts\Player\DynamicPhysicMaterial.cs" />
-    <Compile Include="Assets\MobileInput\Scripts\MobileControlRig.cs" />
-    <Compile Include="Assets\Scripts\PausibleObject.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\FogModel.cs" />
-    <Compile Include="Assets\Scripts\Quest\Quest3.cs" />
-    <Compile Include="Assets\Scripts\Helpers\VolumeHandler.cs" />
-    <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabBrowserWindow.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\FxaaComponent.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\ScreenSpaceReflectionModel.cs" />
-    <Compile Include="Assets\Scripts\Managers\LevelManager.cs" />
-    <Compile Include="Assets\MobileInput\Scripts\VirtualInput.cs" />
-    <Compile Include="Assets\MobileInput\Scripts\CrossPlatformInputManager.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\TaaComponent.cs" />
-    <Compile Include="Assets\Scripts\Enemy\LongRangeAttack.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Managers\SpawnManagers.cs" />
-    <Compile Include="Assets\Scripts\Quest\Quest4.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\BuiltinDebugViewsComponent.cs" />
-    <Compile Include="Assets\Scripts\StateMachineBehaviours\Faerie\FaerieCooling.cs" />
-    <Compile Include="Assets\Scripts\MouseMovement.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\EyeAdaptationComponent.cs" />
-    <Compile Include="Assets\Sketchfab For Unity\Scripts\Resizer.cs" />
-    <Compile Include="Assets\Scripts\Managers\SaveGameManager.cs" />
-    <Compile Include="Assets\Scripts\Audio\MixLevels.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
-    <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabApi.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\BuiltinDebugViewsModel.cs" />
-    <Compile Include="Assets\Scripts\Loading\Loading.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\BloomComponent.cs" />
-    <Compile Include="Assets\Scripts\CheatCodes\CheatCodeManager.cs" />
+    <Compile Include="Assets/Scripts/Enemy/SpawnLogic.cs" />
+    <Compile Include="Assets/Scripts/Managers/PauseManager.cs" />
+    <Compile Include="Assets/Scripts/Player/PlayerShooting.cs" />
+    <Compile Include="Assets/Scripts/Player/PlayerBullet.cs" />
+    <Compile Include="Assets/Scripts/Pet/AttackerPet.cs" />
+    <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabExporter.cs" />
+    <Compile Include="Assets/Import/ParticlePack/Misc Effects/Scripts/SpawnEffect.cs" />
+    <Compile Include="Assets/Scripts/Enemy/EnemyAttack.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Models/DitheringModel.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Models/MotionBlurModel.cs" />
+    <Compile Include="Assets/Scripts/Player/Attack.cs" />
+    <Compile Include="Assets/Scripts/Pet/AvoidPlayer.cs" />
+    <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabPlugin.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Utils/GraphicsUtils.cs" />
+    <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabImporterWindow.cs" />
+    <Compile Include="Assets/Scripts/Helpers/RandomAnimationPoint.cs" />
+    <Compile Include="Assets/Scripts/Managers/LoadGameMenuManager.cs" />
+    <Compile Include="Assets/Scripts/Managers/AsyncLoad.cs" />
+    <Compile Include="Assets/FaerieHappy.cs" />
+    <Compile Include="Assets/Scripts/Managers/PoolManager.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/PostProcessingProfile.cs" />
+    <Compile Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser/SketchfabModelWindow.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Models/ChromaticAberrationModel.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Components/GrainComponent.cs" />
+    <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabUI.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Models/AmbientOcclusionModel.cs" />
+    <Compile Include="Assets/Scripts/Pet/IncreasePet.cs" />
+    <Compile Include="Assets/Scripts/Player/PlayerHealth.cs" />
+    <Compile Include="Assets/Scripts/Pet/HealerPet.cs" />
+    <Compile Include="Assets/Scripts/Enemy/EnemyMovement.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/PostProcessingModel.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Components/ChromaticAberrationComponent.cs" />
+    <Compile Include="Assets/Scripts/CheatCodes/ICheatCode.cs" />
+    <Compile Include="Assets/Scripts/Managers/ShopManager.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Components/MotionBlurComponent.cs" />
+    <Compile Include="Assets/Scripts/Pet/PetMovement.cs" />
+    <Compile Include="Assets/Scripts/Pet/PetHealth.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Models/EyeAdaptationModel.cs" />
+    <Compile Include="Assets/Scripts/StateMachineBehaviours/Faerie/FaerieAngry.cs" />
+    <Compile Include="Assets/MobileInput/Scripts/PlatformSpecific/MobileInput.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Models/ColorGradingModel.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Components/VignetteComponent.cs" />
+    <Compile Include="Assets/Scripts/FaerieCircle.cs" />
+    <Compile Include="Assets/Scripts/Grenade.cs" />
+    <Compile Include="Assets/TopMover.cs" />
+    <Compile Include="Assets/Scripts/Managers/GrenadeManager.cs" />
+    <Compile Include="Assets/Scripts/Enemy/EnemyHealth.cs" />
+    <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabImporter.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Utils/MaterialFactory.cs" />
+    <Compile Include="Assets/Scripts/Countdown/ShopCountdown.cs" />
+    <Compile Include="Assets/Scripts/Enemy/Shotgun.cs" />
+    <Compile Include="Assets/TriggerTest.cs" />
+    <Compile Include="Assets/Scripts/Quest/Quest2.cs" />
+    <Compile Include="Assets/Scripts/Managers/SettingsMenuManager.cs" />
+    <Compile Include="Assets/OrbLogic.cs" />
+    <Compile Include="Assets/Scripts/Quest/QuestInfoManager.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Components/ColorGradingComponent.cs" />
+    <Compile Include="Assets/Scripts/SpawnOrbLogic.cs" />
+    <Compile Include="Assets/Scripts/DataPersistence/FileDataHandler.cs" />
+    <Compile Include="Assets/Scripts/Managers/SceneLevelManager.cs" />
+    <Compile Include="Assets/Scripts/Managers/ScoreManager.cs" />
+    <Compile Include="Assets/Scripts/Managers/EnemyManager.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Attributes/GetSetAttribute.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/PostProcessingContext.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Models/GrainModel.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Components/AmbientOcclusionComponent.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Models/DepthOfFieldModel.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Components/DepthOfFieldComponent.cs" />
+    <Compile Include="Assets/Scripts/Camera/CameraFollow.cs" />
+    <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabLogger.cs" />
+    <Compile Include="Assets/Scripts/DataPersistence/IDataPersistence.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Utils/ColorGradingCurve.cs" />
+    <Compile Include="Assets/Scripts/Managers/StatisticsMenuManager.cs" />
+    <Compile Include="Assets/Scripts/DataPersistence/GameData.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Models/BloomModel.cs" />
+    <Compile Include="Assets/Scripts/Quest/Quest1.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Components/FogComponent.cs" />
+    <Compile Include="Assets/Scripts/Managers/StatisticsManager.cs" />
+    <Compile Include="Assets/Scripts/CutSceneController.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Attributes/MinAttribute.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Components/UserLutComponent.cs" />
+    <Compile Include="Assets/Scripts/Managers/CinematicController.cs" />
+    <Compile Include="Assets/Scripts/Managers/GameOverManager.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Components/DitheringComponent.cs" />
+    <Compile Include="Assets/Scripts/DataPersistence/DataPersistenceManager.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Models/VignetteModel.cs" />
+    <Compile Include="Assets/Scripts/Helpers/RandomParticlePoint.cs" />
+    <Compile Include="Assets/Scripts/Countdown/Countdown.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Components/ScreenSpaceReflectionComponent.cs" />
+    <Compile Include="Assets/Effects/PostRenderEffects/FaerieAnger.cs" />
+    <Compile Include="Assets/GameOverCount.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Attributes/TrackballGroupAttribute.cs" />
+    <Compile Include="Assets/Scripts/Managers/SettingsManager.cs" />
+    <Compile Include="Assets/Scripts/Managers/PopupManager.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Models/UserLutModel.cs" />
+    <Compile Include="Assets/Scripts/Managers/GameManager.cs" />
+    <Compile Include="Assets/Scripts/Pet/EnemyPetMovement.cs" />
+    <Compile Include="Assets/MobileInput/Scripts/PlatformSpecific/StandaloneInput.cs" />
+    <Compile Include="Assets/Scripts/Weapon.cs" />
+    <Compile Include="Assets/Scripts/Managers/MainMenuManager.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Utils/RenderTextureFactory.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Attributes/TrackballAttribute.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/PostProcessingBehaviour.cs" />
+    <Compile Include="Assets/Scripts/Managers/EventManager.cs" />
+    <Compile Include="Assets/MobileInput/Scripts/Joystick.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/PostProcessingComponent.cs" />
+    <Compile Include="Assets/Scripts/Enemy/PoisonArea.cs" />
+    <Compile Include="Assets/Scripts/StateMachineBehaviours/Faerie/FaerieStateBehaviour.cs" />
+    <Compile Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser/SketchfabBrowserManager.cs" />
+    <Compile Include="Assets/Scripts/Player/DynamicPhysicMaterial.cs" />
+    <Compile Include="Assets/MobileInput/Scripts/MobileControlRig.cs" />
+    <Compile Include="Assets/Scripts/Enemy/BossCondition.cs" />
+    <Compile Include="Assets/Scripts/PausibleObject.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Models/FogModel.cs" />
+    <Compile Include="Assets/Scripts/Quest/Quest3.cs" />
+    <Compile Include="Assets/Scripts/Helpers/VolumeHandler.cs" />
+    <Compile Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser/SketchfabBrowserWindow.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Components/FxaaComponent.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Models/ScreenSpaceReflectionModel.cs" />
+    <Compile Include="Assets/Scripts/Managers/LevelManager.cs" />
+    <Compile Include="Assets/MobileInput/Scripts/VirtualInput.cs" />
+    <Compile Include="Assets/MobileInput/Scripts/CrossPlatformInputManager.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Components/TaaComponent.cs" />
+    <Compile Include="Assets/Scripts/Enemy/LongRangeAttack.cs" />
+    <Compile Include="Assets/Scripts/Player/PlayerMovement.cs" />
+    <Compile Include="Assets/Scripts/Managers/SpawnManagers.cs" />
+    <Compile Include="Assets/Scripts/Quest/Quest4.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Components/BuiltinDebugViewsComponent.cs" />
+    <Compile Include="Assets/Scripts/StateMachineBehaviours/Faerie/FaerieCooling.cs" />
+    <Compile Include="Assets/Scripts/MouseMovement.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Components/EyeAdaptationComponent.cs" />
+    <Compile Include="Assets/Sketchfab For Unity/Scripts/Resizer.cs" />
+    <Compile Include="Assets/Scripts/Managers/SaveGameManager.cs" />
+    <Compile Include="Assets/Scripts/Audio/MixLevels.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Models/AntialiasingModel.cs" />
+    <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabApi.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Models/BuiltinDebugViewsModel.cs" />
+    <Compile Include="Assets/Scripts/Loading/Loading.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Components/BloomComponent.cs" />
+    <Compile Include="Assets/Scripts/CheatCodes/CheatCodeManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Models/Pets/Bat_Monster/license.txt" />
@@ -1277,13 +1282,16 @@
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+  <ItemGroup>
+    <ProjectCapability Remove="LaunchProfiles" />
+    <ProjectCapability Remove="SharedProjectReferences" />
+    <ProjectCapability Remove="ReferenceManagerSharedProjects" />
+    <ProjectCapability Remove="ProjectReferences" />
+    <ProjectCapability Remove="ReferenceManagerProjects" />
+    <ProjectCapability Remove="COMReferences" />
+    <ProjectCapability Remove="ReferenceManagerCOM" />
+    <ProjectCapability Remove="AssemblyReferences" />
+    <ProjectCapability Remove="ReferenceManagerAssemblies" />
+  </ItemGroup>
 </Project>
