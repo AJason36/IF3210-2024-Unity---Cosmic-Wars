@@ -95,6 +95,7 @@ namespace Nightmare
         {
             // EventManager.TriggerEvent("Sound", this.transform.position);
             if(!isPet){
+                Debug.Log("Masuk ke sini deadnya");
                 anim.SetTrigger ("Dead");
                 enemyAudio.clip = deathClip;
                 enemyAudio.Play ();

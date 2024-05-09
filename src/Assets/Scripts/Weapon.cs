@@ -23,7 +23,6 @@ public class Weapon : MonoBehaviour
         float scroll = Input.GetAxis("Weapon Wheel");
         if (scroll != 0)
         {
-            Debug.Log(scroll);
             ChangeWeaponByScroll(scroll);
         } else {
             if (Input.GetButtonDown("Weapon 0"))

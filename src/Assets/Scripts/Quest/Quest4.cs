@@ -42,6 +42,8 @@ namespace Nightmare{
             
           }
           else{
+            // Kondisi kalau udah menang
+            Debug.Log("Has win");
             if(allEnemy.Length > 0){
               foreach(GameObject enemy in allEnemy){
                 if(enemy != null){
@@ -56,6 +58,8 @@ namespace Nightmare{
                 }
               }
             }
+            sceneLevelManager.loadScene(10);
+
           }
         }
       }
