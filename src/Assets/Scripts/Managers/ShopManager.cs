@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,18 @@ public class ShopManager : MonoBehaviour
     public Canvas shopPopup;
     public Image darkOverlay;
 
+    // Price Text
+    public TMP_Text rdPriceText;
+    public TMP_Text bbPriceText;
+
+    // Buy Buttons
+    public Button rdBuyButton;
+    public Button bbBuyButton;
+
+    // Item Price
+    private int rdPrice = 50;
+    private int bbPrice = 100;
+
     // ItemID
     // 0 for R2D2
     // 1 for BB8
@@ -21,6 +34,28 @@ public class ShopManager : MonoBehaviour
       shopCanvas.gameObject.SetActive(true);
       Cursor.lockState = CursorLockMode.None;
       // SetCanvasInteractable(true);
+
+        rdPriceText.text = "$" + rdPrice.ToString();
+        bbPriceText.text = "$" + bbPrice.ToString();
+
+        // Set interactivity of the buy buttons
+        if (DataPersistenceManager.Instance.GetGameData().money < rdPrice)
+        {
+            rdBuyButton.interactable = false;
+        }
+        else
+        {
+            rdBuyButton.interactable = true;
+        }
+
+        if (DataPersistenceManager.Instance.GetGameData().money < bbPrice)
+        {
+            bbBuyButton.interactable = false;
+        }
+        else
+        {
+            bbBuyButton.interactable = true;
+        }
     }
 
     public void SetShopInactive(){
@@ -70,12 +105,14 @@ public class ShopManager : MonoBehaviour
         // Buy the item
         if (itemID == 0)
         {
-            // TODO: Buy R2D2
+            DataPersistenceManager.Instance.GetGameData().money -= rdPrice;
+            DataPersistenceManager.Instance.GetGameData().petId = 0;
             Debug.Log("R2D2 bought");
         }
         else if (itemID == 1)
         {
-            // TODO: Buy BB8
+            DataPersistenceManager.Instance.GetGameData().money -= bbPrice;
+            DataPersistenceManager.Instance.GetGameData().petId = 1;
             Debug.Log("BB8 bought");
         }
 

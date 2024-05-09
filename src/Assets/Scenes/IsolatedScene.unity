@@ -1843,6 +1843,10 @@ MonoBehaviour:
   shopCanvas: {fileID: 2136768542}
   shopPopup: {fileID: 1874125031}
   darkOverlay: {fileID: 357129572}
+  rdPriceText: {fileID: 1089416616}
+  bbPriceText: {fileID: 2042791550}
+  rdBuyButton: {fileID: 1215824391}
+  bbBuyButton: {fileID: 1214670008}
 --- !u!4 &465513519 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8062021755967200524, guid: 06c637bde542d5c41aa24780dfbee2c2, type: 3}

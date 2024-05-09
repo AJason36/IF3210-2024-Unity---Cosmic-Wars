@@ -74,6 +74,8 @@ public class CheatCodeManager : MonoBehaviour
         {
             if (buffer.EndsWith(cheatCode.Value))
             {
+                Debug.Log("Cheat code activated: " + cheatCode.Key);
+
                 if (listeners.ContainsKey(cheatCode.Key))
                 {
                     foreach (var listener in listeners[cheatCode.Key])
