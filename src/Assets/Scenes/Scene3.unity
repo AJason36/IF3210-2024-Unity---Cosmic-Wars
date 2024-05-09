@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14766848, g: 0.10537336, b: 0.21225631, a: 1}
+  m_IndirectSpecularColor: {r: 0.1476632, g: 0.105369635, b: 0.21225083, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1842,71 +1842,71 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1112127195951481959, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112127195951481959, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
-      propertyPath: playerCamera
-      value: 
-      objectReference: {fileID: 1373950557}
-    - target: {fileID: 6103703434791968098, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
-      propertyPath: damageImage
-      value: 
-      objectReference: {fileID: 1881397287}
-    - target: {fileID: 6103703434791968098, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
-      propertyPath: healthSlider
-      value: 
-      objectReference: {fileID: 171170794}
-    - target: {fileID: 6299961745156841582, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
-      propertyPath: m_Name
-      value: MainPlayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 6800277629684807334, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
+    - target: {fileID: 541134337441532856, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.51999664
       objectReference: {fileID: 0}
-    - target: {fileID: 6800277629684807334, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
+    - target: {fileID: 541134337441532856, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: m_LocalPosition.z
       value: -11.029999
       objectReference: {fileID: 0}
-    - target: {fileID: 8593971710945800740, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
+    - target: {fileID: 1322238719265662567, guid: 9e012a509f25284488419def75635cee, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953422582845042418, guid: 9e012a509f25284488419def75635cee, type: 3}
+      propertyPath: damageImage
+      value: 
+      objectReference: {fileID: 1881397287}
+    - target: {fileID: 3953422582845042418, guid: 9e012a509f25284488419def75635cee, type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 171170794}
+    - target: {fileID: 4491053821689472843, guid: 9e012a509f25284488419def75635cee, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4491053821689472843, guid: 9e012a509f25284488419def75635cee, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 1373950557}
+    - target: {fileID: 5166069313548256704, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 119.31
       objectReference: {fileID: 0}
-    - target: {fileID: 8593971710945800740, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
+    - target: {fileID: 5166069313548256704, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.75
       objectReference: {fileID: 0}
-    - target: {fileID: 8593971710945800740, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
+    - target: {fileID: 5166069313548256704, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: m_LocalPosition.z
       value: 76.18
       objectReference: {fileID: 0}
-    - target: {fileID: 8593971710945800740, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
+    - target: {fileID: 5166069313548256704, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8593971710945800740, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
+    - target: {fileID: 5166069313548256704, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8593971710945800740, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
+    - target: {fileID: 5166069313548256704, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8593971710945800740, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
+    - target: {fileID: 5166069313548256704, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8593971710945800740, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
+    - target: {fileID: 5166069313548256704, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8593971710945800740, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
+    - target: {fileID: 5166069313548256704, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8593971710945800740, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
+    - target: {fileID: 5166069313548256704, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
@@ -1915,13 +1915,13 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6409905934239331934, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 7540631970778894165, guid: 9e012a509f25284488419def75635cee, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1731666487}
-  m_SourcePrefab: {fileID: 100100000, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9e012a509f25284488419def75635cee, type: 3}
 --- !u!114 &1028980805 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6103703434791968098, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3953422582845042418, guid: 9e012a509f25284488419def75635cee, type: 3}
   m_PrefabInstance: {fileID: 1028980804}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -2869,7 +2869,7 @@ MonoBehaviour:
   questTitleObject: {fileID: 193251585}
   questObjectiveObject: {fileID: 494895463}
   questTitle: Quest 3
-  questObjective: INI DIGANTI YA NAT
+  questObjective: Defeat All Enemies
 --- !u!4 &1552338318
 Transform:
   m_ObjectHideFlags: 0
@@ -3243,7 +3243,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1731666486 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 6409905934239331934, guid: 76eb637ff2a91d64fb9c04577158bc93, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7540631970778894165, guid: 9e012a509f25284488419def75635cee, type: 3}
   m_PrefabInstance: {fileID: 1028980804}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1731666487

@@ -8,14 +8,23 @@ namespace Nightmare
         private StatisticsManager statisticsManager;
         private int totalAttackOrbs;
         private int damage;
-        private int initialDamage;
+        private int initialDamage=40;
         public Camera playerCamera;
         public GameObject projectilePrefab;
         public Transform shootingPoint; // A transform from where projectiles are shot
         public float projectileSpeed = 2000f;
         public Animator animator;
         public float range = 100f;
-        public float spreadAngle = 0.5f; 
+        public float spreadAngle = 0.5f;
+        public Collider meleeCollider;
+        public bool enemyInRange;
+        public GameObject enemy;
+        public float gunCooldown = 0.5f; 
+        public float meleeCooldown = 0.75f;
+        public float shotgunCooldown = 1.0f;
+        private float lastAttackTime;
+        public ParticleSystem gunEffect;
+        public ParticleSystem shotgunEffect;
         
         void Start()
         {
@@ -23,17 +32,20 @@ namespace Nightmare
             totalAttackOrbs = 0;
             initialDamage = 40;
             damage = initialDamage; 
+            meleeCollider = GetComponent<Collider>();
         }
 
         void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0)  && Time.time > lastAttackTime)
             {
                 int weapon = animator.GetInteger("Weapon");
-                animator.SetTrigger("Fight");
-                if (weapon == 1) {
+                
+                if (weapon == 1 && Time.time > lastAttackTime + gunCooldown) {
+                    animator.SetTrigger("Fight");
+                    lastAttackTime = Time.time;
                     statisticsManager.RecordShot();
-                    Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, 2 * Screen.height / 3));
+                    Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, 1 * Screen.height / 2));
                     GameObject projectile = Instantiate(projectilePrefab, shootingPoint.position, Quaternion.LookRotation(ray.direction));
                     PlayerBullet bulletComponent = projectile.GetComponent<PlayerBullet>();
                     
@@ -41,6 +53,13 @@ namespace Nightmare
                     {
                         bulletComponent.damage = damage; 
                         bulletComponent.isShotGun = false;
+                        if (gunEffect != null) {
+                            ParticleSystem effectInstance = Instantiate(gunEffect, shootingPoint.position, Quaternion.identity);  // Instantiate effect
+                            effectInstance.transform.parent = projectile.transform; 
+                            if(!effectInstance.isPlaying){
+                                effectInstance.Play();
+                            }
+                        }
                     }
                     else
                     {
@@ -48,15 +67,24 @@ namespace Nightmare
                     }
                     Vector3 targetPoint = ray.origin + ray.direction * range; // Calculate a point in the direction of the ray
                     StartCoroutine(MoveProjectile(projectile, targetPoint));
-                } else if (weapon == 2) {
-                    Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
+                } else if (weapon == 2 && Time.time > lastAttackTime + shotgunCooldown) {
+                    animator.SetTrigger("Fight");
+                    lastAttackTime = Time.time;
+                    Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, 1*Screen.height / 3));
                     GameObject straightProjectile = Instantiate(projectilePrefab, shootingPoint.position, Quaternion.LookRotation(ray.direction));
                     PlayerBullet bulletComponent1 = straightProjectile.GetComponent<PlayerBullet>();
                     
                     if (bulletComponent1 != null)
                     {
                         bulletComponent1.damage = damage;
-                        bulletComponent1.isShotGun = true;
+                        bulletComponent1.isShotGun = true;;
+                        if (gunEffect != null) {
+                            ParticleSystem effectInstance = Instantiate(shotgunEffect, shootingPoint.position, Quaternion.identity);  // Instantiate effect
+                            // effectInstance.transform.parent = straightProjectile.transform; 
+                            if(!effectInstance.isPlaying){
+                                effectInstance.Play();
+                            }
+                        }
                     }
                     Vector3 straightTarget = ray.origin + ray.direction * range;
                     StartCoroutine(MoveProjectile(straightProjectile, straightTarget));
@@ -115,6 +143,16 @@ namespace Nightmare
                     Vector3 downTarget = downRay.origin + downRay.direction * range;
                     StartCoroutine(MoveProjectile(downProjectile, downTarget));
                 }
+                else if (weapon == 3 && Time.time > lastAttackTime + meleeCooldown) 
+                {
+                    animator.SetTrigger("Fight");
+                    lastAttackTime = Time.time;
+                    PerformMeleeAttack((int)(damage*1.5)); 
+                }else if(weapon ==4 && Time.time > lastAttackTime + meleeCooldown){
+                    animator.SetTrigger("Fight");
+                    lastAttackTime = Time.time;
+                    PerformMeleeAttack(damage/2);
+                }
             }
         }
 
@@ -139,5 +177,35 @@ namespace Nightmare
                 Debug.Log("Ini damage setelah increase" + damage);
             }
         }
+
+        private void PerformMeleeAttack(int damage)
+        {
+            if(enemy!=null && enemyInRange)
+            {
+                EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
+                if(enemyHealth!=null && enemyHealth.currentHealth>0)
+                {
+                    enemyHealth.TakeDamage(damage);
+                }
+            }
+        }
+
+        void OnTriggerEnter (Collider other)
+        {
+            if(other.gameObject.CompareTag("Enemy")||other.gameObject.CompareTag("Jendral"))
+            {
+                enemy = other.gameObject;
+                enemyInRange = true;
+            }
+        }
+
+        void OnTriggerExit (Collider other)
+        {
+            if(other.gameObject.CompareTag("Enemy")||other.gameObject.CompareTag("Jendral"))
+            {
+                enemyInRange = false;
+            }
+        }
+
     }
 }
