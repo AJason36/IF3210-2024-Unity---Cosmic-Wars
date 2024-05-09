@@ -24,6 +24,7 @@ public class Countdown : MonoBehaviour
     void Update()
     {
       if (remainingTime > endOfTime){
+        Debug.Log(remainingTime);
         remainingTime -= Time.deltaTime;
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
