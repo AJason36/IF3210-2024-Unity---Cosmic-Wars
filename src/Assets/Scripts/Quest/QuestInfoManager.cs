@@ -37,7 +37,46 @@ public class QuestInfoManager : MonoBehaviour
       }
     }
 
+    public void StartQuest() {
+      questInfoObject.SetActive(true);
+      hasRewarded = false;
+    }
+
+    public void FinishQuest() {
+      if (!hasRewarded) {
+        questInfoObject.SetActive(false);
+        addMoney();
+        hasRewarded = true;
+      }
+    }
+
     public bool getIsDone(){
       return isDone;
+    }
+
+    private void addMoney() {
+      DataPersistenceManager dataPersistenceManager = DataPersistenceManager.Instance;
+
+      switch (questTitle) {
+        case "Quest 1":
+          UnityEngine.Debug.Log("Adding 50 money");
+          dataPersistenceManager.GetGameData().money += 50;
+          break;
+        case "Quest 2":
+          UnityEngine.Debug.Log("Adding 75 money");
+          dataPersistenceManager.GetGameData().money += 75;
+          break;
+        case "Quest 3":
+          UnityEngine.Debug.Log("Adding 100 money");
+          dataPersistenceManager.GetGameData().money += 100;
+          break;
+        case "Quest 4":
+          UnityEngine.Debug.Log("Adding 100 money");
+          dataPersistenceManager.GetGameData().money += 100;
+          break;
+        default:
+          // Add 0 money
+          break;
+      }
     }
 }
