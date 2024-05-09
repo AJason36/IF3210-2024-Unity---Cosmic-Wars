@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Quest1 : MonoBehaviour
+namespace Nightmare
 {
+  public class Quest1 : MonoBehaviour
+  {
     bool isWon;
 
     // Winning Condition
@@ -16,9 +18,10 @@ public class Quest1 : MonoBehaviour
     float endOfTime = 0f;
     float hold = 60f;
 
-    void Awake(){
-        sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
-        questInfoManager = UnityEngine.GameObject.FindGameObjectWithTag("Quest").GetComponent<QuestInfoManager>();
+    void Awake()
+    {
+      sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
+      questInfoManager = UnityEngine.GameObject.FindGameObjectWithTag("Quest").GetComponent<QuestInfoManager>();
     }
 
     // Start is called before the first frame update
@@ -32,23 +35,32 @@ public class Quest1 : MonoBehaviour
     void Update()
     {
       // Start after Quest Info is Done
-      if (questInfoManager.getIsDone()){
-        if (!isWon){
+      if (questInfoManager.getIsDone())
+      {
+        if (!isWon)
+        {
           // TO DO
-          if (hold > endOfTime){
+          if (hold > endOfTime)
+          {
             hold -= Time.deltaTime;
-          } else {
+          }
+          else
+          {
             isWon = true;
           }
         }
-        else{
+        else
+        {
           // If won, start the countdown
-          if (remainingTime > endOfTime){
+          if (remainingTime > endOfTime)
+          {
             remainingTime -= Time.deltaTime;
             int minutes = Mathf.FloorToInt(remainingTime / 60);
             int seconds = Mathf.FloorToInt(remainingTime % 60);
             winningCountdown.text = string.Format("Countdown to Next Scene\n{0:00}:{1:00}", minutes, seconds);
-          } else {
+          }
+          else
+          {
             winningCountdown.text = "Time's Up!";
             sceneLevelManager.loadScene(nextSceneToLoad);
           }
@@ -56,4 +68,5 @@ public class Quest1 : MonoBehaviour
       }
 
     }
+  }
 }
