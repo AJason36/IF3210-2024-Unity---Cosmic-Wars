@@ -16,7 +16,8 @@ public class QuestInfoManager : MonoBehaviour
   float remainingTime = 3f;
   float endOfTime = 0f;
   bool isDone;
-
+  bool hasRewarded;
+  
     // Start is called before the first frame update
     void Start()
     {
