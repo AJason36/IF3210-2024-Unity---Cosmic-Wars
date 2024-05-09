@@ -108,13 +108,16 @@ namespace Nightmare
         }
         void Death()
         {
-            isDead = true;
+            if(!isDead)
+            {
+                isDead = true;
+                // Animations
+                // anim.SetTrigger("Die");
+                playerAudio.clip = deathClip;
+                playerAudio.Play();
+                playerMovement.enabled = false;
+            }
 
-            // Animations
-            anim.SetTrigger("Die");
-            playerAudio.clip = deathClip;
-            playerAudio.Play();
-            playerMovement.enabled = false;
         }
 
         public void DrinkHealthOrb()
