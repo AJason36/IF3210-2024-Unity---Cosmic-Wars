@@ -56,7 +56,7 @@ namespace Nightmare
 
         void Update()
         {
-            if(playerHealth.currentHealth <= 0)
+            if(playerHealth.getIsDead())
             {
                 anim.SetTrigger("GameOver");
                 restartTimer += Time.deltaTime;

@@ -4926,11 +4926,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6043bde05a7fc4cba197d06915c1e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damping: {x: 0.1, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: -1, y: 1, z: 0}
+  Damping: {x: 0, y: 0, z: 0}
+  ShoulderOffset: {x: 1.5, y: 0.5, z: 1}
   VerticalArmLength: 0
   CameraSide: 1
-  CameraDistance: 10
+  CameraDistance: 12
   CameraCollisionFilter:
     serializedVersion: 2
     m_Bits: 0
@@ -10437,7 +10437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &166110231
 Transform:
   m_ObjectHideFlags: 0
@@ -24345,14 +24345,14 @@ RectTransform:
   m_GameObject: {fileID: 439409173}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1263690225}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -20, y: -20}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439409175
@@ -72343,19 +72343,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 541134337441532856, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -105.32008
+      value: 0.98000073
       objectReference: {fileID: 0}
     - target: {fileID: 541134337441532856, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.01
+      value: 1.7600002
       objectReference: {fileID: 0}
     - target: {fileID: 541134337441532856, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 136.64014
+      value: -12.0300045
       objectReference: {fileID: 0}
     - target: {fileID: 541134337441532856, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.539489
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 541134337441532856, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: m_LocalRotation.x
@@ -72363,7 +72363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 541134337441532856, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.84199274
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 541134337441532856, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: m_LocalRotation.z
@@ -72383,7 +72383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3447896058145229324, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: mouseSensitivity
-      value: 500
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3524280084584144655, guid: 9e012a509f25284488419def75635cee, type: 3}
       propertyPath: m_ScreenX
@@ -90783,8 +90783,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650954288}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 119.29, y: 3.01, z: 64.15}
+  m_LocalRotation: {x: 0, y: 0.84199274, z: 0, w: 0.539489}
+  m_LocalPosition: {x: -60.1987, y: 11.780001, z: 29.707058}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -11,7 +11,7 @@ public class MouseMovement : MonoBehaviour
     float XRotation = 0f;
     float YRotation = 0f;
 
-    float BelowXRotationThreshold = -1.5f;
+    float BelowXRotationThreshold = -2.5f;
     float UpperXRotationThreshold = 7f;
  
     void Start()
