@@ -7073,7 +7073,7 @@ GameObject:
   - component: {fileID: 3918493310492434567}
   m_Layer: 0
   m_Name: Fish_Monster
-  m_TagString: Pet
+  m_TagString: EnemyPet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7193,7 +7193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b157d30930aad4188e16c928cd6616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boss: {fileID: 8714430919143628134, guid: caa782cb1e2407d41be0991a30f23180, type: 3}
+  boss: {fileID: 5358147707146045576, guid: 83e334a800fcb7b41857df24ebb5f4d1, type: 3}
   buffPercentage: 0.2
 --- !u!114 &9068259672592495654
 MonoBehaviour:
@@ -7208,7 +7208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 5166069313548256704, guid: 9e012a509f25284488419def75635cee, type: 3}
-  boss: {fileID: 8714430919143522630, guid: caa782cb1e2407d41be0991a30f23180, type: 3}
+  boss: {fileID: 5358147707146081448, guid: 83e334a800fcb7b41857df24ebb5f4d1, type: 3}
   nav: {fileID: 2332264248138617270}
   moveSpeed: 3
   safeDistance: 10

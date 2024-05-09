@@ -143,6 +143,7 @@
     <Compile Include="Assets\Scripts\Managers\StatisticsManager.cs" />
     <Compile Include="Assets\Scripts\CutSceneController.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
+    <Compile Include="Assets\Scripts\Managers\GameOver.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\UserLutComponent.cs" />
     <Compile Include="Assets\Scripts\Managers\CinematicController.cs" />
     <Compile Include="Assets\Scripts\Managers\GameOverManager.cs" />

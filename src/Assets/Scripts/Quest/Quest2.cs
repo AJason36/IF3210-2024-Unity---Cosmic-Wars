@@ -5,20 +5,20 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Quest2 : MonoBehaviour
-{
-    bool isWon;
-    private PlayerHealth playerHealth;
-
-    // Winning Condition
-    [SerializeField] TextMeshProUGUI winningCountdown;
-    [SerializeField] TextMeshProUGUI gameCountdown;
-    private SceneLevelManager sceneLevelManager;
-    private QuestInfoManager questInfoManager;
-    float remainingTime = 5f;
-    int nextSceneToLoad = 5; // Isolated Scene
-    float endOfTime = 0f;
-    float remainingGameTime = 180f;
+namespace Nightmare{
+  public class Quest2 : MonoBehaviour
+  {
+      bool isWon;
+      private PlayerHealth playerHealth;
+      // Winning Condition
+      [SerializeField] TextMeshProUGUI winningCountdown;
+      [SerializeField] TextMeshProUGUI gameCountdown;
+      private SceneLevelManager sceneLevelManager;
+      private QuestInfoManager questInfoManager;
+      float remainingTime = 5f;
+      int nextSceneToLoad = 5; // Isolated Scene
+      float endOfTime = 0f;
+      float remainingGameTime = 180f;
 
     private GameObject[] allEnemies;
 
@@ -30,12 +30,12 @@ public class Quest2 : MonoBehaviour
         allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-      winningCountdown.text = "";
-      isWon = false;
-    }
+      // Start is called before the first frame update
+      void Start()
+      {
+        winningCountdown.text = "";
+        isWon = false;
+      }
 
     void DestroyAllEnemies(GameObject[] allEnemies){
       // Destroy all remaining enemy 
@@ -88,4 +88,5 @@ public class Quest2 : MonoBehaviour
         DestroyAllEnemies(allEnemies);
       }
     } 
+  }
 }

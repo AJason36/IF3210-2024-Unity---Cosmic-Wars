@@ -812,6 +812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 247732993}
   - component: {fileID: 247732994}
+  - component: {fileID: 247732995}
   m_Layer: 0
   m_Name: StatisticsObject
   m_TagString: Untagged
@@ -850,6 +851,18 @@ MonoBehaviour:
   countdownText: {fileID: 161821588}
   remainingTime: 10
   sceneToLoad: 0
+--- !u!114 &247732995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247732992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b01bffd700eecf41aa5d6cf5b85db77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &289378149
 GameObject:
   m_ObjectHideFlags: 0
@@ -2126,9 +2139,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 153533191}
-        m_TargetAssemblyTypeName: SceneLevelManager, Assembly-CSharp
-        m_MethodName: retryGame
+      - m_Target: {fileID: 247732995}
+        m_TargetAssemblyTypeName: GameOverButton, Assembly-CSharp
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2136,7 +2149,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1504316363
 MonoBehaviour:
@@ -3618,9 +3631,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 153533191}
-        m_TargetAssemblyTypeName: SceneLevelManager, Assembly-CSharp
-        m_MethodName: toMainMenu
+      - m_Target: {fileID: 247732995}
+        m_TargetAssemblyTypeName: GameOverButton, Assembly-CSharp
+        m_MethodName: GoToHomePage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

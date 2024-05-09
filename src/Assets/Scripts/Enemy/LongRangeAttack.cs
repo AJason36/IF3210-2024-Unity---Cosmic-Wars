@@ -71,10 +71,10 @@ namespace Nightmare
                 return;
             }
 
-            if (plasmaExplosionEffect != null) {
-                plasmaExplosionEffect.transform.position = shootingPoint.position;
-                plasmaExplosionEffect.Play();
-                // StartCoroutine(StopParticleSystem(plasmaExplosionEffect, plasmaExplosionEffect.main.duration));
+            if (plasmaExplosionEffect != null && !plasmaExplosionEffect.isPlaying) {
+                ParticleSystem effectInstance = Instantiate(plasmaExplosionEffect, shootingPoint.position, Quaternion.identity);
+                effectInstance.transform.position = shootingPoint.position;
+                if(!effectInstance.isPlaying) effectInstance.Play();
             } else {
                 Debug.LogError("Plasma Explosion Effect is not assigned!");
             }

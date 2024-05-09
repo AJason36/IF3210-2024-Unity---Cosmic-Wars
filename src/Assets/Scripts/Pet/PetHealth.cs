@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPetHealth : MonoBehaviour
+public class PetHealth : MonoBehaviour
 {
 
     public int startingHealth = 50;

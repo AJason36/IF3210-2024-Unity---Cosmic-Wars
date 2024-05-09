@@ -40,6 +40,14 @@ namespace Nightmare {
                 } else {
                     Debug.LogError("PlayerHealth component missing on player object!", other);
                 }
+            }else if(other.gameObject.CompareTag("Pet")){
+                PetHealth petHealth = other.gameObject.GetComponent<PetHealth>();
+                if (petHealth != null) {
+                    petHealth.TakeDamage(damage);
+                    Destroy(gameObject); // Destroy the projectile on hitting the pet
+                } else {
+                    Debug.LogError("PetHealth component missing on pet object!", other);
+                }
             }
         }
     }

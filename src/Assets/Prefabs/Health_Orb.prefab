@@ -324,6 +324,7 @@ GameObject:
   - component: {fileID: 7090600309293423407}
   - component: {fileID: 6143857591991479175}
   - component: {fileID: 9039907931282453564}
+  - component: {fileID: 1723533141928113468}
   m_Layer: 0
   m_Name: Health_Orb
   m_TagString: HealthOrb
@@ -397,6 +398,19 @@ CapsuleCollider:
   m_Height: 4
   m_Direction: 1
   m_Center: {x: 0, y: 0.8, z: 0}
+--- !u!114 &1723533141928113468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4337475147359526460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14de643eeab17fc428925fde69c6a033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 5
 --- !u!1 &5279368135480299425
 GameObject:
   m_ObjectHideFlags: 0

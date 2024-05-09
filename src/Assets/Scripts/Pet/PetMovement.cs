@@ -6,8 +6,8 @@ using UnityEngine.EventSystems;
 
 public class PetMovement : MonoBehaviour
 {
-    public GameObject player;
-    public Transform playerTransform;
+    private GameObject player;
+    private Transform playerTransform;
     public NavMeshAgent nav;
 
 
