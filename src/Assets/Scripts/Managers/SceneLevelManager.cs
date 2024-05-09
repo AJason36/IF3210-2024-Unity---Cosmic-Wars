@@ -109,4 +109,14 @@ public class SceneLevelManager : MonoBehaviour
 
         loadingScreen.SetActive(false);
     }
+
+    public void toMainMenu(){
+      currentLevelIndex = 1; // Reset Level Index
+      loadScene(0);
+    }
+
+    public void retryGame(){
+      currentLevelIndex = 1; // Reset Level Index
+      loadScene(currentLevelIndex);
+    }
 }
