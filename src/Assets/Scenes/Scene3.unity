@@ -2835,6 +2835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 968a27402fad6a3419d87534e3041d0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneLevelManager: {fileID: 1364885369}
   playerHealth: {fileID: 1028980805}
   restartDelay: 5
 --- !u!95 &1448130858

@@ -13,6 +13,7 @@ public class GameOverCount : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Start game over countdown!");
         timer = countDown;
         hasSceneLoaded = false;
     }
@@ -20,8 +21,10 @@ public class GameOverCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("Ini timer " + timer);
         if(timer <= 0 && !hasSceneLoaded)
         {
+            Debug.Log("Tim's up");
             countdownText.text = "Time's Up!";
             sceneLevelManager.loadScene(1);
             hasSceneLoaded = true; // Set the flag to true to prevent further scene loading

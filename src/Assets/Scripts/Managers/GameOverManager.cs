@@ -7,6 +7,8 @@ namespace Nightmare
 {
     public class GameOverManager : MonoBehaviour
     {
+        public SceneLevelManager sceneLevelManager;
+        private bool loadStatistics;
         // private PlayerHealth playerHealth;
         // Animator anim;
 
@@ -39,6 +41,7 @@ namespace Nightmare
         //     anim.SetBool("GameOver", false);
         //     playerHealth.ResetPlayer();
         // }
+
         public PlayerHealth playerHealth;
         public float restartDelay = 5f;
 
@@ -48,6 +51,7 @@ namespace Nightmare
         void Awake()
         {
             anim = GetComponent<Animator>();
+            loadStatistics = false;
         }
 
         void Update()
@@ -56,10 +60,12 @@ namespace Nightmare
             {
                 anim.SetTrigger("GameOver");
                 restartTimer += Time.deltaTime;
-                if(restartTimer >= restartDelay)
+                if(restartTimer >= restartDelay && !loadStatistics)
                 {
+                    loadStatistics = true;
+                    Debug.Log("Masuk ke sini");
                     Cursor.lockState = CursorLockMode.None;
-                    Application.LoadLevel("GameOverScene");
+                    sceneLevelManager.loadScene(6);
                 }
             }
         }
