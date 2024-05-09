@@ -45,7 +45,7 @@ namespace Nightmare
         void OnTriggerEnter(Collider other)
         {
             if(other is CapsuleCollider ){
-            if (other.gameObject.CompareTag("Jendral") || other.gameObject.CompareTag("Enemy"))
+            if (other.gameObject.CompareTag("Jendral") || other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("EnemyPet"))
             {
                 EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
                 if (enemyHealth.currentHealth>0)

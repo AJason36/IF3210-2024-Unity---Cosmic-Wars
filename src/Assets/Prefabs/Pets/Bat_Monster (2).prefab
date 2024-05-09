@@ -1089,7 +1089,7 @@ GameObject:
   - component: {fileID: 6705315597615302953}
   m_Layer: 0
   m_Name: Bat_Monster (2)
-  m_TagString: Pet
+  m_TagString: EnemyPet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

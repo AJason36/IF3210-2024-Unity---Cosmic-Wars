@@ -8,7 +8,7 @@ namespace Nightmare
         private StatisticsManager statisticsManager;
         private int totalAttackOrbs;
         private int damage;
-        private int initialDamage=40;
+        public int initialDamage=40;
         public Camera playerCamera;
         public GameObject projectilePrefab;
         public Transform shootingPoint; // A transform from where projectiles are shot
@@ -25,6 +25,7 @@ namespace Nightmare
         private float lastAttackTime;
         public ParticleSystem gunEffect;
         public ParticleSystem shotgunEffect;
+        public bool isOneHitKill = false;
         
         void Start()
         {
@@ -37,6 +38,9 @@ namespace Nightmare
 
         void Update()
         {
+            if(isOneHitKill){
+                damage = 9999;
+            }
             if (Input.GetMouseButtonDown(0)  && Time.time > lastAttackTime)
             {
                 int weapon = animator.GetInteger("Weapon");

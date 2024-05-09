@@ -75,15 +75,13 @@ public class SceneLevelManager : MonoBehaviour
     {
         if (sceneId == 1) {
           yield return StartCoroutine(LoadSceneAsync(7, false)); 
-
-          PlayableDirector director = null;
-
-          if (director == null)
-              director = FindObjectOfType<PlayableDirector>();
-
-          if (director != null)
-          {
-              yield return new WaitUntil(() => director.state != PlayState.Playing);
+          PlayableDirector director = director = FindObjectOfType<PlayableDirector>();
+          yield return new WaitUntil(() => director.state != PlayState.Playing);
+        } else if (sceneId == 5) {
+          if (currentLevelIndex == 1) {
+            yield return StartCoroutine(LoadSceneAsync(8, false)); 
+            PlayableDirector director = director = FindObjectOfType<PlayableDirector>();
+            yield return new WaitUntil(() => director.state != PlayState.Playing);
           }
         }
 
@@ -103,6 +101,20 @@ public class SceneLevelManager : MonoBehaviour
         }
 
         yield return StartCoroutine(LoadSceneAsync(sceneId, false)); 
+    }
+
+    IEnumerator LoadTimeline(int id) {
+      yield return StartCoroutine(LoadSceneAsync(id, false)); 
+
+      PlayableDirector director = null;
+
+      if (director == null)
+          director = FindObjectOfType<PlayableDirector>();
+
+      if (director != null)
+      {
+          yield return new WaitUntil(() => director.state != PlayState.Playing);
+      }
     }
 
     IEnumerator LoadSceneAsync(int sceneId, bool additive)

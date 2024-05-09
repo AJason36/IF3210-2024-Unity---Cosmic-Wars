@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Quest3 : MonoBehaviour
+namespace Nightmare
 {
+  public class Quest3 : MonoBehaviour
+  {
     bool isWon;
 
     // Winning Condition
@@ -18,11 +20,12 @@ public class Quest3 : MonoBehaviour
     float endOfTime = 0f;
     float hold = 5f;
 
-    void Awake(){
-        sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
-        questInfoManager = UnityEngine.GameObject.FindGameObjectWithTag("Quest").GetComponent<QuestInfoManager>();
-        enemies = UnityEngine.GameObject.FindGameObjectsWithTag("Jendral");
-        Debug.Log(enemies.Length);
+    void Awake()
+    {
+      sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
+      questInfoManager = UnityEngine.GameObject.FindGameObjectWithTag("Quest").GetComponent<QuestInfoManager>();
+      enemies = UnityEngine.GameObject.FindGameObjectsWithTag("Jendral");
+      Debug.Log(enemies.Length);
     }
 
     // Start is called before the first frame update
@@ -37,26 +40,35 @@ public class Quest3 : MonoBehaviour
     {
 
       // Start after Quest Info is Done
-      if (questInfoManager.getIsDone()){
+      if (questInfoManager.getIsDone())
+      {
         enemies = UnityEngine.GameObject.FindGameObjectsWithTag("Jendral");
         isWon = enemies.Length == 0;
         // Debug.Log("Ini iswon " + isWon);
-        if (!isWon){
+        if (!isWon)
+        {
           // TO DO
-          if (hold > endOfTime){
+          if (hold > endOfTime)
+          {
             hold -= Time.deltaTime;
-          } else {
+          }
+          else
+          {
             isWon = true;
           }
         }
-        else{
+        else
+        {
           // If won, start the countdown
-          if (remainingTime > endOfTime){
+          if (remainingTime > endOfTime)
+          {
             remainingTime -= Time.deltaTime;
             int minutes = Mathf.FloorToInt(remainingTime / 60);
             int seconds = Mathf.FloorToInt(remainingTime % 60);
             winningCountdown.text = string.Format("Countdown to Next Scene\n{0:00}:{1:00}", minutes, seconds);
-          } else {
+          }
+          else
+          {
             winningCountdown.text = "Time's Up!";
             sceneLevelManager.loadScene(nextSceneToLoad);
           }
@@ -64,4 +76,5 @@ public class Quest3 : MonoBehaviour
       }
 
     }
+  }
 }

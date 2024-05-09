@@ -4159,12 +4159,19 @@ PlayableDirector:
     value: {fileID: 366297373}
   - key: {fileID: -1543723168370904056, guid: a4d0658a3c36f4642a1bde921345e6ee, type: 2}
     value: {fileID: 2129646446}
+  - key: {fileID: 1395729629738929769, guid: a4d0658a3c36f4642a1bde921345e6ee, type: 2}
+    value: {fileID: 1948601317}
+  - key: {fileID: -707600019330936866, guid: a4d0658a3c36f4642a1bde921345e6ee, type: 2}
+    value: {fileID: 67320626}
   m_ExposedReferences:
     m_References:
+    - 7bae03f914a044048a1dd0d435591245: {fileID: 1389744583}
     - b5a9b5cb7f1394f7f9c12994a99c3082: {fileID: 574803173}
+    - badfdae7f66884c58ab9811668d2d1f8: {fileID: 1948601315}
     - 245aed39c9d1d441ab792db14fd5ca1b: {fileID: 1948601315}
     - c179e9a58ae964eb5b9eac00b4972c59: {fileID: 868453788}
     - f1557493a1d5249ce902405470a39558: {fileID: 1948601315}
+    - a5c865b4f9ba34c098350fad88a38074: {fileID: 574803173}
     - 9258d906345604e55801e39f828ecee0: {fileID: 868453788}
 --- !u!4 &1309022412
 Transform:
@@ -4308,7 +4315,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 20
+  m_Priority: 2000
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
@@ -4339,14 +4346,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389744581}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.09405444, y: 0.8598015, z: -0.17143857, w: 0.4717033}
-  m_LocalPosition: {x: 58.3, y: 21.4, z: 52.3}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 81.5, y: 17.8, z: -43.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1520894429}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 359.7088, y: 359.1443, z: 0.4283871}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1482331890
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4710,9 +4717,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 3.4
-  far clip plane: 999.91
-  field of view: 20
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60.000004
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -4739,7 +4746,7 @@ Transform:
   m_GameObject: {fileID: 1779335489}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 61.29, y: 3.33, z: -3.15}
+  m_LocalPosition: {x: 81.5, y: 17.8, z: -43.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
