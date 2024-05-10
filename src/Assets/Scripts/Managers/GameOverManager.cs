@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -7,6 +8,7 @@ namespace Nightmare
 {
     public class GameOverManager : MonoBehaviour
     {
+        [SerializeField] TextMeshProUGUI playerName;
         public SceneLevelManager sceneLevelManager;
         private bool loadStatistics;
         // private PlayerHealth playerHealth;
@@ -50,6 +52,7 @@ namespace Nightmare
 
         void Awake()
         {
+            playerName.text = DataPersistenceManager.Instance.GetGameData().username;
             anim = GetComponent<Animator>();
             loadStatistics = false;
         }
