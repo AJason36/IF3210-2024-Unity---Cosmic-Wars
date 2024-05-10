@@ -51,6 +51,7 @@ namespace Nightmare{
     // Update is called once per frame
     void Update()
     {
+      allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
       // Start after Quest Info is Done
       if (!playerHealth.getIsDead()){
         if (questInfoManager.getIsDone()){
