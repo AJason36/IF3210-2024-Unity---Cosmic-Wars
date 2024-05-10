@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 namespace Nightmare
 {
@@ -16,7 +18,7 @@ namespace Nightmare
     float remainingTime = 5f;
     int nextSceneToLoad = 5; // Isolated Scene
     float endOfTime = 0f;
-    float hold = 10f;
+    float hold = 5f;
 
     void Awake()
     {

@@ -31,7 +31,7 @@ namespace Nightmare
             playerMovement = GetComponent<PlayerMovement>();
             // playerShooting = GetComponentInChildren<PlayerShooting>();
             currentHealth = startingHealth;
-
+            playerAudio.loop = false;
             // ResetPlayer();
         }
 

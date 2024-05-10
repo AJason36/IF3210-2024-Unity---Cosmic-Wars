@@ -29,4 +29,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene1Intro.unity
     guid: 205ce3befc2f243ba833c19482eea6b9
+  - enabled: 1
+    path: Assets/Scenes/Scene1End.unity
+    guid: f3631d4db74664ccb8c2dd6eebc4222f
+  - enabled: 1
+    path: Assets/Scenes/Scene4 Win.unity
+    guid: 12988f36f9ddf437da41d050d90455c8
+  - enabled: 1
+    path: Assets/Scenes/GameWinScene.unity
+    guid: 2aa3c32e241e02242920267f79fcd336
   m_configObjects: {}

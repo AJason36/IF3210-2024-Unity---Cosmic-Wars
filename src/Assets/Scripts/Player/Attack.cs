@@ -175,10 +175,8 @@ namespace Nightmare
         {
             if(totalAttackOrbs < 15)
             {
-                Debug.Log("Ini damage sebelom increase : " + damage);
                 totalAttackOrbs += 1;
                 damage += (int)(0.1*initialDamage);
-                Debug.Log("Ini damage setelah increase" + damage);
             }
         }
 
