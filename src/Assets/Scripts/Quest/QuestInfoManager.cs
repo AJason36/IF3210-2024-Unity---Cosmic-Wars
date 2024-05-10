@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using Nightmare;
 using TMPro;
 using UnityEngine;
-using static Nightmare.CheatCodeManager;
 
 namespace Nightmare
 {
@@ -30,7 +29,18 @@ namespace Nightmare
       questTitleObject.text = questTitle;
       questObjectiveObject.text = questObjective;
       isDone = false;
-      CheatCodeManager.instance.RegisterListener(this, CheatCodes.NO_DAMAGE, CheatCodes.ONE_HIT, CheatCodes.INF_MONEY, CheatCodes.SPEED_UP, CheatCodes.IMMORTAL_PET, CheatCodes.KILL_PET, CheatCodes.INSTANT_ORB, CheatCodes.SKIP_LEVEL);
+
+      CheatCodeManager.instance.RegisterListener(
+        this,
+        CheatCodes.NO_DAMAGE,
+        CheatCodes.ONE_HIT,
+        CheatCodes.INF_MONEY,
+        CheatCodes.SPEED_UP,
+        CheatCodes.IMMORTAL_PET,
+        CheatCodes.KILL_PET,
+        CheatCodes.INSTANT_ORB,
+        CheatCodes.SKIP_LEVEL
+      );
     }
 
     // Update is called once per frame
@@ -47,7 +57,17 @@ namespace Nightmare
       }
     }
     void OnDestroy(){
-      CheatCodeManager.instance.UnregisterListener(this, CheatCodes.NO_DAMAGE, CheatCodes.ONE_HIT, CheatCodes.INF_MONEY, CheatCodes.SPEED_UP, CheatCodes.IMMORTAL_PET, CheatCodes.KILL_PET, CheatCodes.INSTANT_ORB, CheatCodes.SKIP_LEVEL);
+      CheatCodeManager.instance.UnregisterListener(
+        this,
+        CheatCodes.NO_DAMAGE,
+        CheatCodes.ONE_HIT,
+        CheatCodes.INF_MONEY,
+        CheatCodes.SPEED_UP,
+        CheatCodes.IMMORTAL_PET,
+        CheatCodes.KILL_PET,
+        CheatCodes.INSTANT_ORB,
+        CheatCodes.SKIP_LEVEL
+      );
     }
 
     public void StartQuest()
