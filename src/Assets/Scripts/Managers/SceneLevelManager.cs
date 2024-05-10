@@ -67,9 +67,15 @@ public class SceneLevelManager : MonoBehaviour
           slider = (Slider) FindObjectOfType(typeof (Slider));
         }
       }
-      loadingScreen.SetActive(true);
-      // currentScreen.SetActive(false);
-      StartCoroutine(LoadScenesInOrder(sceneId));
+
+      if (loadingScreen){
+        loadingScreen.SetActive(true);
+        // currentScreen.SetActive(false);
+        StartCoroutine(LoadScenesInOrder(sceneId));
+      } else {
+        SceneManager.LoadScene(sceneId);
+      }
+
     }
 
 
