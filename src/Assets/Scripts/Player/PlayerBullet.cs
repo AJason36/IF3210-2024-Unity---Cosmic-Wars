@@ -9,7 +9,7 @@ namespace Nightmare
         private StatisticsManager statisticsManager;
         public int damage = 40;
         public float speed = 10f;
-        public float maxDistance = 20f;
+        public float maxDistance = 30f;
         public bool isShotGun = false;
 
         private Vector3 startPosition;
@@ -54,6 +54,7 @@ namespace Nightmare
                     if(isShotGun){
                         int pelletDmg = damage * 2 / 5;
                         enemyHealth.TakeDamage(pelletDmg);
+                            Debug.Log(pelletDmg);
                     }else{
                         enemyHealth.TakeDamage(damage);
                     }

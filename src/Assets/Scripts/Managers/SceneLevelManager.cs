@@ -64,8 +64,8 @@ public class SceneLevelManager : MonoBehaviour
         if ( UnityEngine.GameObject.FindGameObjectWithTag("LoadingSlider")){
           slider = (Slider) FindObjectOfType(typeof (Slider));
         }
-      }
       loadingScreen.SetActive(true);
+      }
       // currentScreen.SetActive(false);
       StartCoroutine(LoadScenesInOrder(sceneId));
     }
