@@ -66,7 +66,7 @@ namespace Nightmare
         {
             if(playerHealth.getIsDead())
             {
-                Debug.Log("Player is dead");
+                // Debug.Log("Player is dead");
                 anim.SetTrigger("GameOver");
                 restartTimer += Time.deltaTime;
                 if(restartTimer >= restartDelay && !loadStatistics)

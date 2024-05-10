@@ -13,16 +13,14 @@ namespace Nightmare{
       private QuestInfoManager questInfoManager;
       private GameObject[] allEnemy;
       private GameObject[] allJendral;
-      float remainingTime = 5f;
-      int nextSceneToLoad = 5; // Isolated Scene
-      float endOfTime = 0f;
-      float hold = 5f;
-
+      private PlayerHealth playerHealth;
+  
       void Awake(){
           sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
           questInfoManager = UnityEngine.GameObject.FindGameObjectWithTag("Quest").GetComponent<QuestInfoManager>();
           allEnemy = GameObject.FindGameObjectsWithTag("Enemy");
           allJendral = GameObject.FindGameObjectsWithTag("Jendral");
+          playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
       }
 
       // Start is called before the first frame update
@@ -64,7 +62,25 @@ namespace Nightmare{
 
           }
         }
+        if(playerHealth.getIsDead()){
+        allEnemy = GameObject.FindGameObjectsWithTag("Enemy");
+        allJendral = GameObject.FindGameObjectsWithTag("Jendral");
+        DestroyAllEnemies(allEnemy);
+        DestroyAllEnemies(allJendral);
       }
+
+    }
+
+    void DestroyAllEnemies(GameObject[] allMobs){
+      // Destroy all remaining enemy 
+      if(allMobs!=null&&allMobs.Length > 0){
+        foreach(GameObject enemy in allMobs){
+          if(enemy != null){
+            Destroy(enemy);
+          }
+        }
+      }
+    }
 
       public bool getIsWon(){
         return isWon;

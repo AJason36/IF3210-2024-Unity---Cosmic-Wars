@@ -1104,7 +1104,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7554131, z: -0, w: 0.65524894}
   m_LocalPosition: {x: -397.71274, y: -81.49009, z: -434.29016}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2694784783979285029}
@@ -1253,7 +1253,6 @@ MonoBehaviour:
   playerTransform: {fileID: 5166069313548256704, guid: 9e012a509f25284488419def75635cee, type: 3}
   boss: {fileID: 8925301299877009792, guid: 4025180b093bffb48a47298bde71e1fe, type: 3}
   nav: {fileID: 5147325273155738836}
-  moveSpeed: 8
   safeDistance: 10
 --- !u!114 &6705315597615302953
 MonoBehaviour:

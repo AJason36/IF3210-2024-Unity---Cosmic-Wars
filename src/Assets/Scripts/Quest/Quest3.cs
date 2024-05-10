@@ -19,12 +19,18 @@ namespace Nightmare
     int nextSceneToLoad = 5; // Isolated Scene
     float endOfTime = 0f;
     float hold = 5f;
+    private PlayerHealth playerHealth;
+    private GameObject[] allEnemies;
+    private GameObject[] allJendral;
 
     void Awake()
     {
       sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
       questInfoManager = UnityEngine.GameObject.FindGameObjectWithTag("Quest").GetComponent<QuestInfoManager>();
       enemies = UnityEngine.GameObject.FindGameObjectsWithTag("Jendral");
+      playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+      allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+      allJendral = GameObject.FindGameObjectsWithTag("Jendral");
     }
 
     // Start is called before the first frame update
@@ -60,6 +66,10 @@ namespace Nightmare
         }
         else
         {
+          allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+          allJendral = GameObject.FindGameObjectsWithTag("Jendral");
+          DestroyAllEnemies(allEnemies);
+          DestroyAllEnemies(allJendral);
           // If won, start the countdown
           if (remainingTime > endOfTime)
           {
@@ -76,6 +86,24 @@ namespace Nightmare
         }
       }
 
+      if(playerHealth.getIsDead()){
+        allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+        allJendral = GameObject.FindGameObjectsWithTag("Jendral");
+        DestroyAllEnemies(allEnemies);
+        DestroyAllEnemies(allJendral);
+      }
+
+    }
+
+    void DestroyAllEnemies(GameObject[] allMobs){
+      // Destroy all remaining enemy 
+      if(allMobs!=null&&allMobs.Length > 0){
+        foreach(GameObject enemy in allMobs){
+          if(enemy != null){
+            Destroy(enemy);
+          }
+        }
+      }
     }
   }
 }

@@ -17,10 +17,7 @@ namespace Nightmare
     private QuestInfoManager questInfoManager;
     private SpawnManagers point1;
     private SpawnManagers point2;
-    float remainingTime = 5f;
     int nextSceneToLoad = 5; // Isolated Scene
-    float endOfTime = 0f;
-    float hold = 5f;
     private GameObject[] allEnemies;
 
     void Awake()
@@ -44,7 +41,6 @@ namespace Nightmare
     // Update is called once per frame
     void Update()
     {
-      allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
       // Start after Quest Info is Done
       if (questInfoManager.getIsDone() && point1.AllMobsSpawnedAndDestroyed() && point2.AllMobsSpawnedAndDestroyed())
       {
@@ -53,6 +49,7 @@ namespace Nightmare
       }
 
       if(playerHealth.getIsDead()){
+        allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
         DestroyAllEnemies();
         Destroy(point1);
         Destroy(point2);
@@ -61,7 +58,7 @@ namespace Nightmare
 
     void DestroyAllEnemies(){
       // Destroy all remaining enemy 
-      if(allEnemies.Length > 0){
+      if(allEnemies!=null&&allEnemies.Length > 0){
         foreach(GameObject enemy in allEnemies){
           if(enemy != null){
             Destroy(enemy);

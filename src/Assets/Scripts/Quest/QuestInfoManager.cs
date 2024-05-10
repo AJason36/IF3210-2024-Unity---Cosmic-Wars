@@ -181,6 +181,7 @@ namespace Nightmare
           }
           break;
         case CheatCodes.SKIP_LEVEL:
+          Debug.Log("Skip Level");
           SceneLevelManager sceneLevelManager = GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
           sceneLevelManager.loadScene(5);
           break;

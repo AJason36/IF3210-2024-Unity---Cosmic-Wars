@@ -21,6 +21,7 @@ namespace Nightmare
         CapsuleCollider capsuleCollider;
         EnemyMovement enemyMovement;
         int difficultyId;
+        private float deathTimer = 0f;
 
         void Awake ()
         {
@@ -61,12 +62,12 @@ namespace Nightmare
         {
             if (IsDead() && !isPet)
             {
+                deathTimer += Time.deltaTime;
                 transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
-                if (transform.position.y < -0.25f&& !isBoss)
-                {
+                if (deathTimer >= 2f) {
                     Destroy(gameObject);
                 }
-                if (transform.position.y < -0.35f&& isBoss)
+                if (transform.position.y < -0.4f)
                 {
                     Destroy(gameObject);
                 }
