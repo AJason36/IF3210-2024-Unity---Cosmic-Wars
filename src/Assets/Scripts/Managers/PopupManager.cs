@@ -25,7 +25,7 @@ public class PopupManager : MonoBehaviour
 
     private SaveGameManager saveGameManager;
 
-    float distanceThreshold = 4f;
+    float distanceThreshold = 3f;
 
     void Start()
     {

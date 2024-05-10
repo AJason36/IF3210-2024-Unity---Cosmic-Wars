@@ -34,43 +34,32 @@ namespace Nightmare{
       // Update is called once per frame
       void Update()
       {
-        allEnemy = GameObject.FindGameObjectsWithTag("Enemy");
-        allJendral = GameObject.FindGameObjectsWithTag("Jendral");
-        // Start after Quest Info is Done
-        if (questInfoManager.getIsDone()){
-          if (!isWon){
-            
-          }
-          else{
-            // Kondisi kalau udah menang
-            Debug.Log("Has win");
-            if(allEnemy.Length > 0){
-              foreach(GameObject enemy in allEnemy){
-                if(enemy != null){
-                  Destroy(enemy);
-                }
-              }
+        if(playerHealth.getIsDead()){
+          allEnemy = GameObject.FindGameObjectsWithTag("Enemy");
+          allJendral = GameObject.FindGameObjectsWithTag("Jendral");
+          DestroyAllEnemies(allEnemy);
+          DestroyAllEnemies(allJendral);
+          crosshair.SetActive(false);
+        }
+        else {
+          allEnemy = GameObject.FindGameObjectsWithTag("Enemy");
+          allJendral = GameObject.FindGameObjectsWithTag("Jendral");
+          // Start after Quest Info is Done
+          if (questInfoManager.getIsDone()){
+            if (!isWon){
+              
             }
-            if(allJendral.Length > 0){
-              foreach(GameObject enemy in allJendral){
-                if(enemy != null){
-                  Destroy(enemy);
-                }
-              }
+            else{
+              // Kondisi kalau udah menang
+              Debug.Log("Has win");
+              DestroyAllEnemies(allEnemy);
+              DestroyAllEnemies(allJendral);  
+              questInfoManager.FinishQuest();
+              sceneLevelManager.loadScene(10);
             }
-            questInfoManager.FinishQuest();
-            sceneLevelManager.loadScene(10);
           }
         }
-        if(playerHealth.getIsDead()){
-        allEnemy = GameObject.FindGameObjectsWithTag("Enemy");
-        allJendral = GameObject.FindGameObjectsWithTag("Jendral");
-        DestroyAllEnemies(allEnemy);
-        DestroyAllEnemies(allJendral);
-        crosshair.SetActive(false);
-      }
-
-    }
+      } 
 
     void DestroyAllEnemies(GameObject[] allMobs){
       // Destroy all remaining enemy 
