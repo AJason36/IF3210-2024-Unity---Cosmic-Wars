@@ -16,6 +16,7 @@ namespace Nightmare{
             { CheatCodes.KILL_PET, "MRFRESH" },
             { CheatCodes.INSTANT_ORB, "PLOTARMOR" },
             { CheatCodes.SKIP_LEVEL, "LAZYPLAYZY" },
+            { CheatCodes.SPEED_DOWN, "TURTLE" }
         };
 
         // Singleton instance

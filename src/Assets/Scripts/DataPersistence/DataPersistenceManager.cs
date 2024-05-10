@@ -66,6 +66,16 @@ public class DataPersistenceManager : MonoBehaviour
         _fileDataHandler.Delete(saveId);
     }
 
+    public void setInfMoney()
+    {
+        _gameData.setInfMoney();
+    }
+
+    public int getMoney()
+    {
+        return _gameData.money;
+    }
+
     private List<IDataPersistence> GetDataPersistenceObjects()
     {
         List<IDataPersistence> dataPersistenceObjects = new List<IDataPersistence>();

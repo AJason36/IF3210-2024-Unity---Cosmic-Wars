@@ -10,5 +10,6 @@ namespace Nightmare
         KILL_PET,
         INSTANT_ORB,
         SKIP_LEVEL,
+        SPEED_DOWN
     }
 }

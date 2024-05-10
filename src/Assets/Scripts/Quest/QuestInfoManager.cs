@@ -123,6 +123,7 @@ namespace Nightmare
     void ICheatCode.ActivateCheatCode(CheatCodes codes)
     {
       GameObject player = GameObject.FindGameObjectWithTag("Player");
+      PlayerMovement playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
       switch (codes)
       {
         case CheatCodes.NO_DAMAGE:
@@ -143,10 +144,18 @@ namespace Nightmare
           }
           break;
         case CheatCodes.INF_MONEY:
+          DataPersistenceManager.Instance.setInfMoney();
+          int money = DataPersistenceManager.Instance.getMoney();;
+          Debug.Log("MONEY: " + money);
           Debug.Log("Infinite money cheat code activated");
           break;
         case CheatCodes.SPEED_UP:
+          playerMovement.ActivateBoost();
           Debug.Log("Speed up cheat code activated");
+          break;
+        case CheatCodes.SPEED_DOWN:
+          playerMovement.ActivateSlowDown();
+          Debug.Log("Speed down cheat code activated");
           break;
         case CheatCodes.IMMORTAL_PET:
           Debug.Log("Immortal pet cheat code activated");
@@ -177,7 +186,8 @@ namespace Nightmare
           }
           break;
         case CheatCodes.SKIP_LEVEL:
-          Debug.Log("Skip level cheat code activated");
+          SceneLevelManager sceneLevelManager = GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
+          sceneLevelManager.loadScene(5);
           break;
       }
     }
