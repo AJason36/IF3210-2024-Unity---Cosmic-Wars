@@ -24,4 +24,8 @@ public class GameData
         money = 0;
         level = 1;
     }
+
+    public void setInfMoney() {
+        money = 99999;
+    }
 }

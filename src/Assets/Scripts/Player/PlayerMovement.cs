@@ -92,6 +92,20 @@ namespace Nightmare
             }
         }
 
+        public void ActivateBoost()
+        {
+            speed = 24f;
+            initialSpeed = 24f;
+
+        }
+
+        public void ActivateSlowDown()
+        {
+            speed = 12f;
+            initialSpeed = 12f;
+
+        }
+
         void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("HealthOrb"))
