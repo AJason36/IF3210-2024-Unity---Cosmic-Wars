@@ -17,6 +17,8 @@ public class SceneLevelManager : MonoBehaviour
 
 
   void Awake(){
+    Debug.Log("loadingScreen");
+    Debug.Log(loadingScreen);
     loadingScreen.SetActive(false);
     if (instance != null){
       Destroy (gameObject);
@@ -58,10 +60,10 @@ public class SceneLevelManager : MonoBehaviour
 
     // Start is called before the first frame update
     public void loadScene(int sceneId){
-      Debug.Log(loadingScreen);
       if (!loadingScreen || !slider){
-        loadingScreen = UnityEngine.GameObject.FindGameObjectWithTag("LoadingScreen");
-        if ( UnityEngine.GameObject.FindGameObjectWithTag("LoadingSlider")){
+        loadingScreen = GameObject.FindGameObjectWithTag("LoadingScreen");
+        Debug.Log(loadingScreen);
+        if ( GameObject.FindGameObjectWithTag("LoadingSlider")){
           slider = (Slider) FindObjectOfType(typeof (Slider));
         }
       }
