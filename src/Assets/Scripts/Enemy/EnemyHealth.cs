@@ -31,13 +31,15 @@ namespace Nightmare
             difficultyId = DataPersistenceManager.Instance.GetGameData().difficultyId;
             switch(difficultyId){
                 case 0:
-                    startingHealth *= 2/3;
+                    startingHealth *= 2;
+                    startingHealth /= 3;
                     break;
                 case 1:
                     startingHealth *= 1;
                     break;
                 case 2:
-                    startingHealth *= 3/2;
+                    startingHealth *= 3;
+                    startingHealth /= 2;
                     break;
             }
             currentHealth = startingHealth;
@@ -60,7 +62,11 @@ namespace Nightmare
             if (IsDead() && !isPet)
             {
                 transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
-                if (transform.position.y < -0.35f)
+                if (transform.position.y < -0.25f&& !isBoss)
+                {
+                    Destroy(gameObject);
+                }
+                if (transform.position.y < -0.35f&& isBoss)
                 {
                     Destroy(gameObject);
                 }

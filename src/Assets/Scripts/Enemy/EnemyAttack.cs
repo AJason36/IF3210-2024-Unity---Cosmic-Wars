@@ -41,13 +41,15 @@ namespace Nightmare
             difficultyId = DataPersistenceManager.Instance.GetGameData().difficultyId;
             switch(difficultyId){
                 case 0:
-                    attackDamage *= 2/3;
+                    attackDamage *= 2;
+                    attackDamage /= 3;
                     break;
                 case 1:
                     attackDamage *= 1;
                     break;
                 case 2:
-                    attackDamage *= 3/2;
+                    attackDamage *= 3;
+                    attackDamage /= 2;
                     break;
             }
             initialDamage = attackDamage;
@@ -56,14 +58,10 @@ namespace Nightmare
             pet = GameObject.FindGameObjectWithTag("Pet");
             if (!pet)
             {
-                Debug.Log("Pet not found!");
+                
             }
             else { 
                 petHealth = pet.GetComponent<PetHealth>();
-                if (!petHealth)
-                {
-                    Debug.Log("Pet health not found!");
-                }
             }
         }
 
