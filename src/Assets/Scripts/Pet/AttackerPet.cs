@@ -29,7 +29,6 @@ namespace Nightmare
             // Setting up the references.
             player = GameObject.FindGameObjectWithTag("Player");
             nearestEnemy = null;
-            enemyHealth = nearestEnemy.GetComponent<EnemyHealth>();
         }
         void Update()
         {
@@ -77,10 +76,15 @@ namespace Nightmare
             foreach (GameObject enemy in enemies)
             {
                 float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-                if (distanceToEnemy < shortestDistance && distanceToEnemy > distanceThreshold)
+                if (distanceToEnemy < shortestDistance)
                 {
                     shortestDistance = distanceToEnemy;
-                    closestEnemy = enemy;
+                    enemyHealth = enemy.GetComponent<EnemyHealth>();
+
+                    if (enemyHealth.currentHealth > 0)
+                    {
+                        closestEnemy = enemy;
+                    }
                 }
             }
 
