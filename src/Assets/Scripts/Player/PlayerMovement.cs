@@ -64,6 +64,7 @@ namespace Nightmare
             animator.SetBool("Running", isRunning);
             animator.SetBool("Walking", move.sqrMagnitude > 0.01f);
 
+            // Actial moving
             controller.Move(move * actualSpeed * Time.deltaTime);
 
             // Distance traveled

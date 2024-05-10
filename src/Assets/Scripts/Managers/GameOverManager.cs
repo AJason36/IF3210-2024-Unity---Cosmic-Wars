@@ -56,7 +56,7 @@ namespace Nightmare
 
         void Update()
         {
-            if(playerHealth.currentHealth <= 0)
+            if(playerHealth.getIsDead())
             {
                 anim.SetTrigger("GameOver");
                 restartTimer += Time.deltaTime;
@@ -64,7 +64,7 @@ namespace Nightmare
                 {
                     loadStatistics = true;
                     Cursor.lockState = CursorLockMode.None;
-                    sceneLevelManager.loadScene(6);
+                    sceneLevelManager.loadScene(6); // Statistics
                 }
             }
         }

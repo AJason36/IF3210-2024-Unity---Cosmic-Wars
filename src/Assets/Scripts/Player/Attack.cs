@@ -49,7 +49,7 @@ namespace Nightmare
                     animator.SetTrigger("Fight");
                     lastAttackTime = Time.time;
                     statisticsManager.RecordShot();
-                    Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, 1 * Screen.height / 2));
+                    Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
                     GameObject projectile = Instantiate(projectilePrefab, shootingPoint.position, Quaternion.LookRotation(ray.direction));
                     PlayerBullet bulletComponent = projectile.GetComponent<PlayerBullet>();
                     
@@ -74,7 +74,7 @@ namespace Nightmare
                 } else if (weapon == 2 && Time.time > lastAttackTime + shotgunCooldown) {
                     animator.SetTrigger("Fight");
                     lastAttackTime = Time.time;
-                    Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, 1*Screen.height / 3));
+                    Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
                     GameObject straightProjectile = Instantiate(projectilePrefab, shootingPoint.position, Quaternion.LookRotation(ray.direction));
                     PlayerBullet bulletComponent1 = straightProjectile.GetComponent<PlayerBullet>();
                     
@@ -175,10 +175,8 @@ namespace Nightmare
         {
             if(totalAttackOrbs < 15)
             {
-                Debug.Log("Ini damage sebelom increase : " + damage);
                 totalAttackOrbs += 1;
                 damage += (int)(0.1*initialDamage);
-                Debug.Log("Ini damage setelah increase" + damage);
             }
         }
 

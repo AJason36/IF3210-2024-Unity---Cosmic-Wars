@@ -19,6 +19,9 @@ TagManager:
   - Quest
   - Jendral
   - EnemyPet
+  - Info
+  - Point1
+  - Point2
   layers:
   - Default
   - TransparentFX

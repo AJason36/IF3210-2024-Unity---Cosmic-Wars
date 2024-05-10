@@ -8,9 +8,11 @@ namespace Nightmare
 {
     public class AttackerPet : MonoBehaviour
     {
-        public int attackDamage = 10;
+        public int attackDamage = 100;
         public float timeBetweenAttacks = 1f;
         public float moveSpeed = 5f;
+
+        public float distanceThreshold = 10f;
         public NavMeshAgent nav;
         private GameObject nearestEnemy;
         private EnemyHealth enemyHealth;
@@ -18,19 +20,31 @@ namespace Nightmare
         bool enemyInRange;
         float timer;
 
+        // For Movement Behavior
+        private GameObject player;
+        private Transform playerTransform;
+
         void Awake()
         {
             // Setting up the references.
-            nearestEnemy = GameObject.FindGameObjectWithTag("Enemy");
+            player = GameObject.FindGameObjectWithTag("Player");
+            nearestEnemy = null;
             enemyHealth = nearestEnemy.GetComponent<EnemyHealth>();
         }
         void Update()
         {
             FindNearestEnemy();
             timer += Time.deltaTime;
-            if (nearestEnemy != null && timer >= timeBetweenAttacks)
+
+            if (nearestEnemy != null)
             {
+              if (timer >= timeBetweenAttacks){
                 AttackNearestEnemy();
+              }
+            }
+            // Case there is no near enemy, get to player
+            else {
+              nav.SetDestination(playerTransform.position);
             }
         }
 
@@ -63,7 +77,7 @@ namespace Nightmare
             foreach (GameObject enemy in enemies)
             {
                 float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-                if (distanceToEnemy < shortestDistance)
+                if (distanceToEnemy < shortestDistance && distanceToEnemy > distanceThreshold)
                 {
                     shortestDistance = distanceToEnemy;
                     closestEnemy = enemy;
@@ -82,15 +96,6 @@ namespace Nightmare
             {
                 enemyHealth.TakeDamage(attackDamage);
             }
-            // if (Vector3.Distance(transform.position, nearestEnemy.transform.position) < 1f)
-            // {
-            //     timer = 0f;
-            //     enemyHealth = nearestEnemy.GetComponent<EnemyHealth>();
-            //     if (enemyHealth.currentHealth>0 && enemyInRange)
-            //     {
-            //         enemyHealth.TakeDamage(attackDamage);
-            //     }
-            // }
         }
     }
 }

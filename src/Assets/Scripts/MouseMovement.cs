@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 
 public class MouseMovement : MonoBehaviour
 {
-    public float mouseSensitivity = 100f;
+    public float mouseSensitivity = 20f;
     public Transform follow;
  
-    float xRotation = 0f;
+    float XRotation = 0f;
     float YRotation = 0f;
+
+    float BelowXRotationThreshold = -2.5f;
+    float UpperXRotationThreshold = 7f;
  
     void Start()
     {
@@ -22,15 +26,26 @@ public class MouseMovement : MonoBehaviour
        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
  
        //control rotation around x axis (Look up and down)
-       xRotation -= mouseY;
+       XRotation -= mouseY;
  
        //we clamp the rotation so we cant Over-rotate (like in real life)
-       xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+       XRotation = Mathf.Clamp(XRotation, -90f, 90f);
+
+      // Apply XRotation Threshold
+       if (XRotation < BelowXRotationThreshold){
+        XRotation = BelowXRotationThreshold;
+       }
+       if (XRotation > UpperXRotationThreshold){
+        XRotation = UpperXRotationThreshold;
+       }
  
        //control rotation around y axis (Look up and down)
        YRotation += mouseX;
+
+      // Debug.Log(string.Format("XMouse {0}, YMouse {1}", mouseX, mouseY));
+      // Debug.Log(string.Format("XRotation {0}, YRotation {1}", XRotation, YRotation));
  
-       follow.localRotation = Quaternion.Euler(xRotation, YRotation, 0f);
-       transform.localRotation = Quaternion.Euler(0f, YRotation * 4, 0f);
+      follow.localRotation = UnityEngine.Quaternion.Euler(XRotation * (mouseSensitivity/2) , 0f, 0f);
+      transform.localRotation = UnityEngine.Quaternion.Euler(0f, YRotation * mouseSensitivity, 0f);
     }
 }

@@ -15,6 +15,8 @@ namespace Nightmare
     [SerializeField] TextMeshProUGUI winningCountdown;
     private SceneLevelManager sceneLevelManager;
     private QuestInfoManager questInfoManager;
+    private SpawnManagers point1;
+    private SpawnManagers point2;
     float remainingTime = 5f;
     int nextSceneToLoad = 5; // Isolated Scene
     float endOfTime = 0f;
@@ -24,6 +26,8 @@ namespace Nightmare
     {
       sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
       questInfoManager = UnityEngine.GameObject.FindGameObjectWithTag("Quest").GetComponent<QuestInfoManager>();
+      point1 = UnityEngine.GameObject.FindGameObjectWithTag("Point1").GetComponent<SpawnManagers>();
+      point2 = UnityEngine.GameObject.FindGameObjectWithTag("Point2").GetComponent<SpawnManagers>();
     }
 
     // Start is called before the first frame update
@@ -37,36 +41,9 @@ namespace Nightmare
     void Update()
     {
       // Start after Quest Info is Done
-      if (questInfoManager.getIsDone())
+      if (questInfoManager.getIsDone() && point1.AllMobsSpawnedAndDestroyed() && point2.AllMobsSpawnedAndDestroyed())
       {
-        if (!isWon)
-        {
-          // TO DO
-          if (hold > endOfTime)
-          {
-            hold -= Time.deltaTime;
-          }
-          else
-          {
-            isWon = true;
-          }
-        }
-        else
-        {
-          // If won, start the countdown
-          if (remainingTime > endOfTime)
-          {
-            remainingTime -= Time.deltaTime;
-            int minutes = Mathf.FloorToInt(remainingTime / 60);
-            int seconds = Mathf.FloorToInt(remainingTime % 60);
-            winningCountdown.text = string.Format("Countdown to Next Scene\n{0:00}:{1:00}", minutes, seconds);
-          }
-          else
-          {
-            winningCountdown.text = "Time's Up!";
-            sceneLevelManager.loadScene(nextSceneToLoad);
-          }
-        }
+        sceneLevelManager.loadScene(nextSceneToLoad);
       }
 
     }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Nightmare;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -8,7 +9,7 @@ namespace Nightmare{
   public class Quest2 : MonoBehaviour
   {
       bool isWon;
-
+      private PlayerHealth playerHealth;
       // Winning Condition
       [SerializeField] TextMeshProUGUI winningCountdown;
       [SerializeField] TextMeshProUGUI gameCountdown;
@@ -19,10 +20,15 @@ namespace Nightmare{
       float endOfTime = 0f;
       float remainingGameTime = 180f;
 
-      void Awake(){
-          sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
-          questInfoManager = UnityEngine.GameObject.FindGameObjectWithTag("Quest").GetComponent<QuestInfoManager>();
-      }
+    private GameObject[] allEnemies;
+
+
+    void Awake(){
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
+        questInfoManager = UnityEngine.GameObject.FindGameObjectWithTag("Quest").GetComponent<QuestInfoManager>();
+        allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+    }
 
       // Start is called before the first frame update
       void Start()
@@ -31,10 +37,22 @@ namespace Nightmare{
         isWon = false;
       }
 
-      // Update is called once per frame
-      void Update()
-      {
-        // Start after Quest Info is Done
+    void DestroyAllEnemies(){
+      // Destroy all remaining enemy 
+      if(allEnemies.Length > 0){
+        foreach(GameObject enemy in allEnemies){
+          if(enemy != null){
+            Destroy(enemy);
+          }
+        }
+      }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+      // Start after Quest Info is Done
+      if (!playerHealth.getIsDead()){
         if (questInfoManager.getIsDone()){
           if (!isWon){
             // TO DO
@@ -42,13 +60,16 @@ namespace Nightmare{
               remainingGameTime -= Time.deltaTime;
               int minutes = Mathf.FloorToInt(remainingGameTime / 60);
               int seconds = Mathf.FloorToInt(remainingGameTime % 60);
-              gameCountdown.text = string.Format("Remaining Time\n{0:00}:{1:00}", minutes, seconds);
+              gameCountdown.text = string.Format("{0:00}:{1:00}", minutes, seconds);
             } else {
               gameCountdown.text = "";
               isWon = true;
             }
           }
           else{
+            // Destroy all remaining enemy 
+            DestroyAllEnemies();
+
             // If won, start the countdown
             if (remainingTime > endOfTime){
               remainingTime -= Time.deltaTime;
@@ -61,7 +82,11 @@ namespace Nightmare{
             }
           }
         }
-
+      } else {
+        winningCountdown.text = "";
+        gameCountdown.text = "";
+        DestroyAllEnemies();
       }
+    } 
   }
 }

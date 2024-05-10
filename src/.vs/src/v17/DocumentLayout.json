@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\MouseMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\MouseMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\Managers\\CheatCodeManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Managers\\CheatCodeManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,15 +23,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MouseMovement.cs",
+              "DocumentMoniker": "C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\MouseMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MouseMovement.cs",
+              "ToolTip": "C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\MouseMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MouseMovement.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAcwC8AAABlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T17:23:34.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "CheatCodeManager.cs",
               "DocumentMoniker": "C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\Managers\\CheatCodeManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\CheatCodeManager.cs",
               "ToolTip": "C:\\Files\\Kuliah\\Semester-6\\PBD\\Tugas\\if3210-2024-unity-ajg\\src\\Assets\\Scripts\\Managers\\CheatCodeManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Managers\\CheatCodeManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-09T14:46:26.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-09T14:46:26.889Z"
             }
           ]
         }

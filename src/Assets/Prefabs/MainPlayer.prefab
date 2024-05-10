@@ -1865,6 +1865,7 @@ Transform:
   - {fileID: 2959234002631914072}
   - {fileID: 3438843824922406560}
   - {fileID: 4161633688614375762}
+  - {fileID: 4078768006491391028}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &4059331718642593540
@@ -1942,6 +1943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06db44db5b9b3d64cbb17ee942b0b52f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialDamage: 40
   playerCamera: {fileID: 0}
   projectilePrefab: {fileID: 8008529985799208950, guid: d04b4b8d49c039940b2968f95e88cdc6, type: 3}
   shootingPoint: {fileID: 8593971710945800740}
@@ -1949,6 +1951,15 @@ MonoBehaviour:
   animator: {fileID: 1932489089850825314}
   range: 100
   spreadAngle: 15
+  meleeCollider: {fileID: 0}
+  enemyInRange: 0
+  enemy: {fileID: 0}
+  gunCooldown: 0.5
+  meleeCooldown: 0.75
+  shotgunCooldown: 1
+  gunEffect: {fileID: 0}
+  shotgunEffect: {fileID: 0}
+  isOneHitKill: 0
 --- !u!114 &3482237414781616400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2350,6 +2361,37 @@ Transform:
   m_Children:
   - {fileID: 1330124533067461394}
   m_Father: {fileID: 3464127221128095740}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6919733157210404780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4078768006491391028}
+  m_Layer: 0
+  m_Name: LookAt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4078768006491391028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6919733157210404780}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8593971710945800740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7054118381625363265
 GameObject:
