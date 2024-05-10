@@ -9,7 +9,7 @@ namespace Nightmare
     public class GameOverManager : MonoBehaviour
     {
         [SerializeField] TextMeshProUGUI playerName;
-        public SceneLevelManager sceneLevelManager;
+        SceneLevelManager sceneLevelManager;
         private bool loadStatistics;
         // private PlayerHealth playerHealth;
         // Animator anim;
@@ -53,6 +53,11 @@ namespace Nightmare
         void Awake()
         {
             playerName.text = DataPersistenceManager.Instance.GetGameData().username;
+            sceneLevelManager = GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
+            if(!sceneLevelManager)
+            {
+                Debug.Log("No scene level manager");
+            }
             anim = GetComponent<Animator>();
             loadStatistics = false;
         }
@@ -61,10 +66,12 @@ namespace Nightmare
         {
             if(playerHealth.getIsDead())
             {
+                Debug.Log("Player is dead");
                 anim.SetTrigger("GameOver");
                 restartTimer += Time.deltaTime;
                 if(restartTimer >= restartDelay && !loadStatistics)
-                {
+                {  
+                    Debug.Log("Load scene");
                     loadStatistics = true;
                     Cursor.lockState = CursorLockMode.None;
                     sceneLevelManager.loadScene(6); // Statistics

@@ -32,7 +32,7 @@ namespace Nightmare
             playerHealth = player.GetComponent<PlayerHealth>();
             if (!playerHealth)
             {
-                Debug.Log("Player health not found!");
+                // playerHealth = GameObject.FindGameObjectWithTag("HealthSlider");
             }
             enemyMovement = GetComponent<EnemyMovement>();
             enemyHealth = GetComponent<EnemyHealth>();

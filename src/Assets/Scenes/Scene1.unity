@@ -5283,7 +5283,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: {fileID: 34184900}
-  sceneLevelManager: {fileID: 2063993142}
   playerHealth: {fileID: 1099900812}
   restartDelay: 5
 --- !u!95 &2062736485
