@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -36,14 +37,19 @@ public class ShopManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         // SetCanvasInteractable(true);
 
-        int userMoney = DataPersistenceManager.Instance.GetGameData().money;
-        moneyText.text = "Money: $" + userMoney.ToString();
-
         rdPriceText.text = "$" + rdPrice.ToString();
         bbPriceText.text = "$" + bbPrice.ToString();
 
+        UpdateCanvas();
+    }
+
+    private void UpdateCanvas()
+    {
+        int userMoney = DataPersistenceManager.Instance.GetGameData().money;
+        moneyText.text = "Money: $" + userMoney.ToString();
+
         // Set interactivity of the buy buttons
-        if (userMoney < rdPrice)
+        if (userMoney < rdPrice || DataPersistenceManager.Instance.GetGameData().petId == 0)
         {
             rdBuyButton.interactable = false;
         }
@@ -52,7 +58,7 @@ public class ShopManager : MonoBehaviour
             rdBuyButton.interactable = true;
         }
 
-        if (userMoney < bbPrice)
+        if (userMoney < bbPrice || DataPersistenceManager.Instance.GetGameData().petId == 1)
         {
             bbBuyButton.interactable = false;
         }
@@ -121,8 +127,9 @@ public class ShopManager : MonoBehaviour
             moneyText.text = "Money: $" + DataPersistenceManager.Instance.GetGameData().money;
             Debug.Log("BB8 bought");
         }
-
+        
         CloseShopPopup();
+        UpdateCanvas();
         itemID = -1;
     }
 
