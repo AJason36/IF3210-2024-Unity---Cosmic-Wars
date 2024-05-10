@@ -139,30 +139,14 @@ namespace Nightmare
             
             healthSlider.value = currentHealth;
         }
-        // void Death()
-        // {
-        //     // Set the death flag so this function won't be called again.
-        //     isDead = true;
 
-        //     // Turn off any remaining shooting effects.
-        //     // playerShooting.DisableEffects();
+      public void setGodMode(bool newSet){
+        godMode = newSet;
+      }
 
-        //     // Tell the animator that the player is dead.
-        //     // anim.SetBool("IsDead", true);
-        //     anim.SetTrigger("Die");
-        //     // Set the audiosource to play the death clip and play it (this will stop the hurt sound from playing).
-            
-        //     playerAudio.clip = deathClip;
-        //     playerAudio.Play();
+      public bool getGodMode(){
+        return godMode;
+      }
 
-        //     // Turn off the movement and shooting scripts.
-        //     playerMovement.enabled = false;
-        //     // playerShooting.enabled = false;
-        // }
-
-        // public void RestartLevel()
-        // {
-        //     EventManager.TriggerEvent("GameOver");
-        // }
     }
 }

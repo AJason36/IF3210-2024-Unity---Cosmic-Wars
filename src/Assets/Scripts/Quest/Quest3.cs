@@ -33,6 +33,7 @@ namespace Nightmare
     {
       winningCountdown.text = "";
       isWon = false;
+      questInfoManager.StartQuest();
     }
 
     // Update is called once per frame
@@ -55,6 +56,7 @@ namespace Nightmare
           else
           {
             isWon = true;
+            questInfoManager.FinishQuest();
           }
         }
         else

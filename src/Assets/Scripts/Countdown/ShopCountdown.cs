@@ -9,6 +9,7 @@ public class ShopCountdown : MonoBehaviour
   [SerializeField] TextMeshProUGUI countdownTitle;
   [SerializeField] TextMeshProUGUI countdownText;
   [SerializeField] float remainingTime;
+  [SerializeField] TextMeshProUGUI moneyText;
    
   float endOfTime = 0;
 
@@ -28,5 +29,6 @@ public class ShopCountdown : MonoBehaviour
         countdownText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
       }
 
+      moneyText.text = "Money: $" + DataPersistenceManager.Instance.GetGameData().money;
     }
 }

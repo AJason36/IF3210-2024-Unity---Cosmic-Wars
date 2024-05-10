@@ -75,6 +75,7 @@ public class PopupManager : MonoBehaviour
           popup.text = popupPlaceholder + "Exit Game";
           if (Input.GetKeyDown("e")){
             Debug.Log("Exit Clicked");
+            Cursor.lockState = CursorLockMode.None;
             StatisticsManager.Instance.StopTrackingTime();
             sceneLevelManager.loadScene(0);
           }

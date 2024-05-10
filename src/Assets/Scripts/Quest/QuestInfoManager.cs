@@ -72,7 +72,6 @@ namespace Nightmare
 
     public void StartQuest()
     {
-      questInfoObject.SetActive(true);
       hasRewarded = false;
     }
 
@@ -80,14 +79,8 @@ namespace Nightmare
     {
       if (!hasRewarded)
       {
-        questInfoObject.SetActive(false);
-        addMoney();
+        handleFinishQuest();
         hasRewarded = true;
-
-        if (questTitle == "Quest 4")
-        {
-          StatisticsManager.Instance.RecordGameWon();
-        }
       }
     }
 
@@ -96,7 +89,7 @@ namespace Nightmare
       return isDone;
     }
 
-    private void addMoney()
+    private void handleFinishQuest()
     {
       DataPersistenceManager dataPersistenceManager = DataPersistenceManager.Instance;
 
@@ -112,7 +105,7 @@ namespace Nightmare
           dataPersistenceManager.GetGameData().money += 100;
           break;
         case "Quest 4":
-          dataPersistenceManager.GetGameData().money += 100;
+          StatisticsManager.Instance.RecordGameWon();
           break;
         default:
           // Add 0 money
@@ -122,13 +115,21 @@ namespace Nightmare
 
     void ICheatCode.ActivateCheatCode(CheatCodes codes)
     {
+      GameObject player = GameObject.FindGameObjectWithTag("Player");
       switch (codes)
       {
         case CheatCodes.NO_DAMAGE:
           Debug.Log("No damage cheat code activated");
+          player = GameObject.FindGameObjectWithTag("Player");
+          PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+          if (playerHealth.getGodMode()){
+            playerHealth.setGodMode(false);
+          } else {
+            playerHealth.setGodMode(true);
+          }
           break;
         case CheatCodes.ONE_HIT:
-          GameObject player = GameObject.FindGameObjectWithTag("Player");
+          player = GameObject.FindGameObjectWithTag("Player");
           if(player != null){
             Attack playerAttack = player.GetComponent<Attack>();
             if(playerAttack != null) playerAttack.isOneHitKill = true;
@@ -142,6 +143,13 @@ namespace Nightmare
           break;
         case CheatCodes.IMMORTAL_PET:
           Debug.Log("Immortal pet cheat code activated");
+          GameObject pet = GameObject.FindGameObjectWithTag("Pet");
+          PetHealth petHealth = pet.GetComponent<PetHealth>();
+          if (petHealth.getGodMode()){
+            petHealth.setGodMode(false);
+          } else {
+            petHealth.setGodMode(true);
+          }
           break;
         case CheatCodes.KILL_PET:
           Debug.Log("Kill pet cheat code activated");

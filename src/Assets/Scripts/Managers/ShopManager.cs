@@ -16,14 +16,15 @@ public class ShopManager : MonoBehaviour
     // Price Text
     public TMP_Text rdPriceText;
     public TMP_Text bbPriceText;
+    public TMP_Text moneyText;
 
     // Buy Buttons
     public Button rdBuyButton;
     public Button bbBuyButton;
 
     // Item Price
-    private int rdPrice = 50;
-    private int bbPrice = 100;
+    private int rdPrice = 100;
+    private int bbPrice = 50;
 
     // ItemID
     // 0 for R2D2
@@ -31,15 +32,18 @@ public class ShopManager : MonoBehaviour
     private int itemID;
 
     public void SetShopActive(){
-      shopCanvas.gameObject.SetActive(true);
-      Cursor.lockState = CursorLockMode.None;
-      // SetCanvasInteractable(true);
+        shopCanvas.gameObject.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        // SetCanvasInteractable(true);
+
+        int userMoney = DataPersistenceManager.Instance.GetGameData().money;
+        moneyText.text = "Money: $" + userMoney.ToString();
 
         rdPriceText.text = "$" + rdPrice.ToString();
         bbPriceText.text = "$" + bbPrice.ToString();
 
         // Set interactivity of the buy buttons
-        if (DataPersistenceManager.Instance.GetGameData().money < rdPrice)
+        if (userMoney < rdPrice)
         {
             rdBuyButton.interactable = false;
         }
@@ -48,7 +52,7 @@ public class ShopManager : MonoBehaviour
             rdBuyButton.interactable = true;
         }
 
-        if (DataPersistenceManager.Instance.GetGameData().money < bbPrice)
+        if (userMoney < bbPrice)
         {
             bbBuyButton.interactable = false;
         }
@@ -107,12 +111,14 @@ public class ShopManager : MonoBehaviour
         {
             DataPersistenceManager.Instance.GetGameData().money -= rdPrice;
             DataPersistenceManager.Instance.GetGameData().petId = 0;
+            moneyText.text = "Money: $" + DataPersistenceManager.Instance.GetGameData().money;
             Debug.Log("R2D2 bought");
         }
         else if (itemID == 1)
         {
             DataPersistenceManager.Instance.GetGameData().money -= bbPrice;
             DataPersistenceManager.Instance.GetGameData().petId = 1;
+            moneyText.text = "Money: $" + DataPersistenceManager.Instance.GetGameData().money;
             Debug.Log("BB8 bought");
         }
 

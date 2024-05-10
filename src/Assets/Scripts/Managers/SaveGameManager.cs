@@ -68,6 +68,7 @@ public class SaveGameManager : MonoBehaviour
         }
 
         dataPersistenceManager.SaveGame(saveId.ToString());
+        LoadSaveDataMenu();
         CloseSavePopup();
     }
 
