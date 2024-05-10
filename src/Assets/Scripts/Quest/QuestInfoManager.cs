@@ -39,7 +39,8 @@ namespace Nightmare
         CheatCodes.IMMORTAL_PET,
         CheatCodes.KILL_PET,
         CheatCodes.INSTANT_ORB,
-        CheatCodes.SKIP_LEVEL
+        CheatCodes.SKIP_LEVEL,
+        CheatCodes.SPEED_DOWN
       );
     }
 
@@ -66,7 +67,8 @@ namespace Nightmare
         CheatCodes.IMMORTAL_PET,
         CheatCodes.KILL_PET,
         CheatCodes.INSTANT_ORB,
-        CheatCodes.SKIP_LEVEL
+        CheatCodes.SKIP_LEVEL,
+        CheatCodes.SPEED_DOWN
       );
     }
 
