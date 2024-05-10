@@ -19,6 +19,7 @@ TagManager:
   - Quest
   - Jendral
   - EnemyPet
+  - Info
   layers:
   - Default
   - TransparentFX

@@ -18,17 +18,17 @@ namespace Nightmare
         bool playerInRange;
         float timer;
 
+         GameObject pet;
+         PetHealth petHealth;
+         bool petInRange;
+
         void Awake ()
         {
             // Setting up the references.
             player = GameObject.FindGameObjectWithTag ("Player");
-            if(!player)
-            {
-                Debug.Log("Player not found!");
-            }else
-            {
-                Debug.Log("Player found!");
-            }
+            if(!player) { Debug.Log("Player not found!"); } 
+            else { Debug.Log("Player found!"); }
+
             playerHealth = player.GetComponent <PlayerHealth> ();
             if(!playerHealth)
             {
@@ -39,6 +39,17 @@ namespace Nightmare
             anim = GetComponent <Animator> ();
             initialDamage = attackDamage;
             // StartPausible();
+
+            // For Pet
+            pet = GameObject.FindGameObjectWithTag ("Pet");
+            if(!pet) { Debug.Log("Pet not found!"); } 
+            else { Debug.Log("Pet found!"); }
+
+            petHealth = pet.GetComponent <PetHealth> ();
+            if(!petHealth)
+            {
+                Debug.Log("Pet health not found!");
+            }
         }
 
         void OnDestroy()
@@ -54,6 +65,10 @@ namespace Nightmare
                 // ... the player is in range.
                 playerInRange = true;
             }
+
+            if (other.gameObject == pet){
+                petInRange = true;
+            }
         }
 
         void OnTriggerExit (Collider other)
@@ -63,6 +78,9 @@ namespace Nightmare
             {
                 // ... the player is no longer in range.
                 playerInRange = false;
+            }
+            if (other.gameObject == pet){
+                petInRange = false;
             }
         }
 
@@ -82,11 +100,20 @@ namespace Nightmare
             }
 
             // If the player has zero or less health...
-            if(playerHealth.currentHealth <= 0)
+            if(playerHealth.getIsDead())
             {
                 // ... tell the animator the player is dead.
                 anim.SetTrigger ("PlayerDead");
             }
+
+            // Check for pet
+            if(timer >= timeBetweenAttacks && petInRange && enemyHealth.CurrentHealth() > 0 )
+            {
+                enemyMovement.StopMovement();
+                AttackPet();
+            }
+
+
         }
 
         void Attack ()
@@ -101,6 +128,20 @@ namespace Nightmare
             }
             StartCoroutine(ResumeMovementAfterDelay(timeBetweenAttacks));  // Resume movement after attack delay
         }
+
+        void AttackPet ()
+        {   
+            // Reset the timer.
+            timer = 0f;
+            // If the player has health to lose...
+            if(petHealth.getCurrentHealth() > 0)
+            {
+                // ... damage the player.
+                petHealth.TakeDamage ((int)(attackDamage*buffPercentage));
+            }
+            StartCoroutine(ResumeMovementAfterDelay(timeBetweenAttacks));  // Resume movement after attack delay
+        }
+
         IEnumerator ResumeMovementAfterDelay(float delay)
         {
             yield return new WaitForSeconds(delay);

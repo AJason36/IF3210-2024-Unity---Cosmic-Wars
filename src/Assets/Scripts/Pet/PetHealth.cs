@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class PetHealth : MonoBehaviour
 {
 
+    GameObject infoText;
     public int startingHealth = 50;
     int currentHealth;
 
@@ -15,15 +17,21 @@ public class PetHealth : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        currentHealth = startingHealth;
+      infoText = GameObject.FindGameObjectWithTag("Info");
+      currentHealth = startingHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
+      Debug.Log(currentHealth);
         if(isDead){
           Destroy(gameObject);
         }
+    }
+
+    public int getCurrentHealth(){
+      return currentHealth;
     }
 
     public void TakeDamage (int amount) {
@@ -41,5 +49,7 @@ public class PetHealth : MonoBehaviour
     void Death(){
       isDead = true;
       // Add condition pet dies
+      InfoManager infoManager = infoText.GetComponent<InfoManager>();
+      infoManager.SetInfo("The Pet has Died!");
     }
 }
