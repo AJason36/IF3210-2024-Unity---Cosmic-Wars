@@ -52,4 +52,12 @@ public class PetHealth : MonoBehaviour
       InfoManager infoManager = infoText.GetComponent<InfoManager>();
       infoManager.SetInfo("The Pet has Died!");
     }
+
+      public void setGodMode(bool newSet){
+        godMode = newSet;
+      }
+
+      public bool getGodMode(){
+        return godMode;
+      }
 }
