@@ -52,7 +52,7 @@ namespace Nightmare
                 {
                     statisticsManager.RecordSuccessfulShot();
                     if(isShotGun){
-                        int pelletDmg = damage * 2 / 5;
+                        int pelletDmg = damage * 2 / 3;
                         enemyHealth.TakeDamage(pelletDmg);
                             Debug.Log(pelletDmg);
                     }else{
