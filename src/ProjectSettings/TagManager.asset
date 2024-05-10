@@ -22,7 +22,7 @@ TagManager:
   - Info
   - Point1
   - Point2
-  - Data
+  - HealthSlider
   layers:
   - Default
   - TransparentFX

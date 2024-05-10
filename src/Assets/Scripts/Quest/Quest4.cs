@@ -29,6 +29,7 @@ namespace Nightmare{
       void Start()
       {
         isWon = false;
+        questInfoManager.StartQuest();
       }
 
       // Update is called once per frame
@@ -58,6 +59,7 @@ namespace Nightmare{
                 }
               }
             }
+            questInfoManager.FinishQuest();
             sceneLevelManager.loadScene(10);
 
           }

@@ -72,7 +72,6 @@ namespace Nightmare
 
     public void StartQuest()
     {
-      questInfoObject.SetActive(true);
       hasRewarded = false;
     }
 
@@ -80,14 +79,8 @@ namespace Nightmare
     {
       if (!hasRewarded)
       {
-        questInfoObject.SetActive(false);
-        addMoney();
+        handleFinishQuest();
         hasRewarded = true;
-
-        if (questTitle == "Quest 4")
-        {
-          StatisticsManager.Instance.RecordGameWon();
-        }
       }
     }
 
@@ -96,7 +89,7 @@ namespace Nightmare
       return isDone;
     }
 
-    private void addMoney()
+    private void handleFinishQuest()
     {
       DataPersistenceManager dataPersistenceManager = DataPersistenceManager.Instance;
 
@@ -112,7 +105,7 @@ namespace Nightmare
           dataPersistenceManager.GetGameData().money += 100;
           break;
         case "Quest 4":
-          dataPersistenceManager.GetGameData().money += 100;
+          StatisticsManager.Instance.RecordGameWon();
           break;
         default:
           // Add 0 money
