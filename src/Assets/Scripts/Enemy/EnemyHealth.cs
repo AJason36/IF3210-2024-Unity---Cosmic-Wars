@@ -20,6 +20,7 @@ namespace Nightmare
         AudioSource enemyAudio;
         CapsuleCollider capsuleCollider;
         EnemyMovement enemyMovement;
+        int difficultyId;
 
         void Awake ()
         {
@@ -27,6 +28,18 @@ namespace Nightmare
             enemyAudio = GetComponent <AudioSource> ();
             capsuleCollider = GetComponent <CapsuleCollider> ();
             enemyMovement = this.GetComponent<EnemyMovement>();
+            difficultyId = DataPersistenceManager.Instance.GetGameData().difficultyId;
+            switch(difficultyId){
+                case 0:
+                    startingHealth *= 2/3;
+                    break;
+                case 1:
+                    startingHealth *= 1;
+                    break;
+                case 2:
+                    startingHealth *= 3/2;
+                    break;
+            }
             currentHealth = startingHealth;
         }
 

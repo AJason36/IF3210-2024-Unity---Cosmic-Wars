@@ -5,17 +5,6 @@ using UnityEngine;
 namespace Nightmare{
     public class CheatCodeManager : MonoBehaviour
     {
-        public enum CheatCodes {
-            NO_DAMAGE,
-            ONE_HIT,
-            INF_MONEY,
-            SPEED_UP,
-            IMMORTAL_PET,
-            KILL_PET,
-            INSTANT_ORB,
-            SKIP_LEVEL,
-        }
-
         // Map of cheat codes to their respective key codes
         private Dictionary<CheatCodes, string> cheatCodeMap = new Dictionary<CheatCodes, string>
         {

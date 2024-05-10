@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.52281815, g: 0.48679638, b: 0.5475134, a: 1}
+  m_IndirectSpecularColor: {r: 0.5228798, g: 0.48678917, b: 0.5475872, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -315,7 +315,7 @@ MonoBehaviour:
   questTitleObject: {fileID: 505387931}
   questObjectiveObject: {fileID: 112976317}
   questTitle: Quest 1
-  questObjective: INI DIGANTI YA NET
+  questObjective: Defeat All Enemies
 --- !u!4 &97065278
 Transform:
   m_ObjectHideFlags: 0
@@ -1532,6 +1532,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 2cbbb0116c6126c4eacb8c4f476d6698, type: 2}
+--- !u!1 &684845137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 684845139}
+  - component: {fileID: 684845138}
+  m_Layer: 0
+  m_Name: Spawn Point (1)
+  m_TagString: Point2
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &684845138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684845137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 826046dc9dbc349c28f33a7adad9524c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mobPrefab: {fileID: 7430344815960393558, guid: 053bcee65ddad2a478ca1b68f45d8e4f, type: 3}
+  spawnPoint: {fileID: 1346139011}
+  spawnInterval: 5
+  spawnCount: 10
+--- !u!4 &684845139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684845137}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 28.9, y: 1.5, z: 123.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1346139011}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &747404800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2853,6 +2902,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 765546580}
   m_LocalEulerAnglesHint: {x: 90, y: -10, z: 0}
+--- !u!1 &1346139010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1346139011}
+  m_Layer: 0
+  m_Name: Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1346139011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346139010}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.9782482, z: -0, w: 0.20743816}
+  m_LocalPosition: {x: -31.8, y: 1.1399999, z: -109.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 684845139}
+  m_LocalEulerAnglesHint: {x: 0, y: 156.056, z: 0}
 --- !u!1 &1401519997
 GameObject:
   m_ObjectHideFlags: 0
@@ -5433,7 +5513,7 @@ GameObject:
   - component: {fileID: 2133508735}
   m_Layer: 0
   m_Name: Spawn Point
-  m_TagString: Untagged
+  m_TagString: Point1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5481,6 +5561,7 @@ SceneRoots:
   - {fileID: 248394620}
   - {fileID: 765546580}
   - {fileID: 2133508734}
+  - {fileID: 684845139}
   - {fileID: 2062736490}
   - {fileID: 97065278}
   - {fileID: 2063993143}

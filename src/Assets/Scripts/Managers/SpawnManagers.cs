@@ -11,6 +11,7 @@ public class SpawnManagers : MonoBehaviour
     public int spawnCount = 10;
     int spawned = 0;
     private float timer;
+    private List<GameObject> activeMobs = new List<GameObject>(); 
 
     void Awake()
         {
@@ -30,15 +31,21 @@ public class SpawnManagers : MonoBehaviour
             SpawnMobs();
             timer = spawnInterval;
         }
+        activeMobs.RemoveAll(item => item == null);
     }
 
     void SpawnMobs()
     {
         if (spawnPoint!=null && spawned < spawnCount)
         {
-            Instantiate(mobPrefab, spawnPoint.position, spawnPoint.rotation);
+            GameObject mob = Instantiate(mobPrefab, spawnPoint.position, spawnPoint.rotation);
+            activeMobs.Add(mob); 
             spawned++;
         }
+    }
+
+    public bool AllMobsSpawnedAndDestroyed() {
+        return spawned == spawnCount && activeMobs.Count == 0;
     }
 }
 }
