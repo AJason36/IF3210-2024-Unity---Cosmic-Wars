@@ -21,7 +21,6 @@ public class ShopCountdown : MonoBehaviour
       if (remainingTime <= endOfTime){
         countdownText.text = "";
         countdownTitle.text = "";
-        Debug.Log(remainingTime);
       } else {
         remainingTime -= Time.deltaTime;
         int minutes = Mathf.FloorToInt(remainingTime / 60);
