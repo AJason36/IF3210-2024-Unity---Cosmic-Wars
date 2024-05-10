@@ -35,6 +35,7 @@ namespace Nightmare{
       {
         winningCountdown.text = "";
         isWon = false;
+        questInfoManager.StartQuest();
       }
 
     void DestroyAllEnemies(){
@@ -65,6 +66,7 @@ namespace Nightmare{
             } else {
               gameCountdown.text = "";
               isWon = true;
+              questInfoManager.FinishQuest();
             }
           }
           else{

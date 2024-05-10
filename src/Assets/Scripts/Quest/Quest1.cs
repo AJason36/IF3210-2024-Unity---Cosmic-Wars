@@ -38,6 +38,7 @@ namespace Nightmare
     {
       winningCountdown.text = "";
       isWon = false;
+      questInfoManager.StartQuest();
     }
 
     // Update is called once per frame
@@ -47,6 +48,7 @@ namespace Nightmare
       // Start after Quest Info is Done
       if (questInfoManager.getIsDone() && point1.AllMobsSpawnedAndDestroyed() && point2.AllMobsSpawnedAndDestroyed())
       {
+        questInfoManager.FinishQuest();
         sceneLevelManager.loadScene(nextSceneToLoad);
       }
 

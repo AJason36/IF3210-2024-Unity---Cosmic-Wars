@@ -22,8 +22,8 @@ public class ShopManager : MonoBehaviour
     public Button bbBuyButton;
 
     // Item Price
-    private int rdPrice = 50;
-    private int bbPrice = 100;
+    private int rdPrice = 100;
+    private int bbPrice = 50;
 
     // ItemID
     // 0 for R2D2
