@@ -24,10 +24,13 @@ namespace Nightmare
         void Update()
         {
             timeSinceLastHeal += Time.deltaTime;
-            if (timeSinceLastHeal >= healTimer)
+            if (timeSinceLastHeal >= healTimer && player)
             {
                 HealPlayer();
                 timeSinceLastHeal = 0f;
+            }
+            if(player==null){
+                Destroy(gameObject);
             }
         }
 

@@ -54,7 +54,6 @@ namespace Nightmare
                     if(isShotGun){
                         int pelletDmg = damage * 2 / 3;
                         enemyHealth.TakeDamage(pelletDmg);
-                            Debug.Log(pelletDmg);
                     }else{
                         enemyHealth.TakeDamage(damage);
                     }

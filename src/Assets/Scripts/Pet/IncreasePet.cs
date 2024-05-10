@@ -21,6 +21,12 @@ namespace Nightmare{
             IncreaseAttack(buffPercentage);
         }
 
+        void Update() {
+            if (boss == null) {  // Check if boss has been destroyed
+                Destroy(gameObject);  // Destroy the pet
+            }
+        }
+
         void IncreaseAttack(float percentage)
         {
             if (attackComponent != null)
@@ -34,10 +40,10 @@ namespace Nightmare{
         }
 
         void OnDestroy() {
-            DecreaseAttack(boss, buffPercentage);
+            if(boss)DecreaseAttack(buffPercentage);
         }
 
-        void DecreaseAttack(GameObject character, float percentage) {
+        void DecreaseAttack(float percentage) {
             if (attackComponent != null) {
                 attackComponent.buffPercentage -= percentage;
             }

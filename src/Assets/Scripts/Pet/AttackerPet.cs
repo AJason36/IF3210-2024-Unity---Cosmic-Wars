@@ -34,7 +34,9 @@ namespace Nightmare
         {
             FindNearestEnemy();
             timer += Time.deltaTime;
-
+            if(player==null){
+                Destroy(gameObject);
+            }
             if (nearestEnemy != null)
             {
               if (timer >= timeBetweenAttacks){
@@ -42,7 +44,7 @@ namespace Nightmare
               }
             }
             // Case there is no near enemy, get to player
-            else {
+            else if (player){
               nav.SetDestination(playerTransform.position);
             }
         }
