@@ -13,6 +13,7 @@ namespace Nightmare{
       // Winning Condition
       [SerializeField] TextMeshProUGUI winningCountdown;
       [SerializeField] TextMeshProUGUI gameCountdown;
+      [SerializeField] GameObject crosshair;
       private SceneLevelManager sceneLevelManager;
       private QuestInfoManager questInfoManager;
       float remainingTime = 5f;
@@ -89,6 +90,7 @@ namespace Nightmare{
         winningCountdown.text = "";
         gameCountdown.text = "";
         DestroyAllEnemies();
+        crosshair.SetActive(false);
       }
     } 
   }

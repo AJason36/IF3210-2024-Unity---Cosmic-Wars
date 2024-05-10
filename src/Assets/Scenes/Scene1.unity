@@ -434,6 +434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winningCountdown: {fileID: 1045288839}
+  crosshair: {fileID: 144780777}
 --- !u!114 &97065277
 MonoBehaviour:
   m_ObjectHideFlags: 0

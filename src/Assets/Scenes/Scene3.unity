@@ -3061,6 +3061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winningCountdown: {fileID: 2075527689}
+  crosshair: {fileID: 163104698}
 --- !u!1 &1585087028
 GameObject:
   m_ObjectHideFlags: 0

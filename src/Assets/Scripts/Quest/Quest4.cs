@@ -14,6 +14,7 @@ namespace Nightmare{
       private GameObject[] allEnemy;
       private GameObject[] allJendral;
       private PlayerHealth playerHealth;
+      [SerializeField] GameObject crosshair;
   
       void Awake(){
           sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
@@ -59,7 +60,6 @@ namespace Nightmare{
             }
             questInfoManager.FinishQuest();
             sceneLevelManager.loadScene(10);
-
           }
         }
         if(playerHealth.getIsDead()){
@@ -67,6 +67,7 @@ namespace Nightmare{
         allJendral = GameObject.FindGameObjectsWithTag("Jendral");
         DestroyAllEnemies(allEnemy);
         DestroyAllEnemies(allJendral);
+        crosshair.SetActive(false);
       }
 
     }

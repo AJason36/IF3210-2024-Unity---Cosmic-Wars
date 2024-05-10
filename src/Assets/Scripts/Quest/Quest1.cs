@@ -13,6 +13,7 @@ namespace Nightmare
     private PlayerHealth playerHealth;
     // Winning Condition
     [SerializeField] TextMeshProUGUI winningCountdown;
+    [SerializeField] GameObject crosshair;
     private SceneLevelManager sceneLevelManager;
     private QuestInfoManager questInfoManager;
     private SpawnManagers point1;
@@ -53,6 +54,7 @@ namespace Nightmare
         DestroyAllEnemies();
         Destroy(point1);
         Destroy(point2);
+        crosshair.SetActive(false);
       }
     }
 
