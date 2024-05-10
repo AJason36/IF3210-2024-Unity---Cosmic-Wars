@@ -24,7 +24,6 @@ public class PetHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      Debug.Log(currentHealth);
         if(isDead){
           Destroy(gameObject);
         }
