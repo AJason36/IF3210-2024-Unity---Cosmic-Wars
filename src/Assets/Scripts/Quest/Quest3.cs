@@ -25,7 +25,6 @@ namespace Nightmare
       sceneLevelManager = UnityEngine.GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
       questInfoManager = UnityEngine.GameObject.FindGameObjectWithTag("Quest").GetComponent<QuestInfoManager>();
       enemies = UnityEngine.GameObject.FindGameObjectsWithTag("Jendral");
-      Debug.Log(enemies.Length);
     }
 
     // Start is called before the first frame update
