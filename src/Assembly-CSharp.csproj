@@ -165,6 +165,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Models\UserLutModel.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Pet\EnemyPetMovement.cs" />
+    <Compile Include="Assets\Scripts\Playback.cs" />
     <Compile Include="Assets\MobileInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
     <Compile Include="Assets\Scripts\Managers\MainMenuManager.cs" />
