@@ -1787,7 +1787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mobPrefab: {fileID: 7430344815960393558, guid: 053bcee65ddad2a478ca1b68f45d8e4f, type: 3}
   spawnPoint: {fileID: 1346139011}
-  spawnInterval: 15
+  spawnInterval: 8
   spawnCount: 10
 --- !u!4 &684845139
 Transform:
@@ -5901,7 +5901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mobPrefab: {fileID: 7430344815960393558, guid: 053bcee65ddad2a478ca1b68f45d8e4f, type: 3}
   spawnPoint: {fileID: 136142951}
-  spawnInterval: 15
+  spawnInterval: 8
   spawnCount: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
