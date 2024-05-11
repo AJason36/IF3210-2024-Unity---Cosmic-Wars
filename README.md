@@ -1,93 +1,183 @@
 # IF3210 2024 Unity AJG
 
+# Tubes 2 IF3210 Pengembangan Aplikasi pada Platform
+> Extended Survival Shooter written in the concept of Unity platform-based programming.
 
 
-## Getting started
+## Table of Contents
+- [Tubes 2 IF3210 Pengembangan Aplikasi pada Platform](#tubes-2-if3210-pengembangan-aplikasi-pada-platform)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [General Information](#general-information)
+    - [Background](#background)
+    - [Objective](#objective)
+    - [Description](#description)
+  - [Libraries Used](#libraries-used)
+  - [Screenshots](#screenshots)
+    - [Cutscene](#cutscene)
+    - [Quest](#quest)
+    - [Save](#save)
+    - [Game Over](#game-over)
+    - [Local Scoreboard](#local-scoreboard)
+    - [Main Menu](#main-menu)
+    - [Shopkeeper](#shopkeeper)
+    - [Weapon](#weapon)
+    - [Pet](#pet)
+    - [Cheat](#cheat)
+  - [Project Status](#project-status)
+  - [Acknowledgements](#acknowledgements)
+  - [Job Description](#job-description)
+  - [Contact](#contact)
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+## Introduction
+This project was created by:
+| No. | Name | Student ID |
+| :---: | :---: | :---: |
+| 1. | Alexander Jason | 13521100 |
+| 2. | Farhan Nabil Suryono | 13521114 |
+| 3. | Juan Christopher Santoso | 13521116 |
+| 4. | Nathania Calista | 13521139 |
+| 5. | Antonio Natthan Krishna | 13521162 |
 
-## Add your files
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+## General Information
+### Background
+After Lex Starwalker lost his father, he set out to find him. As he prepared to leave Xandria, he was attacked by zombie puppet monsters. He journeyed through Kashyyyk and finally reached the Coruscant (Extinct Star). There, he faced the final boss, Hellephant, and rescued his father.
 
-```
-cd existing_repo
-git remote add origin https://gitlab.informatika.org/anak-jago-geminkkk/if3210-2024-unity-ajg.git
-git branch -M main
-git push -uf origin main
-```
+### Objective
+1. Understand the basic principles of programming in Unity
+2. Able to work in groups on Unity application development
+3. Able to present the software that has been built
 
-## Integrate with your tools
+### Description
+Extended Survival Shooter is a modification of the Survival Shooter game that has additional functionality, including the following:
+1. Story Mode
+2. Save & Load Game
+3. Game Over
+4. Game Statistic
+5. Main Menu
+6. Shopkeeper
+7. Weapon
+8. Pet
+9. Cheat
+10. Mobs
+11. Orb Power Up
+12. Skill Cutscene (**BONUS**)
 
-- [ ] [Set up project integrations](https://gitlab.informatika.org/anak-jago-geminkkk/if3210-2024-unity-ajg/-/settings/integrations)
 
-## Collaborate with your team
+## Libraries Used
+- Unity
+- UnityEngine
+- System
+- TMPro
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
 
-## Test and Deploy
+## Screenshots
+### Cutscene
+![alt text](screenshot/cutscene.png)
 
-Use the built-in continuous integration in GitLab.
+### Quest
+![alt text](screenshot/quest.png)
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+### Save
+![alt text](screenshot/save.png)
 
-***
+### Game Over
+![alt text](screenshot/game_over.png)
 
-# Editing this README
+### Local Scoreboard
+![alt text](screenshot/local_scoreboard.png)
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+### Main Menu
+![alt text](screenshot/main_menu.png)
 
-## Suggestions for a good README
+### Shopkeeper
+![alt text](screenshot/shopkeeper.png)
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+### Weapon
+![alt text](screenshot/weapon.png)
 
-## Name
-Choose a self-explaining name for your project.
+### Pet
+![alt text](screenshot/pet.png)
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+### Cheat
+![alt text](screenshot/cheat.png)
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+### Weapon Upgrade
+![alt text](screenshot/weapon_upgrade.png)
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+## Job Description
+<table>
+  <tr>
+    <th>NIM</th>
+    <th>Nama</th>
+    <th>Tugas</th>
+    <th>Jam Persiapan dan Pengerjaan</th>
+  </tr>
+  <tr>
+    <td>13521100</td>
+    <td>Alexander Jason</td>
+    <td>
+      - Quest 4<br>
+      - Weapon<br>
+      - Boss HealthBar<br>
+      - Pet<br>
+      - Mobs<br>
+      - Cheat
+    </td>
+    <td>80 jam</td>
+  </tr>
+  <tr>
+    <td>13521114</td>
+    <td>Farhan Nabil Suryono</td>
+    <td>
+      - Main Menu<br>
+      - Save & Load Game <br>
+      - Game Statistic<br>
+      - Shopkeeper<br>
+      - Cheat
+    </td>
+    <td>80 jam</td>
+  </tr>
+  <tr>
+    <td>13521116</td>
+    <td>Juan Christopher Santoso</td>
+    <td>
+      - Quest 2<br>
+      - Shopkeeper<br>
+      - Scene Transition<br>
+      - Pet<br>
+      - Save & Shop Scene (Isolated Scene)<br>
+      - Loading Screen <br>
+      - Cheat
+    </td>
+    <td>80 jam</td>
+  </tr>
+  <tr>
+    <td>13521139</td>
+    <td>Nathania Calista</td>
+    <td>
+      - Quest 3<br>
+      - Mobs<br>
+      - Orb Power Up<br>
+      - Player Healthbar <br>
+      - Game Over Animation<br>
+      - Scene Transition
+    </td>
+    <td>80 jam</td>
+  </tr>
+  <tr>
+    <td>13521162</td>
+    <td>Antonio Natthan Krishna</td>
+    <td>
+        - Quest 1<br>
+        - Main Player<br>
+        - Weapon<br>
+        - Cutscene Opening, Ending, Transition<br>
+        - Cheat
+    </td>
+    <td>80 jam</td>
+  </tr>
+</table>
