@@ -114,6 +114,8 @@ namespace Nightmare
         void Death ()
         {
             // EventManager.TriggerEvent("Sound", this.transform.position);
+            StatisticsManager.Instance.RecordEnemyKilled();
+            
             if(!isPet){
                 Debug.Log("Masuk ke sini deadnya");
                 anim.SetTrigger ("Dead");
