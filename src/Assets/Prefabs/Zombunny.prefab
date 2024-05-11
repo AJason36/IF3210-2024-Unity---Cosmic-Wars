@@ -214,7 +214,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.8
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0.8, z: 0}
@@ -275,6 +275,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenAttacks: 1
   attackDamage: 5
+  initialDamage: 0
+  buffPercentage: 1
 --- !u!114 &1928209043217519027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,6 +313,8 @@ MonoBehaviour:
   deathClip: {fileID: 8300000, guid: 1d3bfb9269f136947bf8ac164cace1ff, type: 3}
   healthSlider: {fileID: 0}
   isBoss: 0
+  isPet: 0
+  currentHealth: 0
 --- !u!82 &9011646750432553966
 AudioSource:
   m_ObjectHideFlags: 0

@@ -104,7 +104,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100074, guid: c236aa7ad6dcabe47abc7d2cf903ae71, type: 3}
       propertyPath: m_Name
-      value: ZomBear 1
+      value: ZomBear
       objectReference: {fileID: 0}
     - target: {fileID: 100074, guid: c236aa7ad6dcabe47abc7d2cf903ae71, type: 3}
       propertyPath: m_TagString
@@ -255,7 +255,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.8
   m_Height: 1.1
   m_Direction: 1
   m_Center: {x: 0, y: 0.6, z: 0}
