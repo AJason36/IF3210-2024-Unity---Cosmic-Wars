@@ -29,7 +29,7 @@ This project was created by:
 
 ## General Information
 ### Background
-After Lex Starwalker lost his father, he set out to find him. As he prepared to leave Tatooine, his planet was attacked by zombie puppet monsters. He journeyed through Kashyyyk and finally reached the Coruscant (Extinct Star). There, he faced the final boss, Hellephant, and rescued his father.
+Zombie Puppet is invading the universe. As the cosmic police office, Lex Starwalker, has duties to kill them all and save all planet. He journeyed through Kashyyyk and finally reached the Coruscant (Extinct Star). There, he faced the final boss, Hellephant. Help Lex to save the universe!
 
 ### Objective
 1. Understand the basic principles of programming in Unity
@@ -67,6 +67,7 @@ Extended Survival Shooter is a modification of the Survival Shooter game that ha
 ![alt text](screenshots/opening.jpg)
 ![alt text](screenshots/quest1-intro.jpg)
 ![alt text](screenshots/quest2-intro.jpg)
+![alt text](screenshots/quest3-intro.jpg)
 ![alt text](screenshots/closing.jpg)
 
 #### Quest
