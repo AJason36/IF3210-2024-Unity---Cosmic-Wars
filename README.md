@@ -29,7 +29,7 @@ This project was created by:
 
 ## General Information
 ### Background
-After Lex Starwalker lost his father, he set out to find him. As he prepared to leave Xandria, he was attacked by zombie puppet monsters. He journeyed through Kashyyyk and finally reached the Coruscant (Extinct Star). There, he faced the final boss, Hellephant, and rescued his father.
+After Lex Starwalker lost his father, he set out to find him. As he prepared to leave Tatooine, his planet was attacked by zombie puppet monsters. He journeyed through Kashyyyk and finally reached the Coruscant (Extinct Star). There, he faced the final boss, Hellephant, and rescued his father.
 
 ### Objective
 1. Understand the basic principles of programming in Unity
