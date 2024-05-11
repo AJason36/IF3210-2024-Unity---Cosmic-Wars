@@ -156,9 +156,24 @@ public class SaveGameManager : MonoBehaviour
                     System.DateTime dateTime = System.DateTime.FromBinary(data.lastUpdated);
                     child.GetComponent<TMP_Text>().text = dateTime.ToString("dd/MM/yyyy");
                 } else {
-                    child.GetComponent<TMP_Text>().text = "Level " + data.level;
+                    child.GetComponent<TMP_Text>().text = "Level " + data.level + " - " + diffIdToName(data.difficultyId);
                 }
             }
+        }
+    }
+
+    private string diffIdToName(int diffId)
+    {
+        switch (diffId)
+        {
+            case 0:
+                return "Easy";
+            case 1:
+                return "Medium";
+            case 2:
+                return "Hard";
+            default:
+                return "Unknown";
         }
     }
 
