@@ -18,6 +18,11 @@ public class GameOverButton : MonoBehaviour
 
     public void Restart()
     {
+        DataPersistenceManager.Instance.NewGame();
+        DataPersistenceManager.Instance.GetGameData().difficultyId = SettingsManager.Instance.GetDifficulty();
+        DataPersistenceManager.Instance.GetGameData().username = SettingsManager.Instance.GetUsername();
+        StatisticsManager.Instance.RecordGamePlayed();
+        
         sceneLevelManager.loadInitialScene();
     }
 }
