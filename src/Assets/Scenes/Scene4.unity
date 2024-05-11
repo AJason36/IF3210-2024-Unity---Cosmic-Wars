@@ -4250,6 +4250,10 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 850906699900336582, guid: a5e68ea3d09d6bc44aa5c70dade66d15, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5fb923e94ac62f54cbd79607203cbff2, type: 2}
     - target: {fileID: 3336551659447782587, guid: a5e68ea3d09d6bc44aa5c70dade66d15, type: 3}
       propertyPath: m_LocalPosition.x
       value: 109.93926
@@ -4294,6 +4298,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tatooine_star_port
       objectReference: {fileID: 0}
+    - target: {fileID: 6098243097522366905, guid: a5e68ea3d09d6bc44aa5c70dade66d15, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e4a3d2c3f5596424eb25785be2096262, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
