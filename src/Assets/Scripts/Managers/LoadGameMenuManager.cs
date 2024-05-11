@@ -137,9 +137,24 @@ public class LoadGameManager : MonoBehaviour
                 }
                 else
                 {
-                    child.GetComponent<TMP_Text>().text = "Level " + data.level;
+                    child.GetComponent<TMP_Text>().text = "Level " + data.level + " - " + diffIdToName(data.difficultyId);
                 }
             }
+        }
+    }
+
+    private string diffIdToName(int diffId)
+    {
+        switch (diffId)
+        {
+            case 0:
+                return "Easy";
+            case 1:
+                return "Medium";
+            case 2:
+                return "Hard";
+            default:
+                return "Unknown";
         }
     }
 
