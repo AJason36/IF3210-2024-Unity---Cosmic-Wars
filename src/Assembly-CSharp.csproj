@@ -96,6 +96,7 @@
     <Compile Include="Assets/PostProcessing/Runtime/PostProcessingModel.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Components/ChromaticAberrationComponent.cs" />
     <Compile Include="Assets/Scripts/CheatCodes/ICheatCode.cs" />
+    <Compile Include="Assets/Scripts/Text/TypewriterEffect.cs" />
     <Compile Include="Assets/Scripts/Managers/ShopManager.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Components/MotionBlurComponent.cs" />
     <Compile Include="Assets/Scripts/Pet/PetHealth.cs" />
@@ -163,6 +164,7 @@
     <Compile Include="Assets/Scripts/Managers/PopupManager.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Models/UserLutModel.cs" />
     <Compile Include="Assets/Scripts/Managers/GameManager.cs" />
+    <Compile Include="Assets/Scripts/Managers/DoubleSpawnManagers.cs" />
     <Compile Include="Assets/Scripts/Pet/EnemyPetMovement.cs" />
     <Compile Include="Assets/MobileInput/Scripts/PlatformSpecific/StandaloneInput.cs" />
     <Compile Include="Assets/Scripts/Weapon.cs" />
