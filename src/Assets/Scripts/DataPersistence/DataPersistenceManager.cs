@@ -76,6 +76,12 @@ public class DataPersistenceManager : MonoBehaviour
         return _gameData.money;
     }
 
+    public int getLevel()
+    {
+        return _gameData.level;
+    }
+
+
     private List<IDataPersistence> GetDataPersistenceObjects()
     {
         List<IDataPersistence> dataPersistenceObjects = new List<IDataPersistence>();

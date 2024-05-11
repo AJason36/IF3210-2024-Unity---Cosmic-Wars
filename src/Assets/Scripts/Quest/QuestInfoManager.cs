@@ -140,8 +140,6 @@ namespace Nightmare
           break;
         case CheatCodes.INF_MONEY:
           DataPersistenceManager.Instance.setInfMoney();
-          int money = DataPersistenceManager.Instance.getMoney();;
-          Debug.Log("MONEY: " + money);
           Debug.Log("Infinite money cheat code activated");
           break;
         case CheatCodes.SPEED_UP:
@@ -182,8 +180,12 @@ namespace Nightmare
           break;
         case CheatCodes.SKIP_LEVEL:
           Debug.Log("Skip Level");
+          int level = DataPersistenceManager.Instance.getLevel();
           SceneLevelManager sceneLevelManager = GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLevelManager>();
-          sceneLevelManager.loadScene(5);
+          if (level == 4) {
+            StatisticsManager.Instance.RecordGameWon();
+          }
+          sceneLevelManager.loadScene(level == 4 ? 10 : 5);
           break;
       }
     }
