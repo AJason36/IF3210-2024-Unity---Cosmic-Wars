@@ -1,10 +1,11 @@
 # IF3210 2024 Unity AJG
 
 # Tubes 2 IF3210 Pengembangan Aplikasi pada Platform
+
 > Extended Survival Shooter written in the concept of Unity platform-based programming.
 
-
 ## Table of Contents
+
 - [Tubes 2 IF3210 Pengembangan Aplikasi pada Platform](#tubes-2-if3210-pengembangan-aplikasi-pada-platform)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
@@ -14,21 +15,7 @@
     - [Description](#description)
   - [Libraries Used](#libraries-used)
   - [Screenshots](#screenshots)
-    - [Cutscene](#cutscene)
-    - [Quest](#quest)
-    - [Save](#save)
-    - [Game Over](#game-over)
-    - [Local Scoreboard](#local-scoreboard)
-    - [Main Menu](#main-menu)
-    - [Shopkeeper](#shopkeeper)
-    - [Weapon](#weapon)
-    - [Pet](#pet)
-    - [Cheat](#cheat)
-  - [Project Status](#project-status)
-  - [Acknowledgements](#acknowledgements)
   - [Job Description](#job-description)
-  - [Contact](#contact)
-
 
 ## Introduction
 This project was created by:
@@ -40,10 +27,9 @@ This project was created by:
 | 4. | Nathania Calista | 13521139 |
 | 5. | Antonio Natthan Krishna | 13521162 |
 
-
 ## General Information
 ### Background
-After Lex Starwalker lost his father, he set out to find him. As he prepared to leave Xandria, he was attacked by zombie puppet monsters. He journeyed through Kashyyyk and finally reached the Coruscant (Extinct Star). There, he faced the final boss, Hellephant, and rescued his father.
+After Lex Starwalker lost his father, he set out to find him. As he prepared to leave Tatooine, his planet was attacked by zombie puppet monsters. He journeyed through Kashyyyk and finally reached the Coruscant (Extinct Star). There, he faced the final boss, Hellephant, and rescued his father.
 
 ### Objective
 1. Understand the basic principles of programming in Unity
@@ -52,6 +38,7 @@ After Lex Starwalker lost his father, he set out to find him. As he prepared to 
 
 ### Description
 Extended Survival Shooter is a modification of the Survival Shooter game that has additional functionality, including the following:
+
 1. Story Mode
 2. Save & Load Game
 3. Game Over
@@ -63,49 +50,62 @@ Extended Survival Shooter is a modification of the Survival Shooter game that ha
 9. Cheat
 10. Mobs
 11. Orb Power Up
-12. Skill Cutscene (**BONUS**)
-
 
 ## Libraries Used
+
 - Unity
 - UnityEngine
 - System
 - TMPro
 
-
 ## Screenshots
-### Cutscene
-![alt text](screenshot/cutscene.png)
 
-### Quest
-![alt text](screenshot/quest.png)
+### Story Mode
 
-### Save
-![alt text](screenshot/save.png)
+#### Cutscene
+
+![alt text](screenshots/cutscene.jpg)
+
+#### Quest
+
+![alt text](screenshots/quest1-1.jpg)
+![alt text](screenshots/quest1-2.jpg)
+![alt text](screenshots/quest2-2.jpg)
+![alt text](screenshots/quest2-1.jpg)
+
+### Save & Load game
+![alt text](screenshots/save-game.jpg)
+![alt text](screenshots/load-game.jpg)
 
 ### Game Over
-![alt text](screenshot/game_over.png)
 
-### Local Scoreboard
-![alt text](screenshot/local_scoreboard.png)
+![alt text](screenshots/game-over-1.jpg)
+![alt text](screenshots/game-over-2.jpg)
+
+### Game Statistic
+
+![alt text](screenshots/statistic.jpg)
 
 ### Main Menu
-![alt text](screenshot/main_menu.png)
+
+![alt text](screenshots/main-menu.jpg)
+![alt text](screenshots/settings.jpg)
 
 ### Shopkeeper
-![alt text](screenshot/shopkeeper.png)
+
+![alt text](screenshots/isolated-scene.jpg)
 
 ### Weapon
-![alt text](screenshot/weapon.png)
+
+![alt text](screenshots/weapon.jpg)
 
 ### Pet
-![alt text](screenshot/pet.png)
 
-### Cheat
-![alt text](screenshot/cheat.png)
+![alt text](screenshots/pet.jpg)
 
-### Weapon Upgrade
-![alt text](screenshot/weapon_upgrade.png)
+### Orb Power Up
+
+![alt text](screenshots/orb.jpg)
 
 
 ## Job Description
