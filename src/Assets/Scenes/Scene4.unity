@@ -2344,9 +2344,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 600
+  m_MaxValue: 800
   m_WholeNumbers: 0
-  m_Value: 600
+  m_Value: 800
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4164,7 +4164,7 @@ PrefabInstance:
       objectReference: {fileID: 1287728639}
     - target: {fileID: 1768297696257294264, guid: 4025180b093bffb48a47298bde71e1fe, type: 3}
       propertyPath: currentHealth
-      value: 600
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 4299508124343741041, guid: 4025180b093bffb48a47298bde71e1fe, type: 3}
       propertyPath: m_Enabled

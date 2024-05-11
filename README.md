@@ -64,7 +64,10 @@ Extended Survival Shooter is a modification of the Survival Shooter game that ha
 
 #### Cutscene
 
-![alt text](screenshots/cutscene.jpg)
+![alt text](screenshots/opening.jpg)
+![alt text](screenshots/quest1-intro.jpg)
+![alt text](screenshots/quest2-intro.jpg)
+![alt text](screenshots/closing.jpg)
 
 #### Quest
 
@@ -72,6 +75,8 @@ Extended Survival Shooter is a modification of the Survival Shooter game that ha
 ![alt text](screenshots/quest1-2.jpg)
 ![alt text](screenshots/quest2-2.jpg)
 ![alt text](screenshots/quest2-1.jpg)
+![alt text](screenshots/quest3.jpg)
+![alt text](screenshots/quest4.jpg)
 
 ### Save & Load game
 ![alt text](screenshots/save-game.jpg)
